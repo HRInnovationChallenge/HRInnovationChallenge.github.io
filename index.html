@@ -570,6 +570,10 @@ p{color:var(--ink-soft); margin-bottom:14px}
 .reward-section.step-1 .reward-podium-col{flex:0 0 240px; max-width:240px}
 /* step-1: podium becomes a compact vertical stack of small cards, note sits right under it */
 .reward-section.step-1 .podium{flex-direction:column; flex-wrap:nowrap; align-items:stretch; gap:10px; margin:0 0 12px; transform:none}
+/* podium xếp dọc (step-1): đúng thứ hạng Nhất > Nhì > Ba (HTML gốc xếp Nhì-Nhất-Ba để làm bục 3D) */
+.reward-section.step-1 .podium .pod.gold{order:1}
+.reward-section.step-1 .podium .pod.silver{order:2}
+.reward-section.step-1 .podium .pod.bronze{order:3}
 .reward-section.step-1 .pod{min-width:0; max-width:none; min-height:0 !important; width:100%;
   border-radius:12px; padding:11px 16px; display:flex; align-items:center; column-gap:14px; text-align:left}
 .reward-section.step-1 .pod:hover{transform:translateX(3px)}
@@ -822,8 +826,28 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     opacity:1 !important; transform:none !important; overflow:visible !important;
     padding:0 !important; margin:0 !important; pointer-events:auto !important;
   }
-  /* podium về hàng ngang gọn, không dùng layout dạng step-1 */
-  .reward-section.step-1 .podium{flex-direction:row !important; flex-wrap:nowrap !important}
+  /* podium: xếp DỌC, mỗi giải là 1 thẻ ngang gọn full-width cho dễ đọc trên mobile */
+  .reward-section .podium,
+  .reward-section.step-1 .podium{
+    flex-direction:column !important; flex-wrap:nowrap !important;
+    align-items:stretch !important; gap:12px !important; margin:16px 0 14px !important; transform:none !important;
+  }
+  .reward-section .podium .pod{
+    width:100% !important; min-width:0 !important; max-width:none !important;
+    min-height:0 !important; height:auto !important;
+    display:flex !important; flex-direction:row !important; align-items:center !important;
+    column-gap:16px !important; text-align:left !important; padding:14px 18px !important; border-radius:14px !important;
+    transform:none !important;
+  }
+  .reward-section .podium .pod .pm{font-size:1.9rem !important; flex-shrink:0 !important}
+  .reward-section .podium .pod .pod-info{text-align:left !important; display:flex !important; flex-direction:column !important}
+  .reward-section .podium .pod .pr{margin:0 !important; font-size:.72rem !important}
+  .reward-section .podium .pod .pv{font-size:1.35rem !important; line-height:1.1 !important; white-space:nowrap !important}
+  .reward-section .podium .pod .pu{font-size:.62rem !important; margin-top:1px !important}
+  /* sắp đúng thứ hạng Nhất > Nhì > Ba (HTML gốc xếp Nhì-Nhất-Ba để làm bục 3D trên desktop) */
+  .reward-section .podium .pod.gold{order:1 !important}
+  .reward-section .podium .pod.silver{order:2 !important}
+  .reward-section .podium .pod.bronze{order:3 !important}
   .reward-section .special-grid,
   .reward-section.step-1 .special-grid,
   .early-grid{grid-template-columns:1fr !important; gap:12px !important}
