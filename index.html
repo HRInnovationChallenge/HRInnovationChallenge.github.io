@@ -153,6 +153,20 @@ section{position:relative; padding:90px 24px; max-width:1240px; margin:0 auto; s
 h2.title, .lede, .quote, .wish, .hero .promise, .hero .sub, .cta-help, .banner p{text-wrap:balance}
 .reveal{opacity:0; transform:translateY(34px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1; transform:none}
+
+/* ===== MOBILE / TABLET: tắt cơ chế "trình chiếu", hiện đầy đủ nội dung khi cuộn thường =====
+   Desktop (>900px) giữ nguyên trải nghiệm step-by-step. */
+@media(max-width:900px){
+  /* mọi khối reveal luôn hiện */
+  .reveal{opacity:1 !important; transform:none !important}
+  .tlx-col{opacity:1 !important; transform:none !important}
+  /* Our Story: hiện cả 2 step (why this challenge + what we believe in) */
+  .story-section.step-0 .story-step-b,
+  .story-section.step-1 .story-step-a{display:block !important}
+  .story-hint{display:none}      /* ẩn gợi ý bấm › vì mobile chỉ cuộn */
+  .kb-hint{display:none}         /* ẩn gợi ý bàn phím */
+  .secnav{display:none}          /* ẩn nút prev/next điều hướng trình chiếu */
+}
 .eyebrow{
   display:inline-flex; align-items:center; gap:8px;
   font-family:'Marcellus',serif; font-size:.72rem; letter-spacing:3px; text-transform:uppercase;
@@ -808,12 +822,10 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   <button class="burger" id="burger" aria-label="menu">☰</button>
   <nav class="nav-links" id="navlinks">
     <a href="#story">Our Story</a>
-    <a href="#who">Who</a>
-    <a href="#journey">Journey</a>
-    <a href="#value">Value</a>
-    <a href="#timeline">Timeline</a>
+    <a href="#who">Who can enter</a>
+    <a href="#journey">The Journey</a>
     <a href="#rewards">Rewards</a>
-    <a href="#faq">FAQ</a>
+    <a href="#timeline">Timeline</a>
     <a href="#submit" class="nav-cta">Submit ✦</a>
   </nav>
 </div>
@@ -1081,7 +1093,6 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <span class="mega-ico">🎩</span>
       <span class="mega-lines">
         <span class="mega-txt">Click HERE to Submit</span>
-        <span class="mega-note">💡 Nếu không click được &gt; click chuột phải &gt; chọn “Mở liên kết trong tab mới”</span>
       </span>
     </span>
     <span class="mega-spark mega-spark-r">✦</span>
@@ -1151,10 +1162,10 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>11 SEP</b><p>Kickoff cuộc thi — công bố Challenge</p><span class="tlx-tag">Find the friction.</span></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>14 SEP · 09:00</b><p>The Gates Open — mở cổng nhận Innovation Case</p><span class="tlx-tag">Define the opportunity.</span></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>27 SEP</b><p>The Sorting Hat Closes — deadline submission Vòng 1</p><span class="tlx-tag">Lock in your idea.</span></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>28 SEP – 04 OCT</b><p>Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p><span class="tlx-tag">Unlock the potential.</span></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>11 SEP</b><p>Kickoff cuộc thi — công bố Challenge</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>14 SEP · 09:00</b><p>The Gates Open — mở cổng nhận Innovation Case</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>27 SEP</b><p>The Sorting Hat Closes — deadline submission Vòng 1</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>28 SEP – 04 OCT</b><p>Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
       </div>
     </div>
 
@@ -1168,8 +1179,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>05 – 18 OCT</b><p>The Chamber — Develop · Test · Validate</p><span class="tlx-tag">Create the value.</span></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~21 – 22 OCT</b><p>Pitch &amp; Demo — chọn Top 5</p><span class="tlx-tag">Prove what became better.</span></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>05 – 18 OCT</b><p>The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~21 – 22 OCT</b><p>Pitch &amp; Demo Day — chọn Top 5</p></div></div>
       </div>
     </div>
 
@@ -1183,8 +1194,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>23 – 29 OCT</b><p>The Final Quest — Top 5 hoàn thiện solution</p><span class="tlx-tag">Strengthen the impact.</span></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~30 / 31 OCT</b><p>Grand Finale — Pitch · Live Demo · Q&amp;A · Awards</p><span class="tlx-tag">Show the difference you made.</span></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>23 – 29 OCT</b><p>The Final Quest — Top 5 hoàn thiện solution</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~30 / 31 OCT</b><p>Grand Finale — Pitch · Q&amp;A · Trao thưởng</p></div></div>
       </div>
     </div>
   </div>
