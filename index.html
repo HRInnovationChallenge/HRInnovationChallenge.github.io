@@ -607,9 +607,16 @@ p{color:var(--ink-soft); margin-bottom:14px}
 
 .early-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
 @media(max-width:900px){
-  /* on small screens: just stack everything, no step animation */
+  /* on small screens: just stack everything, no step animation.
+     Dùng !important để thắng rule .reward-section.step-0 .reward-extra-col (specificity cao hơn)
+     vì trên mobile section luôn kẹt ở step-0 (không có JS chuyển step). */
   .reward-layout{flex-direction:column; gap:10px}
-  .reward-section .reward-extra-col{max-width:100%; opacity:1; transform:none; flex:1; pointer-events:auto; margin-top:26px}
+  .reward-section .reward-extra-col,
+  .reward-section.step-0 .reward-extra-col{
+    max-width:100% !important; opacity:1 !important; transform:none !important;
+    flex:1 !important; pointer-events:auto !important; padding:0 !important; margin-top:26px !important;
+    overflow:visible !important;
+  }
   .reward-section .podium-hint{display:none}
   .reward-section.step-1 .reward-podium-col{flex:1; max-width:100%}
   .reward-section.step-1 .podium{transform:none; margin-bottom:20px}
@@ -623,6 +630,10 @@ p{color:var(--ink-soft); margin-bottom:14px}
   .pod.silver{min-height:150px}
   .pod.bronze{min-height:128px}
   .podium-note{margin-top:4px !important; font-size:.72rem}
+  /* Special Awards + Early Recognition: về 1 cột cho dễ đọc trên màn nhỏ */
+  .reward-section .special-grid,
+  .reward-section.step-1 .special-grid,
+  .early-grid{grid-template-columns:1fr !important; gap:12px}
 }
 .sp-award .spa-name{font-weight:700; color:#fff; font-size:.9rem; display:block}
 .sp-award .spa-desc{font-size:.76rem; color:var(--ink-dim)}
