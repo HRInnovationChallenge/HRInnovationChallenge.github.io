@@ -4,6 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HR Innovation Challenge 2026 — Unlock the Magic of Innovation</title>
+
+<!-- ===== SEO / Social Preview (thumbnail khi share link) =====
+     LƯU Ý: og:image & og:url PHẢI là URL tuyệt đối (https://...).
+     Thay <USER> và <REPO> bằng thông tin GitHub Pages của bạn.
+     Ví dụ GitHub Pages: https://<USER>.github.io/<REPO>/ -->
+<meta name="description" content="HR Innovation Challenge 2026 — Unlock the Magic of Innovation. Nơi mọi ý tưởng nhân sự hóa thành giải pháp thực chứng.">
+
+<!-- Open Graph (Facebook, Zalo, Teams, LinkedIn...) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HR Innovation Challenge 2026">
+<meta property="og:title" content="HR Innovation Challenge 2026 — Unlock the Magic of Innovation">
+<meta property="og:description" content="Nơi mọi ý tưởng nhân sự hóa thành giải pháp thực chứng. Ghi danh câu chuyện của chính bạn.">
+<meta property="og:image" content="https://hrinnovationchallenge.github.io/KV34.png">
+<meta property="og:image:width" content="1448">
+<meta property="og:image:height" content="1086">
+<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="https://hrinnovationchallenge.github.io/">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HR Innovation Challenge 2026 — Unlock the Magic of Innovation">
+<meta name="twitter:description" content="Nơi mọi ý tưởng nhân sự hóa thành giải pháp thực chứng.">
+<meta name="twitter:image" content="https://hrinnovationchallenge.github.io/KV34.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
@@ -511,15 +534,25 @@ p{color:var(--ink-soft); margin-bottom:14px}
 .myth div b{color:#ffb3bd}
 
 /* value framework */
-.vframe{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px}
-.vf-card{padding:28px 26px}
+.vframe{display:flex; flex-wrap:wrap; gap:20px; justify-content:center}
+.vf-card{padding:28px 26px; flex:1 1 300px; max-width:340px}
+/* hàng dưới chỉ có 2 card -> cho rộng ra để cân với hàng 3 phía trên */
+.vf-card:nth-child(4), .vf-card:nth-child(5){flex:1 1 440px; max-width:520px}
+@media(max-width:900px){
+  .vf-card{flex:1 1 260px; max-width:none}
+  .vf-card:nth-child(4), .vf-card:nth-child(5){flex:1 1 260px; max-width:none}
+}
+@media(max-width:560px){.vf-card{flex:1 1 100%}}
 .vf-card .vfh{display:flex; align-items:center; gap:12px; margin-bottom:14px}
 .vf-card .vfh .vfi{width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center;
   font-size:1.5rem; flex-shrink:0}
 .vf-card.human .vfi{background:linear-gradient(135deg,var(--violet),var(--violet-soft))}
+.vf-card.people .vfi{background:linear-gradient(135deg,#3a2168,#8a5fc0)}
+.vf-card.govern .vfi{background:linear-gradient(135deg,#1e4d5c,#3a9bb5)}
+.vf-card .vf-desc{font-size:.88rem; color:var(--ink-soft); margin:14px 0 0; line-height:1.55}
 .vf-card.biz .vfi{background:linear-gradient(135deg,var(--plum),var(--violet))}
 .vf-card.strat .vfi{background:linear-gradient(135deg,var(--gold-deep),var(--gold))}
-.vf-card h3{font-family:'Marcellus',serif; font-size:1.05rem; color:#fff}
+.vf-card h3{font-family:'Marcellus',serif; font-size:1.05rem; color:#fff; line-height:1.2}
 .vf-card .vf-en{font-size:.82rem; font-style:italic; color:var(--gold)}
 .vf-card ul{list-style:none}
 .vf-card ul li{font-size:.86rem; padding-left:18px; position:relative; margin-bottom:6px; color:var(--ink-soft)}
@@ -855,6 +888,228 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   /* ẩn các thành phần chỉ dành cho trình chiếu */
   .secnav, .kb-hint, .story-hint, .podium-hint{display:none !important}
 }
+
+/* ===== KICKOFF: Objectives & Ground Rules cards ===== */
+.kv-card{padding:30px 28px}
+.kv-card .kv-top{display:flex; align-items:center; gap:14px; margin-bottom:14px}
+.kv-card .kv-ico{width:52px; height:52px; border-radius:14px; flex-shrink:0; display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem; background:linear-gradient(135deg,var(--purple-deep),var(--plum)); border:1px solid var(--line)}
+.kv-card h3{font-family:'Marcellus',serif; font-size:1.25rem; color:#fff; letter-spacing:.4px; line-height:1.15}
+.kv-card h3 .kv-en{display:block; font-family:'Marcellus',serif; font-size:1.25rem; color:#fff; letter-spacing:.4px; line-height:1.2}
+.kv-card h3 .kv-vi{display:block; font-family:var(--sans); font-size:.82rem; font-weight:500; color:rgba(255,255,255,.62); letter-spacing:.2px; margin-top:3px}
+.kv-card p{font-size:.98rem; margin:0}
+.kv-list{list-style:none; margin:0; display:flex; flex-direction:column; gap:12px}
+.kv-list li{position:relative; padding-left:24px; font-size:.98rem; color:var(--ink-soft); line-height:1.55}
+.kv-list li::before{content:'✦'; position:absolute; left:0; top:2px; color:var(--gold); font-size:.8rem}
+
+/* ===== KICKOFF: Headmaster / Chief Veo ===== */
+.headmaster-wrap{display:flex; align-items:center; gap:40px; max-width:820px; margin:0 auto;
+  justify-content:center; flex-wrap:wrap; text-align:left}
+.hm-avatar{position:relative; width:200px; height:200px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+  background:radial-gradient(circle at 35% 30%, rgba(240,205,120,.25), rgba(45,27,78,.6));
+  border:2px solid var(--gold); box-shadow:0 0 40px rgba(212,168,75,.35), inset 0 0 30px rgba(8,4,22,.4)}
+.hm-avatar img{width:100%; height:100%; object-fit:cover}
+.hm-avatar .hm-fallback{position:absolute; font-size:5rem; opacity:.55; z-index:-1}
+.hm-avatar.no-img{background:radial-gradient(circle at 35% 30%, rgba(240,205,120,.3), rgba(45,27,78,.7))}
+.hm-info{max-width:420px}
+.hm-name{font-family:'Marcellus',serif; font-size:2rem; color:var(--gold-bright); display:block; line-height:1.1}
+.hm-role{display:block; margin-top:6px}
+.hm-role .hm-en{display:block; font-family:var(--serif); font-style:italic; font-size:1.05rem; color:#fff}
+.hm-role .hm-vi{display:block; font-family:var(--sans); font-size:.82rem; font-weight:500; color:rgba(255,255,255,.62); letter-spacing:.2px; margin-top:3px}
+.hm-note{font-size:.95rem; color:var(--ink-soft); margin-top:14px; padding-top:14px; border-top:1px solid var(--line-soft)}
+@media(max-width:640px){
+  .headmaster-wrap{flex-direction:column; text-align:center; gap:24px}
+  .hm-avatar{width:160px; height:160px}
+  .hm-info{text-align:center}
+}
+
+/* ===== KICKOFF: Three Secret Doors ===== */
+.doors-row{display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:20px;
+  perspective:1600px}
+@media(max-width:820px){.doors-row{grid-template-columns:1fr; gap:40px; max-width:340px; margin-inline:auto}}
+
+.door-card{background:none; border:none; cursor:pointer; display:flex; flex-direction:column;
+  align-items:center; gap:16px; padding:0; font-family:inherit; outline:none}
+
+.door-key{width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+  font-family:'Marcellus',serif; font-weight:700; font-size:1.2rem; color:var(--gold-bright);
+  background:var(--purple); border:1px solid var(--line); box-shadow:0 0 14px rgba(212,168,75,.3);
+  transition:transform .25s, box-shadow .25s}
+.door-card:hover .door-key,.door-card:focus-visible .door-key{transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(212,168,75,.6)}
+
+/* the arch frame */
+.door-frame{position:relative; width:100%; aspect-ratio:3/4.4; max-width:230px;
+  border-radius:120px 120px 14px 14px;
+  background:linear-gradient(160deg,#2a1c0c,#160d05);
+  border:3px solid var(--gold-deep);
+  box-shadow:0 18px 50px rgba(8,4,22,.6), inset 0 0 22px rgba(0,0,0,.7);
+  transform-style:preserve-3d; overflow:hidden; transition:box-shadow .35s}
+.door-card:hover .door-frame,.door-card:focus-visible .door-frame{
+  border-color:var(--gold); box-shadow:0 22px 60px rgba(8,4,22,.7), 0 0 30px rgba(212,168,75,.35), inset 0 0 22px rgba(0,0,0,.6)}
+
+/* golden light behind the leaves (revealed when they swing open) */
+.door-glow{position:absolute; inset:0; border-radius:inherit;
+  background:radial-gradient(circle at 50% 45%, var(--gold-bright), var(--gold) 30%, var(--gold-deep) 65%, #160d05 100%);
+  opacity:0; transition:opacity .5s ease .15s}
+
+/* two swinging leaves */
+.door-leaf{position:absolute; top:0; bottom:0; width:50%; background:linear-gradient(160deg,#3a2a12,#22160a);
+  transition:transform 1s cubic-bezier(.6,.02,.2,1); transform-origin:left center; backface-visibility:hidden;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:16px 10px}
+.door-leaf.leaf-l{left:0; border-right:1px solid rgba(0,0,0,.5); border-radius:120px 0 0 14px; transform-origin:left center}
+.door-leaf.leaf-r{right:0; border-left:1px solid rgba(212,168,75,.15); border-radius:0 120px 14px 0; transform-origin:right center}
+/* recessed panels on each leaf */
+.door-panel{width:70%; height:34%; border-radius:10px; background:linear-gradient(160deg,#241708,#160d05);
+  border:1px solid rgba(212,168,75,.25); box-shadow:inset 0 0 12px rgba(0,0,0,.7)}
+.door-knob{position:absolute; top:50%; left:8px; width:14px; height:14px; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, var(--gold-bright), var(--gold-deep));
+  box-shadow:0 0 10px rgba(212,168,75,.7); transform:translateY(-50%)}
+
+/* OPEN state: leaves swing outward, light floods */
+.door-card.open .door-glow{opacity:1}
+.door-card.open .leaf-l{transform:rotateY(-105deg)}
+.door-card.open .leaf-r{transform:rotateY(105deg)}
+.door-card.open .door-frame{box-shadow:0 22px 70px rgba(8,4,22,.7), 0 0 46px rgba(212,168,75,.6), inset 0 0 22px rgba(0,0,0,.5)}
+
+.door-name{font-family:'Marcellus',serif; font-size:1.15rem; color:#fff; letter-spacing:.5px; transition:color .3s}
+.door-card:hover .door-name,.door-card.open .door-name{color:var(--gold-bright)}
+
+/* ===== KICKOFF: The Arcane Crossroads (Ngã Rẽ Quyền Năng) ===== */
+.crossroads{position:relative; margin:40px auto 10px; max-width:1000px;
+  height:600px; display:block;}
+
+/* ===== 3 LÀN ĐƯỜNG lát đá tỏa từ điểm gốc chung dưới giữa ===== */
+.cr-lanes{position:absolute; inset:0; z-index:1; pointer-events:none;}
+.cr-lane{position:absolute; left:50%; bottom:64px; width:120px; height:470px;
+  transform-origin:50% 100%; margin-left:-60px;
+  /* dải đường hẹp trên (xa) rộng dưới (gần) tạo cảm giác chiều sâu */
+  clip-path:polygon(38% 0, 62% 0, 100% 100%, 0 100%);
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.10) 0 2px, transparent 2px 26px),
+    linear-gradient(180deg, rgba(212,168,75,.08), rgba(212,168,75,.22));
+  border-left:1px solid rgba(212,168,75,.28);
+  border-right:1px solid rgba(212,168,75,.28);
+  opacity:.55; transition:opacity .45s, filter .45s;}
+.cr-lane.dim{opacity:.16;}
+.cr-lane.active{opacity:1;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.18) 0 2px, transparent 2px 26px),
+    linear-gradient(180deg, rgba(240,205,120,.35), rgba(212,168,75,.55));
+  border-color:rgba(240,205,120,.7);
+  filter:drop-shadow(0 0 18px rgba(240,205,120,.6));}
+/* vạch giữa làn đường (dashed đứt như tim đường) */
+.cr-lane::after{content:''; position:absolute; left:50%; top:6%; bottom:4%; width:4px; margin-left:-2px;
+  background:repeating-linear-gradient(0deg, var(--gold-bright) 0 14px, transparent 14px 30px);
+  opacity:.5; transition:opacity .45s;}
+.cr-lane.active::after{opacity:1;}
+/* góc nghiêng của mỗi làn (rẻ quạt) */
+.cr-lane[data-branch="A"]{transform:rotate(-34deg);}
+.cr-lane[data-branch="B"]{transform:rotate(0deg);}
+.cr-lane[data-branch="C"]{transform:rotate(34deg);}
+
+/* điểm khởi hành chung — "You are here" */
+.cr-origin{position:absolute; bottom:0; left:50%; transform:translateX(-50%); z-index:3;
+  display:flex; flex-direction:column; align-items:center; gap:10px;}
+.cr-origin-orb{width:64px; height:64px; border-radius:50%;
+  background:radial-gradient(circle at 38% 30%, var(--gold-bright), var(--gold) 45%, var(--gold-deep));
+  display:flex; align-items:center; justify-content:center; font-size:1.7rem;
+  box-shadow:0 0 26px rgba(212,168,75,.65), inset 0 -6px 12px rgba(0,0,0,.35);
+  animation:crPulse 2.6s ease-in-out infinite;}
+@keyframes crPulse{0%,100%{box-shadow:0 0 26px rgba(212,168,75,.55), inset 0 -6px 12px rgba(0,0,0,.35);}
+  50%{box-shadow:0 0 40px rgba(240,205,120,.9), inset 0 -6px 12px rgba(0,0,0,.35);}}
+.cr-origin-tag{font-family:var(--sans); font-size:.72rem; font-weight:600; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--gold-bright); background:var(--glass);
+  border:1px solid var(--line); border-radius:30px; padding:5px 14px; backdrop-filter:blur(6px);}
+
+/* các node ở cuối mỗi nhánh */
+.cr-node{position:absolute; z-index:4; width:230px; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+  background:none; border:none; cursor:pointer; font-family:inherit; outline:none; padding:0;}
+.cr-node[data-branch="A"]{left:15%; top:18px;}
+.cr-node[data-branch="B"]{left:50%; top:0;}
+.cr-node[data-branch="C"]{left:85%; top:18px;}
+@media(max-width:820px){
+  .crossroads{height:auto; display:flex; flex-direction:column; gap:28px; align-items:center;}
+  .cr-lanes,.cr-origin{display:none;}
+  .cr-node{position:static; transform:none; width:100%; max-width:340px;}
+}
+
+/* orb icon cuối nhánh (thay cho cánh cửa) */
+.cr-orb{position:relative; width:118px; height:118px; border-radius:50%;
+  background:linear-gradient(160deg, var(--purple), var(--navy-2));
+  border:1.5px solid var(--line); display:flex; align-items:center; justify-content:center;
+  font-size:3rem; box-shadow:0 14px 40px rgba(8,4,22,.6), inset 0 0 20px rgba(0,0,0,.5);
+  transition:transform .35s, box-shadow .35s, border-color .35s;}
+.cr-orb::before{content:''; position:absolute; inset:-3px; border-radius:50%;
+  background:conic-gradient(from 0deg, transparent, rgba(212,168,75,.5), transparent 60%);
+  opacity:0; transition:opacity .4s; z-index:-1;}
+.cr-node:hover .cr-orb,.cr-node:focus-visible .cr-orb{transform:translateY(-6px) scale(1.05);
+  border-color:var(--gold); box-shadow:0 20px 50px rgba(8,4,22,.7), 0 0 32px rgba(212,168,75,.5), inset 0 0 20px rgba(0,0,0,.4);}
+.cr-node.active .cr-orb{border-color:var(--gold-bright); transform:translateY(-6px) scale(1.08);
+  box-shadow:0 22px 56px rgba(8,4,22,.75), 0 0 46px rgba(240,205,120,.75), inset 0 0 20px rgba(0,0,0,.35);}
+.cr-node.active .cr-orb::before{opacity:1; animation:crSpin 3s linear infinite;}
+@keyframes crSpin{to{transform:rotate(360deg);}}
+
+/* phím vote */
+.cr-key{width:38px; height:38px; border-radius:9px; display:flex; align-items:center; justify-content:center;
+  font-family:'Marcellus',serif; font-weight:700; font-size:1.15rem; color:var(--gold-bright);
+  background:var(--purple); border:1px solid var(--line); box-shadow:0 0 14px rgba(212,168,75,.3);
+  transition:transform .25s, box-shadow .25s;}
+.cr-node:hover .cr-key,.cr-node.active .cr-key{transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(212,168,75,.6);}
+
+/* nhãn + badge */
+.cr-label{text-align:center; display:flex; flex-direction:column; align-items:center; gap:6px;}
+.cr-branch{font-family:'Marcellus',serif; font-size:.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold);}
+.cr-name{font-family:var(--display); font-weight:700; font-size:1.28rem; color:#fff; line-height:1.2; transition:color .3s;}
+.cr-node:hover .cr-name,.cr-node.active .cr-name{color:var(--gold-bright);}
+.cr-desc{font-size:.82rem; color:var(--ink-soft); max-width:210px; line-height:1.5;}
+.cr-meta{display:flex; align-items:center; gap:8px; margin-top:2px; flex-wrap:wrap; justify-content:center;}
+.cr-time{font-size:.74rem; font-weight:600; color:var(--ink-dim); letter-spacing:.5px;}
+.cr-badge{font-size:.68rem; font-weight:700; letter-spacing:.8px; text-transform:uppercase;
+  padding:3px 11px; border-radius:30px;}
+.cr-badge.req{color:#160e2e; background:linear-gradient(160deg, var(--gold-bright), var(--gold));
+  box-shadow:0 0 14px rgba(212,168,75,.4);}
+.cr-badge.opt{color:var(--ink-dim); background:transparent; border:1px dashed var(--line);}
+
+/* ===== floating "Back to the Doors" button ===== */
+.back-doors{position:fixed; left:22px; bottom:24px; z-index:95;
+  display:inline-flex; align-items:center; gap:9px; padding:11px 18px 11px 14px;
+  border-radius:40px; cursor:pointer; font-family:var(--sans); font-weight:600; font-size:.82rem;
+  letter-spacing:.3px; color:var(--gold-bright);
+  background:linear-gradient(160deg, rgba(45,27,78,.92), rgba(30,20,64,.88));
+  border:1px solid var(--line); backdrop-filter:blur(8px);
+  box-shadow:0 8px 24px rgba(8,4,22,.5), 0 0 18px rgba(212,168,75,.28);
+  opacity:0; transform:translateY(16px) scale(.95); pointer-events:none;
+  transition:opacity .45s ease, transform .45s ease, box-shadow .3s, background .3s;
+  animation:bdFloat 3s ease-in-out infinite}
+.back-doors.show{opacity:1; transform:none; pointer-events:auto}
+.back-doors:hover{color:#fff; background:linear-gradient(160deg,var(--gold),var(--gold-deep));
+  box-shadow:0 12px 30px rgba(8,4,22,.6), 0 0 26px rgba(212,168,75,.55)}
+.back-doors .bd-ico{font-size:1.1rem; line-height:1}
+@keyframes bdFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@media(max-width:560px){.back-doors .bd-txt{display:none} .back-doors{padding:12px; border-radius:50%}}
+@media print{.back-doors{display:none !important}}
+
+/* ===== floating "Go to The Arcane Crossroads" button ===== */
+.to-crossroads{position:fixed; right:22px; bottom:24px; z-index:95;
+  display:inline-flex; align-items:center; gap:9px; padding:11px 16px 11px 14px;
+  border-radius:40px; cursor:pointer; font-family:var(--sans); font-weight:600; font-size:.82rem;
+  letter-spacing:.3px; color:var(--gold-bright);
+  background:linear-gradient(160deg, rgba(45,27,78,.92), rgba(30,20,64,.88));
+  border:1px solid var(--line); backdrop-filter:blur(8px);
+  box-shadow:0 8px 24px rgba(8,4,22,.5), 0 0 18px rgba(212,168,75,.28);
+  opacity:0; transform:translateY(16px) scale(.95); pointer-events:none;
+  transition:opacity .45s ease, transform .45s ease, box-shadow .3s, background .3s;
+  animation:bdFloat 3s ease-in-out infinite}
+.to-crossroads.show{opacity:1; transform:none; pointer-events:auto}
+.to-crossroads:hover{color:#fff; background:linear-gradient(160deg,var(--gold),var(--gold-deep));
+  box-shadow:0 12px 30px rgba(8,4,22,.6), 0 0 26px rgba(212,168,75,.55)}
+.to-crossroads .tc-ico{font-size:1.1rem; line-height:1}
+@media(max-width:560px){.to-crossroads .tc-txt{display:none} .to-crossroads{padding:12px; border-radius:50%}}
+@media print{.to-crossroads{display:none !important}}
 </style>
 </head>
 <body>
@@ -868,6 +1123,18 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   <button class="secnav-btn" id="navPrev" aria-label="Section trước" title="Section trước (← / ↑)">‹</button>
   <button class="secnav-btn" id="navNext" aria-label="Section kế" title="Section kế (→ / ↓)">›</button>
 </div>
+
+<!-- floating: back to the Three Doors -->
+<button class="back-doors" id="backDoors" title="Quay về 3 Cánh Cửa" aria-label="Quay về 3 Cánh Cửa">
+  <span class="bd-ico">🚪</span>
+  <span class="bd-txt">Back to the Doors</span>
+</button>
+
+<!-- floating: go to The Arcane Crossroads -->
+<button class="to-crossroads" id="toCrossroads" title="Tới Ngã Rẽ Quyền Năng" aria-label="Go to The Arcane Crossroads">
+  <span class="tc-ico">🧭</span>
+  <span class="tc-txt">Go to The Arcane Crossroads</span>
+</button>
 <div class="kb-hint" id="kbHint">
   <span class="kbk">←</span><span class="kbk">→</span> để chuyển section
 </div>
@@ -891,8 +1158,63 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 
 <!-- ============ HERO ============ -->
 <header class="hero-kv">
-  <a href="#facts" class="scroll-hint" aria-label="scroll down">Scroll to begin<span>⌄</span></a>
+  <a href="#objectives" class="scroll-hint" aria-label="scroll down">Scroll to begin<span>⌄</span></a>
 </header>
+
+<!-- ============ OBJECTIVES & GROUND RULES ============ -->
+<section id="objectives" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">The Rules of Magic</div>
+    <h2 class="title">Before we begin, <em>a pact</em></h2>
+    <p class="lede">Just 50 minutes — we go straight to what matters most.</p>
+  </div>
+
+  <div class="grid-2">
+    <!-- Objective -->
+    <div class="gcard kv-card">
+      <div class="kv-top">
+        <span class="kv-ico">🎯</span>
+        <h3><span class="kv-en">The Objective</span><span class="kv-vi">Mục Tiêu</span></h3>
+      </div>
+      <p>Ra khỏi buổi hôm nay, bạn nắm rõ <b>thể lệ</b>, <b>cơ cấu giải thưởng</b> và sẵn sàng nộp bài vào <b>sáng Thứ Hai (14/09)</b>.</p>
+    </div>
+
+    <!-- Ground Rules -->
+    <div class="gcard kv-card">
+      <div class="kv-top">
+        <span class="kv-ico">📜</span>
+        <h3><span class="kv-en">Ground Rules</span><span class="kv-vi">Quy Ước Học Viện</span></h3>
+      </div>
+      <ul class="kv-list">
+        <li>BTC cam kết <b>súc tích</b>, đi thẳng trọng tâm — không lan man.</li>
+        <li>Các phù thủy luôn sẵn <b>đũa phép</b> để biểu quyết liên tục (phím 1 · 2 · 3).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ LỜI HIỆU TRIỆU — CHIEF VEO ============ -->
+<section id="headmaster" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">The Headmaster Speech</div>
+    <h2 class="title">A Word from <em>the Headmaster</em></h2>
+  </div>
+
+  <div class="headmaster-wrap">
+    <div class="hm-avatar">
+      <img src="chiefveo.png" alt="Chief Veo" onerror="this.style.display='none';this.parentNode.classList.add('no-img')">
+      <span class="hm-fallback">🧙‍♂️</span>
+    </div>
+    <div class="hm-info">
+      <b class="hm-name">Chief Veo</b>
+      <span class="hm-role"><span class="hm-en">Headmaster of the Academy</span><span class="hm-vi">Hiệu Trưởng Học Viện · Khai mở &amp; Tầm nhìn</span></span>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
 
 <!-- ============ OUR STORY ============ -->
 <section id="story" class="reveal story-section step-0" data-steps="2">
@@ -931,6 +1253,52 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
         <p>Thước đo nằm ở câu hỏi giản dị: <em>"Điều gì quanh bạn đã/sẽ thực sự trở nên tốt đẹp hơn nhờ giải pháp này?"</em>.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ THREE SECRET DOORS ============ -->
+<section id="doors" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">Three Secret Doors</div>
+    <h2 class="title">Choose a door <em>to unlock</em></h2>
+    <p class="lede">Press <b>1</b>, <b>2</b> or <b>3</b> — or click a door — to open it.</p>
+  </div>
+
+  <div class="doors-row">
+    <!-- Door 1 -->
+    <button class="door-card" data-door="1" data-target="#who" aria-label="Open Door 1 — The Chosen Wizard">
+      <span class="door-key">1</span>
+      <div class="door-frame">
+        <div class="door-glow"></div>
+        <div class="door-leaf leaf-l"><span class="door-panel"></span><span class="door-panel"></span></div>
+        <div class="door-leaf leaf-r"><span class="door-panel"></span><span class="door-panel"></span><span class="door-knob"></span></div>
+      </div>
+      <span class="door-name">The Chosen Wizard</span>
+    </button>
+
+    <!-- Door 2 -->
+    <button class="door-card" data-door="2" data-target="#journey" aria-label="Open Door 2 — The Map">
+      <span class="door-key">2</span>
+      <div class="door-frame">
+        <div class="door-glow"></div>
+        <div class="door-leaf leaf-l"><span class="door-panel"></span><span class="door-panel"></span></div>
+        <div class="door-leaf leaf-r"><span class="door-panel"></span><span class="door-panel"></span><span class="door-knob"></span></div>
+      </div>
+      <span class="door-name">The Map</span>
+    </button>
+
+    <!-- Door 3 -->
+    <button class="door-card" data-door="3" data-target="#rewards" aria-label="Open Door 3 — The Treasury">
+      <span class="door-key">3</span>
+      <div class="door-frame">
+        <div class="door-glow"></div>
+        <div class="door-leaf leaf-l"><span class="door-panel"></span><span class="door-panel"></span></div>
+        <div class="door-leaf leaf-r"><span class="door-panel"></span><span class="door-panel"></span><span class="door-knob"></span></div>
+      </div>
+      <span class="door-name">The Treasury</span>
+    </button>
   </div>
 </section>
 
@@ -990,21 +1358,29 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <section id="value" class="reveal">
   <div class="sec-head">
     <div class="eyebrow">The Crystals of Power</div>
-    <h2 class="title">What does <em>“value”</em> look like?</h2>
+    <h2 class="title">What does <em>value</em> look like? — The 5 <em>OneHR Core Values</em></h2>
   </div>
 
   <div class="vframe">
-    <div class="gcard vf-card human">
-      <div class="vfh"><div class="vfi">👤</div><div><h3>Human Value</h3><span class="vf-en">Giải phóng con người</span></div></div>
-      <ul><li>Higher productivity</li><li>Better quality</li><li>Better experience</li><li>Better decision-making</li></ul>
-    </div>
     <div class="gcard vf-card biz">
-      <div class="vfh"><div class="vfi">💼</div><div><h3>Business Value</h3><span class="vf-en">Tối ưu vận hành</span></div></div>
-      <ul><li>Lower cost</li><li>Lower risk</li><li>Fewer errors</li><li>Better business performance</li></ul>
+      <div class="vfh"><div class="vfi">📈</div><div><h3>Business Performance Impact</h3></div></div>
+      <p class="vf-desc">Sáng kiến có đóng góp trực tiếp hoặc gián tiếp vào kết quả kinh doanh chung không?</p>
     </div>
     <div class="gcard vf-card strat">
-      <div class="vfh"><div class="vfi">🚀</div><div><h3>Strategic Value</h3><span class="vf-en">Kiến tạo tương lai</span></div></div>
-      <ul><li>Culture</li><li>Capability</li><li>Transformation</li></ul>
+      <div class="vfh"><div class="vfi">⚡</div><div><h3>Productivity &amp; Efficiency</h3></div></div>
+      <p class="vf-desc">Sáng kiến có giúp tăng tốc độ, nâng cao chất lượng công việc hoặc tối ưu chi phí vận hành không?</p>
+    </div>
+    <div class="gcard vf-card human">
+      <div class="vfh"><div class="vfi">💜</div><div><h3>Employee Experience &amp; Engagement</h3></div></div>
+      <p class="vf-desc">Sáng kiến có cải thiện cảm nhận và trải nghiệm thực tế của CBNV không?</p>
+    </div>
+    <div class="gcard vf-card people">
+      <div class="vfh"><div class="vfi">🌟</div><div><h3>Leadership &amp; Talent Sustainability</h3></div></div>
+      <p class="vf-desc">Sáng kiến có giúp củng cố và phát triển năng lực của đội ngũ lãnh đạo và năng lực tổ chức trước các cơ hội hoặc thách thức không?</p>
+    </div>
+    <div class="gcard vf-card govern">
+      <div class="vfh"><div class="vfi">🛡️</div><div><h3>Governance &amp; Data Excellence</h3></div></div>
+      <p class="vf-desc">Sáng kiến có tăng cường kiểm soát tuân thủ, giảm thiểu rủi ro hoặc hỗ trợ ra quyết định dựa trên dữ liệu không?</p>
     </div>
   </div>
 </section>
@@ -1132,8 +1508,66 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <p class="mut" style="margin-bottom:16px">Ghi nhận ngay tại Vòng 1 cho mỗi Innovation được Qualified — không cần đợi tới Chung kết.</p>
       <div class="special-grid">
         <div class="gcard sp-award"><span class="spa-ico">🥇</span><div><span class="spa-name">05 Qualified đầu tiên</span><span class="spa-desc">Ghi nhận ngay tại Vòng 1</span></div><span class="spa-amt">500K</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">✨</span><div><span class="spa-name">Các Qualified tiếp theo</span><span class="spa-desc">Mỗi Innovation được Qualified</span></div><span class="spa-amt">200K</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">✨</span><div><span class="spa-name">Các Qualified tiếp theo</span><span class="spa-desc">Mỗi Innovation được Qualified (cut off top 40)</span></div><span class="spa-amt">200K</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ THE POWER CROSSROADS (NGÃ RẼ QUYỀN NĂNG) ============ -->
+<section id="crossroads" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">The Arcane Crossroads</div>
+    <h2 class="title">The Arcane <em>Crossroads</em></h2>
+  </div>
+
+  <div class="crossroads">
+    <!-- 3 làn đường lát đá tỏa rẻ quạt từ điểm gốc chung dưới giữa -->
+    <div class="cr-lanes" aria-hidden="true">
+      <span class="cr-lane" data-branch="A"></span>
+      <span class="cr-lane" data-branch="B"></span>
+      <span class="cr-lane" data-branch="C"></span>
+    </div>
+
+    <!-- Ngã rẽ A -->
+    <button class="cr-node" data-branch="A" data-key="1" aria-label="Ngã rẽ A — Demo Form Vòng 1">
+      <span class="cr-orb">🪶</span>
+      <span class="cr-key">1</span>
+      <span class="cr-label">
+        <span class="cr-branch">Ngã rẽ A</span>
+        <span class="cr-name">Demo Form Vòng 1</span>
+        <span class="cr-meta"><span class="cr-time">⏱ 3 phút</span><span class="cr-badge opt">Optional</span></span>
+      </span>
+    </button>
+
+    <!-- Ngã rẽ B -->
+    <button class="cr-node" data-branch="B" data-key="2" aria-label="Ngã rẽ B — Đấu Trường Kahoot">
+      <span class="cr-orb">⚔️</span>
+      <span class="cr-key">2</span>
+      <span class="cr-label">
+        <span class="cr-branch">Ngã rẽ B</span>
+        <span class="cr-name">Đấu Trường Kahoot</span>
+        <span class="cr-meta"><span class="cr-time">⏱ 7 phút</span><span class="cr-badge req">Bắt buộc</span></span>
+      </span>
+    </button>
+
+    <!-- Ngã rẽ C -->
+    <button class="cr-node" data-branch="C" data-key="3" aria-label="Ngã rẽ C — Phòng Yêu Cầu / Q&A">
+      <span class="cr-orb">🔮</span>
+      <span class="cr-key">3</span>
+      <span class="cr-label">
+        <span class="cr-branch">Ngã rẽ C</span>
+        <span class="cr-name">Phòng Yêu Cầu / Q&amp;A</span>
+        <span class="cr-meta"><span class="cr-time">⏱ 10 phút</span><span class="cr-badge req">Bắt buộc</span></span>
+      </span>
+    </button>
+
+    <!-- điểm khởi hành chung -->
+    <div class="cr-origin">
+      <span class="cr-origin-orb">🧙</span>
+      <span class="cr-origin-tag">You are here</span>
     </div>
   </div>
 </section>
@@ -1517,7 +1951,118 @@ setTimeout(hideHint, 7000);
     }catch(err){ /* để href mặc định xử lý */ }
   });
 })();
+
+/* ===== Three Secret Doors: open animation + go to section ===== */
+(function(){
+  const doors = Array.from(document.querySelectorAll('.door-card'));
+  if(!doors.length) return;
+  const doorsSection = document.getElementById('doors');
+
+  function openDoor(card){
+    if(!card || card.classList.contains('open')) return;
+    card.classList.add('open');
+    const sel = card.getAttribute('data-target');
+    const target = sel && document.querySelector(sel);
+    if(!target) return;
+    // reveal target (and any lazy reveals inside) before scrolling
+    setTimeout(()=>{
+      target.classList.add('in');
+      target.querySelectorAll('.reveal,.tl').forEach(el=>el.classList.add('in'));
+      if(target.hasAttribute('data-steps')){ // multi-step section -> start at step 0
+        const total=parseInt(target.getAttribute('data-steps')||'1',10);
+        for(let k=0;k<total;k++) target.classList.remove('step-'+k);
+        target.classList.add('step-0');
+      }
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }, 900); // wait for the leaves to swing open
+  }
+
+  doors.forEach(card=>card.addEventListener('click', ()=>openDoor(card)));
+
+  // floating "Back to the Doors" button
+  const backBtn = document.getElementById('backDoors');
+  if(backBtn && doorsSection){
+    backBtn.addEventListener('click', ()=>{
+      doors.forEach(d=>d.classList.remove('open')); // reset so cửa đóng lại, chọn tiếp
+      doorsSection.classList.add('in');
+      doorsSection.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    // show the button once we've scrolled past the doors section
+    const toggleBackBtn = ()=>{
+      const r = doorsSection.getBoundingClientRect();
+      const scrolledPast = r.bottom < window.innerHeight*0.4; // đã đi qua khỏi khu vực cửa
+      backBtn.classList.toggle('show', scrolledPast);
+    };
+    window.addEventListener('scroll', toggleBackBtn, {passive:true});
+    toggleBackBtn();
+  }
+
+  // keys 1 / 2 / 3 open the matching door — only while the doors section is on screen
+  document.addEventListener('keydown',(e)=>{
+    const tag=(e.target.tagName||'').toLowerCase();
+    if(tag==='input'||tag==='textarea'||e.target.isContentEditable) return;
+    if(e.altKey||e.ctrlKey||e.metaKey) return;
+    if(!['1','2','3'].includes(e.key)) return;
+    if(!doorsSection) return;
+    const r=doorsSection.getBoundingClientRect();
+    const onScreen = r.top < window.innerHeight*0.6 && r.bottom > window.innerHeight*0.3;
+    if(!onScreen) return;
+    const card=doors.find(d=>d.getAttribute('data-door')===e.key);
+    if(card){ e.preventDefault(); openDoor(card); }
+  });
+})();
+
+/* ===== The Power Crossroads: vote phím 1/2/3 chọn ngã rẽ ===== */
+(function(){
+  const section = document.getElementById('crossroads');
+  if(!section) return;
+  const nodes = Array.from(section.querySelectorAll('.cr-node'));
+  const lanes = Array.from(section.querySelectorAll('.cr-lane'));
+  if(!nodes.length) return;
+
+  function choose(branch){
+    nodes.forEach(n=>n.classList.toggle('active', n.getAttribute('data-branch')===branch));
+    lanes.forEach(l=>{
+      const isSel = l.getAttribute('data-branch')===branch;
+      l.classList.toggle('active', isSel);
+      l.classList.toggle('dim', !isSel);
+    });
+  }
+
+  nodes.forEach(n=>n.addEventListener('click', ()=>choose(n.getAttribute('data-branch'))));
+
+  // floating "Go to The Arcane Crossroads" button
+  const goBtn = document.getElementById('toCrossroads');
+  if(goBtn){
+    goBtn.addEventListener('click', ()=>{
+      section.classList.add('in');
+      section.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    // hiện nút sau khi cuộn khỏi đầu trang; ẩn khi đang đứng ngay tại section
+    const toggleGoBtn = ()=>{
+      const r = section.getBoundingClientRect();
+      const onSection = r.top < window.innerHeight*0.55 && r.bottom > window.innerHeight*0.25;
+      const scrolledEnough = window.scrollY > window.innerHeight*0.6;
+      goBtn.classList.toggle('show', scrolledEnough && !onSection);
+    };
+    window.addEventListener('scroll', toggleGoBtn, {passive:true});
+    toggleGoBtn();
+  }
+
+  // keys 1 / 2 / 3 — only while the crossroads section is on screen
+  document.addEventListener('keydown',(e)=>{
+    const tag=(e.target.tagName||'').toLowerCase();
+    if(tag==='input'||tag==='textarea'||e.target.isContentEditable) return;
+    if(e.altKey||e.ctrlKey||e.metaKey) return;
+    const map={'1':'A','2':'B','3':'C'};
+    if(!map[e.key]) return;
+    const r=section.getBoundingClientRect();
+    const onScreen = r.top < window.innerHeight*0.6 && r.bottom > window.innerHeight*0.3;
+    if(!onScreen) return;
+    e.preventDefault();
+    choose(map[e.key]);
+  });
+})();
 </script>
 </body>
 </html>
-
