@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Innovation Challenge 2026 — Unlock the Magic of Innovation</title>
+
+<!-- ===== SEO / Social Preview ===== -->
+<meta name="description" content="HR Innovation Challenge 2026 — Unlock the Magic of Innovation. Nơi mọi ý tưởng nhân sự hóa thành giải pháp thực chứng.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HR Innovation Challenge 2026">
+<meta property="og:title" content="HR Innovation Challenge 2026 — Unlock the Magic of Innovation">
+<meta property="og:description" content="Nơi mọi ý tưởng nhân sự hóa thành giải pháp thực chứng. Ghi danh câu chuyện của chính bạn.">
+<meta property="og:image" content="https://hrinnovationchallenge.github.io/KV34.png">
+<meta property="og:image:width" content="1448">
+<meta property="og:image:height" content="1086">
+<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="https://hrinnovationchallenge.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HR Innovation Challenge 2026 — Unlock the Magic of Innovation">
+<meta name="twitter:description" content="Nơi mọi ý tưởng nhân sự hóa thành giải pháp thực chứng.">
+<meta name="twitter:image" content="https://hrinnovationchallenge.github.io/KV34.png">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+/* ===== Vietnamese fallback fix ===== */
+@font-face{
+  font-family:'Marcellus';
+  src:local('Be Vietnam Pro'),local('Segoe UI'),local('Arial');
+  unicode-range:U+00C0-024F,U+1E00-1EFF,U+0300-036F,U+20AB;
+}
+@font-face{
+  font-family:'Cinzel';
+  src:local('Be Vietnam Pro'),local('Segoe UI'),local('Arial');
+  unicode-range:U+00C0-024F,U+1E00-1EFF,U+0300-036F,U+20AB;
+}
+
+:root{
+  --navy:#160e2e;
+  --navy-2:#1e1440;
+  --purple:#2d1b4e;
+  --purple-deep:#3a2168;
+  --plum:#4a1942;
+  --violet:#6b3fa0;
+  --violet-soft:#8a5fc0;
+  --gold:#d4a84b;
+  --gold-bright:#f0cd78;
+  --gold-deep:#a6690a;
+  --ink:#ece6fb;
+  --ink-soft:#c4b8d9;
+  --ink-dim:#9a8cc0;
+  --line:rgba(212,168,75,0.22);
+  --line-soft:rgba(255,255,255,0.08);
+  --glass:rgba(30,20,64,0.55);
+  --glass-2:rgba(45,27,78,0.5);
+  --shadow:0 18px 50px rgba(8,4,22,0.55);
+  --radius:18px;
+  --serif:'EB Garamond','Be Vietnam Pro',Georgia,serif;
+  --display:'Cormorant','EB Garamond','Be Vietnam Pro',Georgia,serif;
+  --sans:'Inter','Be Vietnam Pro','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  line-height:1.7;
+  background:var(--navy);
+  overflow-x:hidden;
+}
+
+.bg-fixed{
+  position:fixed; inset:0; z-index:-3;
+  background:url('KV34.png') center top / cover no-repeat;
+  filter:saturate(1.05);
+}
+.bg-veil{
+  position:fixed; inset:0; z-index:-2;
+  background:
+    radial-gradient(1200px 700px at 78% 12%, rgba(107,63,160,0.28), transparent 60%),
+    linear-gradient(180deg, rgba(15,8,30,0.55) 0%, rgba(15,8,30,0.82) 42%, rgba(12,6,24,0.96) 100%);
+}
+.bg-stars{position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.5;
+  background-image:
+    radial-gradient(1.5px 1.5px at 20% 30%, rgba(240,205,120,.9), transparent),
+    radial-gradient(1.5px 1.5px at 70% 60%, rgba(240,205,120,.7), transparent),
+    radial-gradient(1px 1px at 45% 80%, rgba(255,255,255,.7), transparent),
+    radial-gradient(1px 1px at 85% 25%, rgba(240,205,120,.7), transparent),
+    radial-gradient(1.5px 1.5px at 30% 65%, rgba(255,255,255,.5), transparent);
+  background-size:cover; animation:twinkle 6s ease-in-out infinite alternate;}
+@keyframes twinkle{from{opacity:.28}to{opacity:.6}}
+
+/* ============ TOP NAV ============ */
+.topbar{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 30px;
+  background:transparent;
+  backdrop-filter:none;
+  border-bottom:1px solid transparent;
+  transition:padding .3s, background .3s, border-color .3s, backdrop-filter .3s;
+}
+.topbar.solid{
+  padding:10px 30px;
+  background:linear-gradient(180deg, rgba(15,8,30,0.92), rgba(15,8,30,0.5));
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex; align-items:center; gap:12px}
+.brand .sigil{
+  width:38px; height:38px; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, var(--gold-bright), var(--gold-deep));
+  display:flex; align-items:center; justify-content:center; font-size:1.1rem;
+  box-shadow:0 0 18px rgba(212,168,75,.5);
+}
+.brand-txt b{font-family:'Marcellus',serif; font-size:.92rem; letter-spacing:1px; color:var(--gold-bright); display:block; line-height:1.1}
+.brand-txt span{font-size:.62rem; letter-spacing:2px; color:var(--ink-dim); text-transform:uppercase}
+.nav-links{display:flex; gap:4px; align-items:center}
+.nav-links a{
+  color:var(--ink-soft); text-decoration:none; font-size:.78rem; font-weight:500;
+  padding:8px 13px; border-radius:20px; transition:.2s; letter-spacing:.3px;
+}
+.nav-links a:hover{color:var(--gold-bright); background:rgba(212,168,75,.1)}
+.nav-cta{
+  background:linear-gradient(135deg,var(--gold),var(--gold-deep)) !important;
+  color:#241503 !important; font-weight:700 !important;
+  box-shadow:0 0 16px rgba(212,168,75,.4);
+}
+.nav-cta:hover{color:#241503 !important; transform:translateY(-1px)}
+.burger{display:none; background:none; border:none; color:var(--gold-bright); font-size:1.5rem; cursor:pointer}
+
+.scroll-progress{position:fixed; top:0; left:0; height:3px; z-index:101;
+  background:linear-gradient(90deg,var(--violet),var(--gold-bright)); width:0%;
+  box-shadow:0 0 10px rgba(212,168,75,.6);}
+
+.secnav{position:fixed; right:22px; bottom:24px; z-index:90; display:flex; flex-direction:column; gap:10px}
+.secnav-btn{width:46px; height:46px; border-radius:50%; cursor:pointer; font-size:1.5rem; line-height:1;
+  display:flex; align-items:center; justify-content:center; color:var(--gold-bright);
+  background:linear-gradient(160deg, rgba(30,20,64,.85), rgba(45,27,78,.7)); backdrop-filter:blur(8px);
+  border:1px solid var(--line); box-shadow:0 6px 20px rgba(8,4,22,.5);
+  transition:transform .2s, background .2s, box-shadow .2s, color .2s}
+.secnav-btn:hover{transform:translateY(-3px); color:#fff;
+  background:linear-gradient(160deg,var(--gold),var(--gold-deep));
+  box-shadow:0 0 20px rgba(212,168,75,.55)}
+.secnav-btn:active{transform:translateY(0)}
+
+.kb-hint{position:fixed; right:22px; bottom:82px; z-index:90; display:flex; align-items:center; gap:6px;
+  padding:8px 14px; border-radius:30px; font-size:.72rem; letter-spacing:.4px; color:var(--ink-soft);
+  background:rgba(20,12,42,.9); backdrop-filter:blur(8px); border:1px solid var(--line);
+  box-shadow:0 6px 20px rgba(8,4,22,.5); transition:opacity .5s, transform .5s; opacity:1; pointer-events:none}
+.kb-hint.gone{opacity:0; transform:translateY(8px)}
+.kb-hint .kbk{display:inline-flex; align-items:center; justify-content:center; min-width:20px; height:20px;
+  padding:0 5px; border-radius:5px; background:var(--purple); border:1px solid var(--line);
+  color:var(--gold-bright); font-size:.75rem; font-weight:700}
+@media(max-width:820px){.kb-hint{display:none} .secnav{right:14px; bottom:16px}}
+
+/* ============ SHARED SECTION ============ */
+section{position:relative; padding:90px 24px; max-width:1240px; margin:0 auto; scroll-margin-top:90px}
+h2.title, .lede, .quote, .wish, .hero .promise, .hero .sub, .cta-help, .banner p{text-wrap:balance}
+.reveal{opacity:0; transform:translateY(34px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1; transform:none}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Marcellus',serif; font-size:.72rem; letter-spacing:3px; text-transform:uppercase;
+  color:var(--gold); padding:6px 16px; border:1px solid var(--line); border-radius:30px;
+  background:rgba(212,168,75,.06); margin-bottom:18px;
+}
+.eyebrow::before,.eyebrow::after{content:'✦'; color:var(--gold); font-size:.6rem; opacity:.8}
+h2.title{
+  font-family:var(--serif); font-weight:700; font-size:clamp(2rem,4.5vw,3.2rem);
+  line-height:1.12; color:#fff; margin-bottom:10px; letter-spacing:.5px;
+}
+h2.title em{color:var(--gold-bright); font-style:italic}
+.lede{font-family:var(--serif); font-size:clamp(1.05rem,2vw,1.35rem); color:var(--ink-soft); font-style:italic; max-width:720px; margin-bottom:26px}
+p{color:var(--ink-soft); margin-bottom:14px}
+.mut{color:var(--ink-dim)}
+
+.gcard{
+  background:linear-gradient(160deg, var(--glass), var(--glass-2));
+  border:1px solid var(--line-soft); border-radius:var(--radius);
+  backdrop-filter:blur(12px); box-shadow:var(--shadow);
+  position:relative; overflow:hidden; transition:transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s;
+}
+.gcard::before{content:''; position:absolute; inset:0; border-radius:inherit; padding:1px;
+  background:linear-gradient(140deg, rgba(212,168,75,.5), transparent 40%, transparent 70%, rgba(212,168,75,.25));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude; opacity:.7; transition:opacity .35s}
+.gcard:hover{transform:translateY(-6px); border-color:var(--line); box-shadow:0 26px 60px rgba(8,4,22,.7)}
+.gcard:hover::before{opacity:1}
+
+/* ============ HERO ============ */
+.hero-kv{position:relative; height:100vh; width:100%; max-width:none; margin:0; padding:0;
+  background:url('KV34.png') center center / cover no-repeat;}
+.hero-kv::after{content:''; position:absolute; left:0; right:0; bottom:0; height:38vh; pointer-events:none;
+  background:linear-gradient(180deg, transparent 0%, rgba(15,8,30,0.55) 55%, rgba(12,6,24,0.98) 100%)}
+.hero-kv .scroll-hint{z-index:2; text-decoration:none}
+@media(max-width:820px){.hero-kv{background-position:72% center}}
+
+.scroll-hint{position:absolute; bottom:26px; left:50%; transform:translateX(-50%); color:var(--ink-dim);
+  font-size:.7rem; letter-spacing:2px; text-transform:uppercase; animation:bob 2s ease-in-out infinite}
+.scroll-hint span{display:block; font-size:1.2rem; margin-top:4px; color:var(--gold)}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* ============ OUR STORY ============ */
+.story-narrative{max-width:760px; margin:0 auto}
+.story-narrative p{font-size:1.02rem; line-height:1.85; color:var(--ink-soft)}
+.story-quote{margin:26px 0 8px; padding:22px 28px; border-left:3px solid var(--gold);
+  background:linear-gradient(120deg, rgba(212,168,75,.1), transparent);
+  border-radius:0 14px 14px 0; font-family:var(--serif); font-style:italic;
+  font-size:1.22rem; line-height:1.6; color:#fff}
+.story-quote b{color:var(--gold-bright); font-style:normal}
+.story-step{transition:opacity .5s ease, transform .5s ease}
+.story-section.step-0 .story-step-b{display:none}
+.story-section.step-1 .story-step-a{display:none}
+.story-step-b{animation:fadeUp .5s ease}
+.story-hint{text-align:center; margin-top:28px; font-size:.85rem; color:var(--ink-dim); animation:pulseHint 2.2s ease-in-out infinite}
+.story-hint b{color:var(--gold-bright)}
+@keyframes fadeUp{from{opacity:0; transform:translateY(26px)}to{opacity:1; transform:none}}
+
+.belief{padding:26px 24px}
+.belief .bl-top{display:flex; align-items:center; gap:12px; margin-bottom:12px}
+.belief .bl-ico{width:46px; height:46px; border-radius:12px; flex-shrink:0; display:flex; align-items:center; justify-content:center;
+  font-size:1.35rem; background:linear-gradient(135deg,var(--purple-deep),var(--plum)); border:1px solid var(--line)}
+.belief h4{font-family:'Marcellus',serif; font-size:1.15rem; color:#fff; letter-spacing:.5px}
+.belief h4 .en{display:block; font-family:'Marcellus',serif; font-size:1.15rem; color:#fff; letter-spacing:.5px; line-height:1.2}
+.belief h4 .vi{display:block; font-family:var(--sans); font-size:.82rem; font-weight:500; color:rgba(255,255,255,.62); letter-spacing:.2px; margin-top:3px}
+.belief p{font-size:.9rem; color:var(--ink-soft); margin-bottom:0}
+.sec-head{text-align:center; max-width:880px; margin:0 auto 50px}
+.sec-head .lede{margin:0 auto}
+
+/* ============ WHO / GRIDS ============ */
+.grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px}
+.grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
+@media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid-4{grid-template-columns:1fr}}
+.grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+@media(max-width:720px){.grid-2{grid-template-columns:1fr}}
+.icard{padding:30px 26px; text-align:center}
+.icard .ic-ico{font-size:2.2rem; margin-bottom:12px; display:block}
+.icard h3{font-family:var(--display); font-size:1.05rem; color:var(--gold-bright); margin-bottom:8px; letter-spacing:.5px}
+.icard h3 .en{display:block; font-family:var(--display); font-size:1.12rem; color:var(--gold-bright); letter-spacing:.6px; line-height:1.25}
+.icard h3 .vi{display:block; font-family:var(--sans); font-size:.82rem; font-weight:500; color:rgba(255,255,255,.62); letter-spacing:.2px; margin-top:3px}
+.icard p{font-size:.9rem; margin:0}
+
+/* category cards */
+.cat{padding:26px; text-align:left}
+.cat .cat-top{display:flex; align-items:center; gap:12px; margin-bottom:12px}
+.cat .cat-ico{width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+  font-size:1.4rem; background:linear-gradient(135deg,var(--purple-deep),var(--plum)); border:1px solid var(--line); flex-shrink:0}
+.cat h3{font-family:'Marcellus',serif; font-size:1rem; color:#fff; letter-spacing:.3px}
+.cat .cat-en{font-size:.82rem; color:var(--gold); font-style:italic; margin-bottom:10px; display:block}
+.cat ul{list-style:none; display:flex; flex-wrap:wrap; gap:7px}
+.cat ul li{font-size:.76rem; padding:5px 12px; border-radius:20px; background:rgba(255,255,255,.05);
+  border:1px solid var(--line-soft); color:var(--ink-soft)}
+
+/* banner */
+.banner{padding:34px 30px; text-align:center; background:
+  radial-gradient(600px 200px at 50% 0%, rgba(212,168,75,.14), transparent 70%), linear-gradient(160deg,var(--glass),var(--glass-2))}
+.pill-row.grid2x2{display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:760px; margin-inline:auto; margin-top:8px}
+@media(max-width:560px){.pill-row.grid2x2{grid-template-columns:1fr}}
+.pill{display:flex; align-items:center; gap:8px; padding:11px 18px; border-radius:14px;
+  background:rgba(255,255,255,.05); border:1px solid var(--line-soft); font-size:.85rem; color:var(--ink); text-align:left}
+.pill .pk{color:var(--gold); font-size:1rem}
+
+/* ============ VALUE FRAMEWORK ============ */
+.vframe{display:flex; flex-wrap:wrap; gap:20px; justify-content:center}
+.vf-card{padding:28px 26px; flex:1 1 300px; max-width:340px}
+.vf-card:nth-child(4), .vf-card:nth-child(5){flex:1 1 440px; max-width:520px}
+@media(max-width:900px){
+  .vf-card, .vf-card:nth-child(4), .vf-card:nth-child(5){flex:1 1 260px; max-width:none}
+}
+@media(max-width:560px){.vf-card{flex:1 1 100%}}
+.vf-card .vfh{display:flex; align-items:center; gap:12px; margin-bottom:14px}
+.vf-card .vfh .vfi{width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+  font-size:1.5rem; flex-shrink:0}
+.vf-card.human .vfi{background:linear-gradient(135deg,var(--violet),var(--violet-soft))}
+.vf-card.biz .vfi{background:linear-gradient(135deg,var(--plum),var(--violet))}
+.vf-card.strat .vfi{background:linear-gradient(135deg,var(--gold-deep),var(--gold))}
+.vf-card.people .vfi{background:linear-gradient(135deg,#3a2168,#8a5fc0)}
+.vf-card.govern .vfi{background:linear-gradient(135deg,#1e4d5c,#3a9bb5)}
+.vf-card h3{font-family:'Marcellus',serif; font-size:1.05rem; color:#fff; line-height:1.2}
+.vf-card .vf-desc{font-size:.88rem; color:var(--ink-soft); margin:14px 0 0; line-height:1.55}
+
+/* ============ JOURNEY / ROUNDS ============ */
+.rounds{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:22px; margin-top:12px}
+.round{padding:0; overflow:hidden; display:flex; flex-direction:column}
+.round .r-top{padding:24px 26px 20px; position:relative; border-top:4px solid transparent}
+.round.r1{border-color:rgba(138,95,192,.35)}
+.round.r1 .r-top{background:linear-gradient(160deg, rgba(138,95,192,.55), rgba(74,25,66,.25)); border-top-color:var(--violet-soft)}
+.round.r1 .r-badge{color:#c9aef0}
+.round.r2{border-color:rgba(74,25,66,.45)}
+.round.r2 .r-top{background:linear-gradient(160deg, rgba(74,25,66,.7), rgba(45,27,78,.35)); border-top-color:var(--plum)}
+.round.r2 .r-badge{color:#e6a0c8}
+.round.r3{border-color:rgba(212,168,75,.4)}
+.round.r3 .r-top{background:linear-gradient(160deg, rgba(212,168,75,.5), rgba(166,105,10,.28)); border-top-color:var(--gold)}
+.round.r3 .r-badge{color:var(--gold-bright)}
+.round .r-badge{font-family:'Marcellus',serif; font-size:.68rem; letter-spacing:2px; text-transform:uppercase}
+.round .r-emoji{font-size:2.4rem; display:block; margin:6px 0}
+.round h3{font-family:'Marcellus',serif; font-size:1.12rem; color:#fff; letter-spacing:.3px; white-space:nowrap}
+.round .r-unlock{color:var(--gold-bright); font-family:var(--serif); font-style:italic; font-size:1.05rem; margin-top:2px}
+.round .r-body{padding:22px 26px 26px; flex:1; display:flex; flex-direction:column}
+.round .r-flow{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:14px}
+.round .r-flow span{font-size:.75rem; font-weight:600; padding:5px 11px; border-radius:8px;
+  background:rgba(212,168,75,.12); color:var(--gold-bright); border:1px solid var(--line)}
+.round .r-flow i{color:var(--ink-dim); font-style:normal}
+.round .r-formbox{display:inline-flex; align-self:flex-start; align-items:center; gap:8px; padding:5px 12px; margin-bottom:14px;
+  border-radius:8px; background:rgba(212,168,75,.12); border:1px solid var(--line); color:var(--gold-bright);
+  font-size:.78rem; font-weight:600}
+.round .r-body p{font-size:.88rem}
+.round .r-foot{margin-top:auto; padding-top:14px; border-top:1px solid var(--line-soft);
+  font-size:.82rem; color:var(--gold-bright); font-weight:600}
+.r-milestones{margin-top:14px; padding:12px 14px; border-radius:12px;
+  background:rgba(212,168,75,.07); border:1px solid var(--line); display:flex; flex-direction:column; gap:10px}
+.r-milestones .ms{display:flex; align-items:flex-start; gap:10px}
+.r-milestones .ms-dot{width:9px; height:9px; border-radius:50%; margin-top:6px; flex-shrink:0;
+  background:radial-gradient(circle at 35% 30%,var(--gold-bright),var(--gold-deep)); box-shadow:0 0 8px rgba(212,168,75,.6)}
+.r-milestones .ms b{display:block; font-family:'Marcellus',serif; font-size:.9rem; color:var(--gold-bright); letter-spacing:.3px}
+.r-milestones .ms span{display:block; font-size:.78rem; color:var(--ink-soft); line-height:1.4}
+.round ul{margin:8px 0 8px 2px; list-style:none}
+.round ul li{font-size:.86rem; padding-left:20px; position:relative; margin-bottom:5px}
+.round ul li::before{content:'✦'; position:absolute; left:0; color:var(--gold); font-size:.7rem; top:4px}
+
+/* ============ REWARDS ============ */
+.podium{display:flex; align-items:flex-end; justify-content:center; gap:18px; margin:20px 0 34px; flex-wrap:wrap}
+.pod{flex:1; min-width:180px; max-width:240px; text-align:center; border-radius:16px 16px 0 0; padding:26px 18px;
+  position:relative; transition:transform .35s}
+.pod:hover{transform:translateY(-8px)}
+.pod .pm{font-size:2rem}
+.pod .pr{font-family:'Marcellus',serif; font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.8rem; margin:6px 0; color:#fff}
+.pod .pv{font-family:'Marcellus',serif; font-size:1.5rem; font-weight:800; color:#fff}
+.pod .pu{font-size:.68rem; opacity:.85; color:#fff}
+.pod.gold{background:linear-gradient(160deg,var(--gold),var(--gold-deep)); min-height:230px; box-shadow:0 0 34px rgba(212,168,75,.45)}
+.pod.silver{background:linear-gradient(160deg,#9aa4b0,#5c6470); min-height:190px}
+.pod.bronze{background:linear-gradient(160deg,#c07a44,#7d4420); min-height:160px}
+.special-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:18px}
+.sp-award{grid-column:span 3; padding:18px 20px; display:flex; align-items:center; gap:13px; transition:.3s}
+.sp-award:nth-child(5),.sp-award:nth-child(6),.sp-award:nth-child(7){grid-column:span 4}
+@media(max-width:1000px){
+  .special-grid{grid-template-columns:repeat(2,1fr)}
+  .sp-award,.sp-award:nth-child(n){grid-column:span 1}
+}
+@media(max-width:560px){.special-grid{grid-template-columns:1fr}}
+.sp-award .spa-ico{font-size:1.5rem}
+
+.reward-sub{text-align:center; font-family:'Marcellus',serif; color:var(--gold-bright); letter-spacing:1px; font-size:1.15rem; margin-bottom:6px}
+.reward-layout{display:flex; gap:30px; align-items:flex-start; justify-content:center; transition:gap .6s ease}
+.reward-podium-col{flex:1; max-width:820px; transition:max-width .6s ease, flex-basis .6s ease}
+.podium-note{text-align:center; margin-top:-10px}
+.podium-hint{text-align:center; margin-top:20px; font-size:.85rem; color:var(--ink-dim); animation:pulseHint 2.2s ease-in-out infinite}
+.podium-hint b{color:var(--gold-bright)}
+@keyframes pulseHint{0%,100%{opacity:.5}50%{opacity:1}}
+.reward-extra-col{flex:1.2; min-width:0; opacity:0; max-width:0; overflow:hidden; transform:translateX(20px);
+  transition:opacity .6s ease, transform .6s ease, max-width .6s ease}
+
+.reward-section.step-0 .reward-podium-col{flex-basis:100%; margin:0 auto}
+.reward-section.step-0 .reward-extra-col{flex:0; max-width:0; opacity:0; padding:0; pointer-events:none}
+
+.reward-section.step-1{padding-top:70px; padding-bottom:40px}
+.reward-section.step-1 .sec-head{margin-bottom:24px}
+.reward-section.step-1 .reward-podium-col{flex:0 0 240px; max-width:240px}
+.reward-section.step-1 .podium{flex-direction:column; flex-wrap:nowrap; align-items:stretch; gap:10px; margin:0 0 12px; transform:none}
+.reward-section.step-1 .podium .pod.gold{order:1}
+.reward-section.step-1 .podium .pod.silver{order:2}
+.reward-section.step-1 .podium .pod.bronze{order:3}
+.reward-section.step-1 .pod{min-width:0; max-width:none; min-height:0 !important; width:100%;
+  border-radius:12px; padding:11px 16px; display:flex; align-items:center; column-gap:14px; text-align:left}
+.reward-section.step-1 .pod:hover{transform:translateX(3px)}
+.reward-section.step-1 .pod .pm{font-size:1.7rem; flex-shrink:0}
+.reward-section.step-1 .pod .pod-info{text-align:left}
+.reward-section.step-1 .pod .pr{margin:0 0 1px; font-size:.68rem}
+.reward-section.step-1 .pod .pv{font-size:1.2rem; line-height:1.05}
+.reward-section.step-1 .pod .pu{font-size:.6rem; margin-top:1px; opacity:.85}
+.reward-section.step-1 .podium-note{font-size:.68rem; line-height:1.45; margin-top:0; color:var(--ink-dim)}
+.reward-section.step-1 .podium-hint{display:none}
+.reward-section.step-1 .reward-extra-col{flex:1.3; max-width:820px; opacity:1; transform:none; pointer-events:auto}
+.reward-section.step-1 .reward-sub{font-size:1rem; margin-bottom:2px}
+.reward-section.step-1 .reward-extra-col .mut{font-size:.78rem; margin-bottom:10px !important}
+.reward-section.step-1 .special-grid{grid-template-columns:repeat(2,1fr); gap:10px}
+.reward-section.step-1 .special-grid .sp-award:nth-child(n){grid-column:auto}
+.reward-section.step-1 .sp-award{padding:11px 14px; gap:10px}
+.reward-section.step-1 .sp-award .spa-ico{font-size:1.2rem}
+.reward-section.step-1 .sp-award .spa-name{font-size:.82rem}
+.reward-section.step-1 .sp-award .spa-desc{font-size:.68rem}
+.reward-section.step-1 .sp-award .spa-amt{font-size:.85rem}
+.sp-award .spa-name{font-weight:700; color:#fff; font-size:.9rem; display:block}
+.sp-award .spa-desc{font-size:.76rem; color:var(--ink-dim)}
+.sp-award .spa-amt{margin-left:auto; font-family:'Marcellus',serif; font-weight:700; color:var(--gold-bright); font-size:.95rem; white-space:nowrap}
+
+/* ============ FINAL CTA ============ */
+.finalcta{text-align:center; padding:90px 24px 100px}
+.btn-mega{
+  position:relative; display:inline-flex; align-items:center; justify-content:center; gap:14px;
+  margin:34px auto 40px; padding:15px 40px; border-radius:44px; text-decoration:none; cursor:pointer;
+  background:linear-gradient(135deg, var(--gold-bright) 0%, var(--gold) 45%, var(--gold-deep) 100%);
+  background-size:200% 100%;
+  box-shadow:0 0 0 1px rgba(255,255,255,.25) inset, 0 0 22px rgba(240,205,120,.4), 0 12px 34px rgba(166,105,10,.42);
+  overflow:hidden; isolation:isolate;
+  animation:megaPulse 2.8s ease-in-out infinite, megaHue 6s ease infinite;
+}
+.btn-mega::before{
+  content:''; position:absolute; inset:-2px; border-radius:inherit; z-index:-1;
+  background:conic-gradient(from 0deg, transparent 0deg, rgba(240,205,120,.9) 60deg, transparent 140deg,
+             rgba(138,95,192,.8) 220deg, transparent 300deg, rgba(240,205,120,.9) 360deg);
+  filter:blur(7px); opacity:.7; animation:megaSpin 5s linear infinite;
+}
+.btn-mega::after{
+  content:''; position:absolute; top:0; left:-60%; width:45%; height:100%;
+  background:linear-gradient(100deg, transparent, rgba(255,255,255,.7), transparent);
+  transform:skewX(-18deg); animation:megaSweep 3.6s ease-in-out infinite;
+}
+.btn-mega .mega-inner{display:inline-flex; align-items:center; gap:11px; position:relative; z-index:2}
+.btn-mega .mega-ico{font-size:1.25rem}
+.btn-mega .mega-lines{display:flex; flex-direction:column; align-items:center; gap:2px; line-height:1.15}
+.btn-mega .mega-txt{
+  font-family:'Marcellus',serif; font-weight:700; letter-spacing:1.2px;
+  font-size:1.02rem; color:#241503; text-transform:uppercase;
+}
+.btn-mega .mega-spark{position:relative; z-index:2; font-size:.85rem; color:#fff8e6; animation:megaTwinkle 1.8s ease-in-out infinite}
+.btn-mega .mega-spark-r{animation-delay:.9s}
+.btn-mega:hover{transform:translateY(-3px) scale(1.02)}
+@keyframes megaPulse{0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 0 22px rgba(240,205,120,.38),0 12px 34px rgba(166,105,10,.42)}
+  50%{box-shadow:0 0 0 1px rgba(255,255,255,.3) inset,0 0 34px rgba(240,205,120,.62),0 12px 34px rgba(166,105,10,.46)}}
+@keyframes megaHue{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+@keyframes megaSpin{to{transform:rotate(360deg)}}
+@keyframes megaSweep{0%{left:-60%}55%,100%{left:130%}}
+@keyframes megaTwinkle{0%,100%{opacity:.5; transform:scale(.85)}50%{opacity:1; transform:scale(1.15)}}
+
+.road-card{padding:22px 40px 30px; margin-top:0}
+.road-wrap{position:relative; display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding-top:56px}
+.road-end{text-align:center; flex-shrink:0; width:140px; z-index:3}
+.road-end .road-flag{font-size:1.7rem; margin-bottom:4px}
+.road-end b{display:block; font-family:'Marcellus',serif; color:#fff; font-size:1rem}
+.road-end span{font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--ink-dim)}
+.road-end.left{text-align:left}
+.road-end.right{text-align:right}
+
+.road-track{position:absolute; left:150px; right:150px; top:96px; height:12px; border-radius:20px;
+  background:rgba(255,255,255,.08); border:1px solid var(--line-soft);
+  background-image:repeating-linear-gradient(90deg, rgba(212,168,75,.35) 0 14px, transparent 14px 30px)}
+.road-fill{position:absolute; left:0; top:-1px; bottom:-1px; width:0%; border-radius:20px;
+  background:linear-gradient(90deg, var(--gold-deep), var(--gold-bright)); transition:width 1s ease}
+.road-gate{position:absolute; top:50%; left:0%; transform:translate(-50%,-50%); z-index:3; text-align:center}
+.road-gate .gate-pin{width:12px; height:12px; border-radius:50%; margin:0 auto; background:#fff; border:2px solid var(--navy)}
+.road-gate .gate-label{position:absolute; top:16px; left:50%; transform:translateX(-50%); white-space:nowrap}
+.road-gate .gate-label b{display:block; font-family:'Marcellus',serif; font-size:.72rem; color:#c9aef0}
+.road-gate .gate-label span{display:block; font-size:.6rem; text-transform:uppercase; color:var(--ink-dim)}
+.road-here{position:absolute; top:50%; left:0%; transform:translate(-50%,-50%); z-index:4; transition:left 1s ease}
+.road-here .here-bubble{position:absolute; bottom:20px; left:50%; transform:translateX(-50%); white-space:nowrap;
+  background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep)); color:#241503; font-weight:800;
+  font-size:.74rem; padding:5px 12px; border-radius:20px}
+.road-here .here-pin{width:20px; height:20px; border-radius:50%; background:#fff; border:3px solid var(--navy)}
+
+.countdown{text-align:center; margin-top:38px; padding-top:24px; border-top:1px solid var(--line-soft)}
+.cd-label{font-size:.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--ink-dim); margin-bottom:12px}
+.cd-timer{display:flex; align-items:center; justify-content:center; gap:10px}
+.cd-unit{display:flex; flex-direction:column; align-items:center; min-width:64px;
+  background:linear-gradient(160deg, rgba(45,27,78,.6), rgba(30,20,64,.5)); border:1px solid var(--line);
+  border-radius:12px; padding:10px 6px}
+.cd-unit b{font-family:'Marcellus',serif; font-size:1.9rem; color:var(--gold-bright); line-height:1}
+.cd-unit span{font-size:.62rem; text-transform:uppercase; letter-spacing:1px; color:var(--ink-dim); margin-top:4px}
+.cd-sep{font-family:'Marcellus',serif; font-size:1.6rem; color:var(--gold); opacity:.6; margin-top:-8px}
+.countdown.state-open .cd-label{color:var(--gold-bright)}
+.countdown.state-closed .cd-timer{display:none}
+.countdown.state-closed .cd-label{font-size:1.05rem; color:#ffb3bd}
+
+@media(max-width:720px){
+  .road-wrap{flex-direction:column; align-items:stretch; gap:8px; padding-top:0}
+  .road-end{width:auto; display:flex; align-items:center; gap:10px; text-align:left}
+  .road-end.right{text-align:left}
+  .road-track, .road-here{display:none}
+  .cd-unit{min-width:54px}
+  .cd-unit b{font-size:1.5rem}
+}
+
+/* ============ TIMELINE ============ */
+.tlx{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:26px; position:relative}
+.tlx-col{position:relative; z-index:1; display:flex; flex-direction:column;
+  background:linear-gradient(160deg, var(--glass), var(--glass-2));
+  border:1px solid var(--line-soft); border-radius:var(--radius); backdrop-filter:blur(12px);
+  box-shadow:var(--shadow); overflow:hidden}
+.tlx-head{display:flex; align-items:center; gap:14px; padding:20px 22px; border-bottom:1px solid var(--line-soft)}
+.tlx-head .tlx-emoji{width:52px; height:52px; flex-shrink:0; border-radius:14px; display:flex; align-items:center;
+  justify-content:center; font-size:1.7rem; border:1px solid var(--line)}
+.tlx-head.r1 .tlx-emoji{background:linear-gradient(135deg,var(--violet),var(--violet-soft))}
+.tlx-head.r2 .tlx-emoji{background:linear-gradient(135deg,var(--plum),var(--violet))}
+.tlx-head.r3 .tlx-emoji{background:linear-gradient(135deg,var(--gold-deep),var(--gold))}
+.tlx-head .tlx-badge{display:block; font-family:'Marcellus',serif; font-size:.68rem; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--gold)}
+.tlx-head h3{font-family:'Marcellus',serif; font-size:1.08rem; color:#fff; letter-spacing:.3px; line-height:1.2}
+
+.tlx-body{position:relative; padding:20px 22px 24px 22px}
+.tlx-step{position:relative; display:flex; gap:14px; padding-bottom:18px}
+.tlx-step:last-child{padding-bottom:0}
+.tlx-step .tlx-dot{position:relative; z-index:1; width:14px; height:14px; margin-top:5px; flex-shrink:0; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,var(--gold-bright),var(--gold-deep)); border:2px solid var(--navy)}
+.tlx-step b{display:block; font-family:'Marcellus',serif; color:var(--gold-bright); font-size:.92rem; letter-spacing:.4px}
+.tlx-step p{font-size:.84rem; margin:2px 0 0; line-height:1.5; color:var(--ink-soft)}
+@media(max-width:860px){.tlx{grid-template-columns:1fr; gap:16px}}
+
+/* ============ FOOTER ============ */
+footer{text-align:center; padding:40px 24px 60px; border-top:1px solid var(--line-soft); margin-top:20px}
+footer .f-sig{font-family:'Marcellus',serif; color:var(--gold); letter-spacing:2px; font-size:.85rem}
+footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
+.ornament{text-align:center; color:var(--gold); opacity:.6; font-size:1.1rem; letter-spacing:8px; margin:0 auto}
+
+/* ============ MOBILE OVERRIDE ============ */
+@media(max-width:900px){
+  .reveal, .tlx-col, .story-step, .reward-section, .reward-layout, .reward-extra-col, .reward-podium-col, .reward-section .podium, .reward-section .pod{
+    transition:none !important; animation:none !important;
+  }
+  .reveal, .tlx-col{opacity:1 !important; transform:none !important}
+  .story-section .story-step-a, .story-section .story-step-b{display:block !important}
+  .reward-layout{flex-direction:column !important; gap:20px !important; align-items:stretch !important}
+  .reward-section .reward-podium-col, .reward-section .reward-extra-col{
+    flex:1 1 auto !important; max-width:100% !important; width:100% !important; opacity:1 !important; transform:none !important; overflow:visible !important;
+  }
+  .reward-section .podium{
+    flex-direction:column !important; flex-wrap:nowrap !important; align-items:stretch !important; gap:12px !important; margin:16px 0 14px !important;
+  }
+  .reward-section .podium .pod{
+    width:100% !important; min-height:0 !important; height:auto !important; display:flex !important; flex-direction:row !important;
+    align-items:center !important; column-gap:16px !important; text-align:left !important; padding:14px 18px !important; border-radius:14px !important;
+  }
+  .reward-section .podium .pod.gold{order:1 !important}
+  .reward-section .podium .pod.silver{order:2 !important}
+  .reward-section .podium .pod.bronze{order:3 !important}
+  .reward-section .special-grid{grid-template-columns:1fr !important; gap:12px !important}
+  .secnav, .kb-hint, .story-hint, .podium-hint{display:none !important}
+  .nav-links{position:fixed; top:66px; right:14px; left:14px; flex-direction:column; align-items:stretch;
+    background:rgba(20,12,42,.97); backdrop-filter:blur(14px); border:1px solid var(--line); border-radius:16px;
+    padding:12px; gap:4px; transform:translateY(-14px); opacity:0; pointer-events:none; transition:.28s}
+  .nav-links.open{transform:none; opacity:1; pointer-events:auto}
+  .burger{display:block}
+  section{padding:64px 18px}
+}
+</style>
+</head>
+<body>
+<div class="bg-fixed"></div>
+<div class="bg-veil"></div>
+<div class="bg-stars"></div>
+<div class="scroll-progress" id="prog"></div>
+
+<div class="secnav">
+  <button class="secnav-btn" id="navPrev" aria-label="Section trước">‹</button>
+  <button class="secnav-btn" id="navNext" aria-label="Section kế">›</button>
+</div>
+<div class="kb-hint" id="kbHint">
+  <span class="kbk">←</span><span class="kbk">→</span> để chuyển section
+</div>
+
+<div class="topbar" id="topbar">
+  <div class="brand">
+    <div class="sigil">🪄</div>
+    <div class="brand-txt"><b>HR Innovation Challenge</b><span>2026 · Unlock the Magic</span></div>
+  </div>
+  <button class="burger" id="burger" aria-label="menu">☰</button>
+  <nav class="nav-links" id="navlinks">
+    <a href="#story">Our Story</a>
+    <a href="#who">Who can enter</a>
+    <a href="#journey">The Journey</a>
+    <a href="#rewards">Rewards</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#submit" class="nav-cta">Submit ✦</a>
+  </nav>
+</div>
+
+<header class="hero-kv">
+  <a href="#story" class="scroll-hint" aria-label="scroll down">Scroll to begin<span>⌄</span></a>
+</header>
+
+<!-- ============ OUR STORY ============ -->
+<section id="story" class="reveal story-section step-0" data-steps="2">
+  <div class="story-step story-step-a">
+    <div class="sec-head">
+      <div class="eyebrow">The Calling</div>
+      <h2 class="title">Why this challenge, <em>why now?</em></h2>
+    </div>
+    <div class="story-narrative">
+      <p>Thế giới phù thủy HR đang chuyển mình với những kỳ vọng lớn chưa từng thấy: tốc độ nhanh hơn, trí tuệ nhân tạo nhạy bén hơn, và trải nghiệm làm việc ấm áp hơn.</p>
+      <p>Trong góc làm việc mỗi ngày, biết bao thần chú tự động hóa, bao sáng kiến tối ưu đã được các phù thủy tài năng chế tác, nhưng vẫn ngủ quên nơi ngăn kéo cá nhân.</p>
+      <blockquote class="story-quote"><b>HR Innovation Challenge 2026</b> được khai mở không phải để tạo thêm một phong trào nhất thời. Đây là cánh cổng để hóa giải những <b>vướng mắc nhức nhối</b> thành <b>giải pháp thực chứng</b>, đưa những giá trị thầm lặng bước ra ánh sáng.</blockquote>
+    </div>
+    <p class="story-hint">Bấm <b>›</b> để xem The Philosophy</p>
+  </div>
+
+  <div class="story-step story-step-b">
+    <div class="sec-head">
+      <div class="eyebrow">The Philosophy</div>
+      <h2 class="title">What we <em>believe in</em></h2>
+    </div>
+    <div class="grid-3">
+      <div class="gcard belief">
+        <div class="bl-top"><span class="bl-ico">⚖️</span><h4><span class="en">Meritocracy</span><span class="vi">Thực tài</span></h4></div>
+        <p>Không cần phép thuật hoa mỹ hay những bài thuyết trình bóng bẩy. Phép màu khởi sinh từ việc giải quyết trọn vẹn một bài toán có thật.</p>
+      </div>
+      <div class="gcard belief">
+        <div class="bl-top"><span class="bl-ico">🤍</span><h4><span class="en">Caring</span><span class="vi">Nhân văn</span></h4></div>
+        <p>Xóa bỏ rào cản thủ tục rườm rà, khuyến khích các phù thủy trẻ thử nghiệm và hợp tác. Ghi nhận mọi nỗ lực đóng góp thực chất.</p>
+      </div>
+      <div class="gcard belief">
+        <div class="bl-top"><span class="bl-ico">💫</span><h4><span class="en">Value-Driven</span><span class="vi">Thực giá trị</span></h4></div>
+        <p>Thước đo nằm ở câu hỏi giản dị: <em>"Điều gì quanh bạn đã/sẽ thực sự trở nên tốt đẹp hơn nhờ giải pháp này?"</em>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ WHO CAN JOIN ============ -->
+<section id="who" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">Who Can Enter</div>
+    <h2 class="title">The Challenge welcomes <em>every Wizard</em></h2>
+    <p class="lede">Dù bạn là một ẩn sĩ độc hành hay một biệt đội đồng lòng, cánh cổng luôn mở rộng.</p>
+  </div>
+  <div class="grid-4">
+    <div class="gcard icard"><span class="ic-ico">👤</span><h3><span class="en">Solo Mage</span><span class="vi">Độc hành</span></h3><p>Mang solution của riêng bạn đến ghi danh.</p></div>
+    <div class="gcard icard"><span class="ic-ico">👥</span><h3><span class="en">The Fellowship</span><span class="vi">Hợp lực</span></h3><p>Lập team tối đa 5 thành viên. Kết hợp đa góc nhìn, ghép các mảnh ghép chuyên môn để cùng phá đảo bài toán lớn.</p></div>
+    <div class="gcard icard"><span class="ic-ico">♾️</span><h3><span class="en">No Limits</span><span class="vi">Không giới hạn</span></h3><p>Không giới hạn số sáng kiến mỗi cá nhân hay đội nhóm có thể gửi về.</p></div>
+    <div class="gcard icard"><span class="ic-ico">🌱</span><h3><span class="en">Any Scale</span><span class="vi">Mọi quy mô</span></h3><p>Một cải tiến tiết kiệm 5 phút mỗi ngày cho một nhóm nhỏ cũng có thể là khởi đầu diệu kỳ để nhân rộng mai sau.</p></div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ INNOVATION CATEGORY ============ -->
+<section id="kind" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">What We're Looking For</div>
+    <h2 class="title">Countless ways to <em>create magic</em></h2>
+    <p class="lede">Innovation không chỉ là AI hay một sản phẩm công nghệ.</p>
+  </div>
+  <div class="grid-2">
+    <div class="gcard cat">
+      <div class="cat-top"><div class="cat-ico">🔄</div><h3>Process & Ways of Working</h3></div>
+      <span class="cat-en">Thuật Biến Hình Quy Trình biến những quy trình rườm rà thành dòng chảy thông suốt, giản đơn và chuẩn xác.</span>
+      <ul><li>Rút ngắn thời gian xử lý</li><li>Giảm bước thừa</li><li>Giảm sai sót</li></ul>
+    </div>
+    <div class="gcard cat">
+      <div class="cat-top"><div class="cat-ico">🛠️</div><h3>Tools & Technology</h3></div>
+      <span class="cat-en">Bùa Chú Công Nghệ khai mở sức mạnh công nghệ để giải phóng sức lao động cho các phù thủy.</span>
+      <ul><li>AI</li><li>PowerAutomate</li><li>PowerApp</li><li>Dashboard</li></ul>
+    </div>
+    <div class="gcard cat">
+      <div class="cat-top"><div class="cat-ico">🎓</div><h3>Capability & Knowledge</h3></div>
+      <span class="cat-en">Cây tri thức nâng tầm năng lực các phù thủy thông qua đúc kết cẩm nang, khung năng lực hoặc phương pháp học tập mới.</span>
+      <ul><li>Learning solution</li><li>Playbook</li><li>Knowledge hub</li><li>Capability framework</li></ul>
+    </div>
+    <div class="gcard cat">
+      <div class="cat-top"><div class="cat-ico">📋</div><h3>HR Regulations & Policies</h3></div>
+      <span class="cat-en">Tái tạo các quy chuẩn, mang triết lý thực tài nhân văn thấm sâu vào từng quy định, chính sách nhân sự.</span>
+      <ul><li>Cải tiến quy định, chính sách</li><li>Đề xuất quy định, chính sách mới</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUE FRAMEWORK ============ -->
+<section id="value" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">The Crystals of Power</div>
+    <h2 class="title">What does <em>value</em> look like? — The 5 <em>OneHR Values Categories</em></h2>
+  </div>
+  <div class="vframe">
+    <div class="gcard vf-card biz">
+      <div class="vfh"><div class="vfi">📈</div><div><h3>Business Performance Impact</h3></div></div>
+      <p class="vf-desc">Sáng kiến có đóng góp trực tiếp hoặc gián tiếp vào kết quả kinh doanh chung không?</p>
+    </div>
+    <div class="gcard vf-card strat">
+      <div class="vfh"><div class="vfi">⚡</div><div><h3>Productivity &amp; Efficiency</h3></div></div>
+      <p class="vf-desc">Sáng kiến có giúp tăng tốc độ, nâng cao chất lượng công việc hoặc tối ưu chi phí vận hành không?</p>
+    </div>
+    <div class="gcard vf-card human">
+      <div class="vfh"><div class="vfi">💖</div><div><h3>Employee Experience &amp; Engagement</h3></div></div>
+      <p class="vf-desc">Sáng kiến có cải thiện cảm nhận và trải nghiệm thực tế của CBNV không?</p>
+    </div>
+    <div class="gcard vf-card people">
+      <div class="vfh"><div class="vfi">🌟</div><div><h3>Leadership &amp; Talent Sustainability</h3></div></div>
+      <p class="vf-desc">Sáng kiến có giúp củng cố và phát triển năng lực của đội ngũ lãnh đạo và năng lực tổ chức trước các cơ hội hoặc thách thức không?</p>
+    </div>
+    <div class="gcard vf-card govern">
+      <div class="vfh"><div class="vfi">🛡️</div><div><h3>Governance &amp; Data Excellence</h3></div></div>
+      <p class="vf-desc">Sáng kiến có tăng cường kiểm soát tuân thủ, giảm thiểu rủi ro hoặc hỗ trợ ra quyết định dựa trên dữ liệu không?</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ EXISTING SOLUTIONS ============ -->
+<section id="existing" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">The Hidden Treasures</div>
+    <h2 class="title">Already creating value? <em>Bring it in.</em></h2>
+  </div>
+  <div class="gcard banner">
+    <p style="max-width:680px; margin-inline:auto">Giải pháp của bạn đã âm thầm thành hình và phát huy tác dụng? Đó là một lợi thế. Đừng để bảo vật nằm trong góc.</p>
+    <div class="pill-row grid2x2">
+      <div class="pill"><span class="pk">✦</span>Innovation phát triển / ra mắt trong 2026</div>
+      <div class="pill"><span class="pk">✦</span>Innovation đã được triển khai trước Challenge</div>
+      <div class="pill"><span class="pk">✦</span>Innovation mang tính chiến lược của Khối</div>
+      <div class="pill"><span class="pk">✦</span>Innovation từng nhận giải Flame – AI Spot Award</div>
+    </div>
+    <p style="margin-top:22px; max-width:640px; margin-inline:auto" class="mut">Hãy mang bằng chứng về việc 'mọi thứ đã thực sự tốt hơn như thế nào' đến đây để tiếp lửa, nhân rộng quy mô và nhận sự ghi nhận xứng đáng nhất.</p>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ THE JOURNEY ============ -->
+<section id="journey" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">The Journey</div>
+    <h2 class="title">Three rounds. <em>Three unlocks.</em></h2>
+  </div>
+  <div class="rounds">
+    <div class="gcard round r1">
+      <div class="r-top">
+        <div class="r-badge">Round 1</div>
+        <span class="r-emoji">🎩</span>
+        <h3>The Sorting Hat</h3>
+        <div class="r-unlock">Unlock Your Idea</div>
+      </div>
+      <div class="r-body">
+        <div class="r-formbox"><span class="rf-ico">📝</span><span>Nộp idea qua <b>Microsoft Form</b></span></div>
+        <p>Thả ý tưởng của bạn vào Chiếc Nón Phân Loại với 3 nội dung:</p>
+        <ul><li>Problem đáng giải quyết</li><li>Solution có logic</li><li>Value đủ rõ để tiếp tục phát triển</li></ul>
+        <div class="r-milestones">
+          <div class="ms"><span class="ms-dot"></span><div><b>14 – 27 / 09</b><span>Mở &amp; đóng cổng nộp Innovation Case</span></div></div>
+        </div>
+        <div class="r-foot">✨ Qualified Innovations unlock Early Recognition.</div>
+      </div>
+    </div>
+
+    <div class="gcard round r2">
+      <div class="r-top">
+        <div class="r-badge">Round 2</div>
+        <span class="r-emoji">⚗️</span>
+        <h3>The Chamber of Innovation</h3>
+        <div class="r-unlock">Unlock Your Solution</div>
+      </div>
+      <div class="r-body">
+        <div class="r-flow"><span>Develop & Validate Idea</span><i>→</i><span>Pitching</span></div>
+        <p>Bước vào không gian phát triển, kiểm chứng giả thuyết bằng dữ liệu và mài giũa sản phẩm để sẵn sàng cho vòng tranh tài vào Top 5.</p>
+        <div class="r-milestones">
+          <div class="ms"><span class="ms-dot"></span><div><b>05 – 18 / 10</b><span>2 tuần Develop · Test · Validate solution</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>~ 21 – 22 / 10</b><span>Pitch + Demo + Q&amp;A → chọn Top 5</span></div></div>
+        </div>
+        <div class="r-foot">🏅 Các solution nổi bật nhất được chọn vào Top 5.</div>
+      </div>
+    </div>
+
+    <div class="gcard round r3">
+      <div class="r-top">
+        <div class="r-badge">Round 3</div>
+        <span class="r-emoji">🏆</span>
+        <h3>The Final Quest</h3>
+        <div class="r-unlock">Unlock Your Impact</div>
+      </div>
+      <div class="r-body">
+        <div class="r-flow"><span>Finalise Presentation</span><i>→</i><span>Live Pitching</span></div>
+        <p>Top 5 chuẩn bị bước lên sân khấu Grand Finale, trình diễn trước hội đồng thẩm định và khắc tên trên Đài Vinh Danh.</p>
+        <div class="r-milestones">
+          <div class="ms"><span class="ms-dot"></span><div><b>23 – 29 / 10</b><span>1 tuần hoàn thiện solution</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>~ 30 – 31 / 10</b><span>Grand Finale · Pitch · Demo · Awards</span></div></div>
+        </div>
+        <div class="r-foot">🔥 Prove the value. Show the impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ REWARDS ============ -->
+<section id="rewards" class="reveal reward-section step-0" data-steps="2">
+  <div class="sec-head">
+    <div class="eyebrow">Rewards Framework</div>
+    <h2 class="title">Greater value <em>unlocks greater recognition</em></h2>
+  </div>
+  <div class="reward-layout">
+    <div class="reward-podium-col">
+      <div class="podium">
+        <div class="pod silver"><div class="pm">🥈</div><div class="pod-info"><div class="pr">Giải Nhì</div><div class="pv">10–20</div><div class="pu">TRIỆU VND</div></div></div>
+        <div class="pod gold"><div class="pm">🥇</div><div class="pod-info"><div class="pr">Giải Nhất</div><div class="pv">20–40</div><div class="pu">TRIỆU VND</div></div></div>
+        <div class="pod bronze"><div class="pm">🥉</div><div class="pod-info"><div class="pr">Giải Ba</div><div class="pv">5–10</div><div class="pu">TRIỆU VND</div></div></div>
+      </div>
+      <p class="podium-note mut">Mức thưởng cụ thể do Hội đồng Chung kết quyết định dựa trên chất lượng của các submission.</p>
+      <p class="podium-hint">Bấm <b>›</b> để xem thêm các giải phụ &amp; Early Recognition</p>
+    </div>
+
+    <div class="reward-extra-col">
+      <h3 class="reward-sub">✨ Special Awards</h3>
+      <div class="special-grid">
+        <div class="gcard sp-award"><span class="spa-ico">🏆</span><div><span class="spa-name">Most Innovative</span><span class="spa-desc">Solution sáng tạo nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">💎</span><div><span class="spa-name">Highest Value</span><span class="spa-desc">Value nổi bật nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">👍</span><div><span class="spa-name">People’s Choice</span><span class="spa-desc">Bình chọn online cao nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🐣</span><div><span class="spa-name">Chíp Chíp Choice</span><span class="spa-desc">2 Chíp yêu thích nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🌱</span><div><span class="spa-name">Rising Star</span><span class="spa-desc">Solution mới có tiềm năng lớn</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🤝</span><div><span class="spa-name">Inclusive</span><span class="spa-desc">Team cross-function nổi bật nhất</span></div><span class="spa-amt">1M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🔥</span><div><span class="spa-name">Most Engaged Function</span><span class="spa-desc">Tỷ lệ tham gia Vòng 1 cao nhất</span></div><span class="spa-amt">5M</span></div>
+      </div>
+
+      <h3 class="reward-sub" style="margin-top:26px">✨ Early Recognition</h3>
+      <p class="mut" style="margin-bottom:16px">Ghi nhận ngay tại Vòng 1 cho mỗi Innovation được Qualified — không cần đợi tới Chung kết.</p>
+      <div class="special-grid">
+        <div class="gcard sp-award"><span class="spa-ico">🥇</span><div><span class="spa-name">05 Qualified đầu tiên</span><span class="spa-desc">Ghi nhận ngay tại Vòng 1</span></div><span class="spa-amt">500K</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">✨</span><div><span class="spa-name">Các Qualified tiếp theo</span><span class="spa-desc">Mỗi Innovation được Qualified (cut off top 40)</span></div><span class="spa-amt">200K</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="submit" class="finalcta reveal">
+  <div class="eyebrow">Ready to Unlock Your Idea?</div>
+  <h2 class="title">The Time <em>Is Now</em></h2>
+  <p style="max-width:680px; margin:0 auto; font-size:1.05rem">Mọi phép màu vĩ đại đều từng bắt đầu từ một sự bất tiện chưa ai thay đổi. Các phù thủy đã <b style="color:var(--gold-bright)">sẵn sàng để bước ra ánh sáng và ghi danh câu chuyện của chính mình?.</b></p>
+
+  <a href="https://forms.cloud.microsoft/r/igpZ5dnhdY" target="_blank" rel="noopener noreferrer" class="btn-mega" id="submitBtn">
+    <span class="mega-spark mega-spark-l">✦</span>
+    <span class="mega-inner">
+      <span class="mega-ico">🎩</span>
+      <span class="mega-lines">
+        <span class="mega-txt">Click HERE to Submit</span>
+      </span>
+    </span>
+    <span class="mega-spark mega-spark-r">✦</span>
+  </a>
+
+  <div class="gcard road-card">
+    <div class="road-wrap">
+      <div class="road-end left">
+        <div class="road-flag">🚀</div>
+        <b>11/09/2026</b><span>Kickoff cuộc thi</span>
+      </div>
+      <div class="road-end right">
+        <div class="road-flag">🎩</div>
+        <b>27/09/2026</b><span>Đóng đơn Vòng 1</span>
+      </div>
+      <div class="road-track">
+        <div class="road-fill" id="roadFill"></div>
+        <div class="road-gate" id="roadGate">
+          <div class="gate-pin"></div>
+          <div class="gate-label"><b>📝 09:00 · 14/09</b><span>Mở đơn</span></div>
+        </div>
+        <div class="road-here" id="roadHere">
+          <div class="here-bubble">📍 We are here</div>
+          <div class="here-pin"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="cd-label" id="cdLabel">Còn lại để nộp Innovation Case</div>
+      <div class="cd-timer" id="cdTimer">
+        <div class="cd-unit"><b id="cdD">--</b><span>ngày</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><b id="cdH">--</b><span>giờ</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><b id="cdM">--</b><span>phút</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><b id="cdS">--</b><span>giây</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament reveal">✦ ⟡ ✦</div>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline" class="reveal">
+  <div class="sec-head">
+    <div class="eyebrow">The Magic Calendar</div>
+    <h2 class="title">When does <em>the magic happen?</em></h2>
+    <p class="lede">Mark your journey.</p>
+  </div>
+
+  <div class="tlx">
+    <div class="tlx-col reveal">
+      <div class="tlx-head r1">
+        <span class="tlx-emoji">🎩</span>
+        <div>
+          <span class="tlx-badge">Chặng 1 · Sep</span>
+          <h3>The Sorting Hat</h3>
+        </div>
+      </div>
+      <div class="tlx-body">
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>11 SEP</b><p>Kickoff cuộc thi — công bố Challenge</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>14 SEP · 09:00</b><p>The Gates Open — mở cổng nhận Innovation Case</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>27 SEP</b><p>The Sorting Hat Closes — deadline submission Vòng 1</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>28 SEP – 04 OCT</b><p>Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
+      </div>
+    </div>
+
+    <div class="tlx-col reveal">
+      <div class="tlx-head r2">
+        <span class="tlx-emoji">⚗️</span>
+        <div>
+          <span class="tlx-badge">Chặng 2 · Oct</span>
+          <h3>The Chamber of Innovation</h3>
+        </div>
+      </div>
+      <div class="tlx-body">
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>05 – 18 OCT</b><p>The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~21 – 22 OCT</b><p>Pitch &amp; Demo Day — chọn Top 5</p></div></div>
+      </div>
+    </div>
+
+    <div class="tlx-col reveal">
+      <div class="tlx-head r3">
+        <span class="tlx-emoji">🏆</span>
+        <div>
+          <span class="tlx-badge">Chặng 3 · Oct</span>
+          <h3>The Final Quest</h3>
+        </div>
+      </div>
+      <div class="tlx-body">
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>23 – 29 OCT</b><p>The Final Quest — Top 5 hoàn thiện solution</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~30 / 31 OCT</b><p>Grand Finale — Pitch · Q&amp;A · Trao thưởng</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ornament">✦ ⟡ ✦</div>
+  <p class="f-sig" style="margin-top:16px">HR INNOVATION CHALLENGE · 2026</p>
+  <p>Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.</p>
+</footer>
+
+<script>
+if('scrollRestoration' in history){history.scrollRestoration='manual';}
+
+const safeStorage={
+  get(k){try{return sessionStorage.getItem(k);}catch(e){return null;}},
+  set(k,v){try{sessionStorage.setItem(k,v);}catch(e){}}
+};
+
+window.addEventListener('load',()=>{
+  if(location.hash){history.replaceState(null,'',location.pathname+location.search);}
+  const y=safeStorage.get('scrollY');
+  if(y!==null) window.scrollTo(0, parseFloat(y));
+});
+window.addEventListener('beforeunload',()=>safeStorage.set('scrollY', window.scrollY));
+
+const prog=document.getElementById('prog'), topbar=document.getElementById('topbar');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  prog.style.width=(window.scrollY/h*100)+'%';
+  topbar.classList.toggle('solid', window.scrollY>60);
+},{passive:true});
+
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal,.tl').forEach(el=>io.observe(el));
+
+const burger=document.getElementById('burger'), navlinks=document.getElementById('navlinks');
+burger.addEventListener('click',()=>navlinks.classList.toggle('open'));
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',(e)=>{
+    const id=a.getAttribute('href');
+    if(id.length<2) return;
+    const target=document.querySelector(id);
+    if(!target) return;
+    e.preventDefault();
+    target.classList.add('in');
+    target.querySelectorAll('.reveal,.tl').forEach(el=>el.classList.add('in'));
+    target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+
+const stops = [document.querySelector('.hero-kv'), ...document.querySelectorAll('section')].filter(Boolean);
+
+function revealStop(el){
+  el.classList.add('in');
+  el.querySelectorAll('.reveal,.tl').forEach(x=>x.classList.add('in'));
+}
+function currentStopIndex(){
+  const mid = window.scrollY + window.innerHeight*0.35;
+  let idx = 0;
+  stops.forEach((el,i)=>{ if(el.offsetTop <= mid) idx = i; });
+  return idx;
+}
+function goToStop(i){
+  i = Math.max(0, Math.min(stops.length-1, i));
+  const el = stops[i];
+  if(el.hasAttribute('data-steps')) setStep(el,0);
+  revealStop(el);
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function getStepState(el){
+  const total=parseInt(el.getAttribute('data-steps')||'1',10);
+  let cur=0;
+  for(let i=0;i<total;i++){ if(el.classList.contains('step-'+i)) cur=i; }
+  return {total,cur};
+}
+function setStep(el,i){
+  const total=parseInt(el.getAttribute('data-steps')||'1',10);
+  for(let k=0;k<total;k++) el.classList.remove('step-'+k);
+  el.classList.add('step-'+i);
+}
+function inViewStop(){ return stops[currentStopIndex()]; }
+
+function nextStop(){
+  const el=inViewStop();
+  if(el && el.hasAttribute('data-steps')){
+    const {total,cur}=getStepState(el);
+    if(cur < total-1){ setStep(el,cur+1); el.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+  }
+  goToStop(currentStopIndex()+1);
+}
+function prevStop(){
+  const el=inViewStop();
+  if(el && el.hasAttribute('data-steps')){
+    const {cur}=getStepState(el);
+    if(cur > 0){ setStep(el,cur-1); el.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+  }
+  goToStop(currentStopIndex()-1);
+}
+
+document.addEventListener('keydown',(e)=>{
+  const tag=(e.target.tagName||'').toLowerCase();
+  if(tag==='input'||tag==='textarea'||e.target.isContentEditable) return;
+  if(e.altKey||e.ctrlKey||e.metaKey) return;
+  const nextKeys=['ArrowRight','ArrowDown','PageDown'];
+  const prevKeys=['ArrowLeft','ArrowUp','PageUp'];
+  if(nextKeys.includes(e.key) || (e.key===' ' && !e.shiftKey)){ e.preventDefault(); nextStop(); }
+  else if(prevKeys.includes(e.key) || (e.key===' ' && e.shiftKey)){ e.preventDefault(); prevStop(); }
+});
+
+document.getElementById('navPrev').addEventListener('click', prevStop);
+document.getElementById('navNext').addEventListener('click', nextStop);
+
+const kbHint=document.getElementById('kbHint');
+function hideHint(){ if(kbHint) kbHint.classList.add('gone'); }
+['keydown','wheel'].forEach(ev=>document.addEventListener(ev,hideHint,{once:true}));
+setTimeout(hideHint, 7000);
+
+/* scroll-driven step reveal */
+(function(){
+  const isDesktop = ()=> window.matchMedia('(min-width:901px)').matches;
+  const TOP_TOLERANCE = 80;
+  const COOLDOWN_MS = 950;
+  let cooldown=false, cooldownUntil=0;
+
+  function activeStepSection(){
+    for(const el of document.querySelectorAll('[data-steps]')){
+      const r=el.getBoundingClientRect();
+      const parkedTop = Math.abs(r.top) <= TOP_TOLERANCE && r.bottom > window.innerHeight*0.5;
+      const {cur}=getStepState(el);
+      const onScreen = r.top < window.innerHeight*0.6 && r.bottom > window.innerHeight*0.4;
+      if(parkedTop || (cur > 0 && onScreen)) return el;
+    }
+    return null;
+  }
+
+  window.addEventListener('wheel',(e)=>{
+    if(!isDesktop()) return;
+    if(Date.now() < cooldownUntil){ e.preventDefault(); return; }
+    const el=activeStepSection();
+    if(!el) return;
+
+    const {total,cur}=getStepState(el);
+    const down = e.deltaY > 0;
+    const canStepFwd  = down && cur < total-1;
+    const canStepBack = !down && cur > 0;
+    if(!canStepFwd && !canStepBack) return;
+
+    if(Math.abs(e.deltaY) < 6) { e.preventDefault(); return; }
+    e.preventDefault();
+    if(cooldown) return;
+    cooldown=true;
+    cooldownUntil = Date.now() + COOLDOWN_MS;
+    setStep(el, down ? cur+1 : cur-1);
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+    setTimeout(()=>{ cooldown=false; }, COOLDOWN_MS);
+  }, {passive:false});
+})();
+
+/* countdown & timeline tracker */
+(function(){
+  const KICKOFF = new Date('2026-09-11T00:00:00');
+  const OPEN    = new Date('2026-09-14T09:00:00');
+  const CLOSE   = new Date('2026-09-27T23:59:59');
+  const fill=document.getElementById('roadFill');
+  const here=document.getElementById('roadHere');
+  const gate=document.getElementById('roadGate');
+  const cd=document.getElementById('countdown');
+  const cdLabel=document.getElementById('cdLabel');
+  const elD=document.getElementById('cdD'), elH=document.getElementById('cdH'),
+        elM=document.getElementById('cdM'), elS=document.getElementById('cdS');
+  if(!fill||!cd) return;
+  const pad=n=>String(n).padStart(2,'0');
+
+  const gatePct = Math.max(0, Math.min(100, (OPEN-KICKOFF)/(CLOSE-KICKOFF)*100));
+  if(gate) gate.style.left = gatePct + '%';
+
+  function diff(ms){
+    const s=Math.floor(ms/1000);
+    elD.textContent=Math.floor(s/86400);
+    elH.textContent=pad(Math.floor(s%86400/3600));
+    elM.textContent=pad(Math.floor(s%3600/60));
+    elS.textContent=pad(s%60);
+  }
+
+  function tick(){
+    const now=new Date();
+    let pct=(now-KICKOFF)/(CLOSE-KICKOFF)*100;
+    pct=Math.max(0,Math.min(100,pct));
+    fill.style.width=pct+'%';
+    if(here) here.style.left=pct+'%';
+
+    if(now < OPEN){
+      cd.className='countdown';
+      cdLabel.textContent='📝 Cổng nộp đơn mở sau';
+      diff(OPEN-now);
+    } else if(now <= CLOSE){
+      cd.className='countdown state-open';
+      cdLabel.textContent='⏳ Còn lại để nộp Innovation Case';
+      diff(CLOSE-now);
+    } else {
+      cd.className='countdown state-closed';
+      cdLabel.textContent='🎩 Cổng nộp Vòng 1 đã đóng — hẹn gặp ở Chamber!';
+    }
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* submit button */
+(function(){
+  var btn=document.getElementById('submitBtn');
+  if(!btn) return;
+  var FORM_URL='https://forms.cloud.microsoft/r/igpZ5dnhdY';
+  btn.addEventListener('click',function(e){
+    try{
+      var w=window.open(FORM_URL,'_blank','noopener');
+      if(w){ e.preventDefault(); }
+    }catch(err){}
+  });
+})();
+</script>
+</body>
+</html>
