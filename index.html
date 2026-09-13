@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HR Innovation Challenge 2026 — Unlock the Magic of Innovation</title>
+<title id="pageTitle">HR Innovation Challenge 2026 — Unlock the Magic of Innovation</title>
 
 <!-- ===== SEO / Social Preview ===== -->
 <meta name="description" content="HR Innovation Challenge 2026 — Unlock the Magic of Innovation. Nơi mọi ý tưởng nhân sự hóa thành giải pháp thực chứng.">
@@ -130,6 +130,28 @@ body{
   box-shadow:0 0 16px rgba(212,168,75,.4);
 }
 .nav-cta:hover{color:#241503 !important; transform:translateY(-1px)}
+
+/* Language Switcher Styling */
+.topbar-actions{display:flex; align-items:center; gap:12px}
+.lang-switch{
+  display:inline-flex; align-items:center; gap:2px;
+  background:rgba(26,16,56,0.85); border:1px solid var(--line);
+  border-radius:20px; padding:3px 4px; box-shadow:0 4px 14px rgba(0,0,0,0.3);
+}
+.lang-btn{
+  background:none; border:none; color:var(--ink-dim);
+  font-family:'Marcellus',serif; font-size:0.75rem; font-weight:700;
+  letter-spacing:.5px; cursor:pointer; padding:4px 9px;
+  border-radius:14px; transition:all .2s ease;
+}
+.lang-btn:hover{color:var(--gold-bright)}
+.lang-btn.active{
+  background:linear-gradient(135deg,var(--gold),var(--gold-deep));
+  color:#241503; font-weight:800;
+  box-shadow:0 0 10px rgba(212,168,75,.5);
+}
+.lang-divider{color:var(--line); font-size:0.7rem; opacity:.7}
+
 .burger{display:none; background:none; border:none; color:var(--gold-bright); font-size:1.5rem; cursor:pointer}
 
 .scroll-progress{position:fixed; top:0; left:0; height:3px; z-index:101;
@@ -548,62 +570,73 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   <button class="secnav-btn" id="navPrev" aria-label="Section trước">‹</button>
   <button class="secnav-btn" id="navNext" aria-label="Section kế">›</button>
 </div>
-<div class="kb-hint" id="kbHint">
+<div class="kb-hint" id="kbHint" data-i18n="kb_hint">
   <span class="kbk">←</span><span class="kbk">→</span> để chuyển section
 </div>
 
 <div class="topbar" id="topbar">
   <div class="brand">
     <div class="sigil">🪄</div>
-    <div class="brand-txt"><b>HR Innovation Challenge</b><span>2026 · Unlock the Magic</span></div>
+    <div class="brand-txt"><b>HR Innovation Challenge</b><span data-i18n="brand_sub">2026 · Unlock the Magic</span></div>
   </div>
-  <button class="burger" id="burger" aria-label="menu">☰</button>
+  
+  <div class="topbar-actions">
+    <!-- Language Switcher -->
+    <div class="lang-switch" id="langSwitch">
+      <button type="button" class="lang-btn active" data-lang="vi">VI</button>
+      <span class="lang-divider">/</span>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    
+    <button class="burger" id="burger" aria-label="menu">☰</button>
+  </div>
+
   <nav class="nav-links" id="navlinks">
-    <a href="#story">Our Story</a>
-    <a href="#who">Who can enter</a>
-    <a href="#journey">The Journey</a>
-    <a href="#rewards">Rewards</a>
-    <a href="#timeline">Timeline</a>
-    <a href="#submit" class="nav-cta">Submit ✦</a>
+    <a href="#story" data-i18n="nav_story">Our Story</a>
+    <a href="#who" data-i18n="nav_who">Who can enter</a>
+    <a href="#journey" data-i18n="nav_journey">The Journey</a>
+    <a href="#rewards" data-i18n="nav_rewards">Rewards</a>
+    <a href="#timeline" data-i18n="nav_timeline">Timeline</a>
+    <a href="#submit" class="nav-cta" data-i18n="nav_submit">Submit ✦</a>
   </nav>
 </div>
 
 <header class="hero-kv">
-  <a href="#story" class="scroll-hint" aria-label="scroll down">Scroll to begin<span>⌄</span></a>
+  <a href="#story" class="scroll-hint" aria-label="scroll down" data-i18n="scroll_hint">Scroll to begin<span>⌄</span></a>
 </header>
 
 <!-- ============ OUR STORY ============ -->
 <section id="story" class="reveal story-section step-0" data-steps="2">
   <div class="story-step story-step-a">
     <div class="sec-head">
-      <div class="eyebrow">The Calling</div>
-      <h2 class="title">Why this challenge, <em>why now?</em></h2>
+      <div class="eyebrow" data-i18n="story_a_eyebrow">The Calling</div>
+      <h2 class="title" data-i18n="story_a_title">Why this challenge, <em>why now?</em></h2>
     </div>
     <div class="story-narrative">
-      <p>Thế giới phù thủy HR đang chuyển mình với những kỳ vọng lớn chưa từng thấy: tốc độ nhanh hơn, trí tuệ nhân tạo nhạy bén hơn, và trải nghiệm làm việc ấm áp hơn.</p>
-      <p>Trong góc làm việc mỗi ngày, biết bao thần chú tự động hóa, bao sáng kiến tối ưu đã được các phù thủy tài năng chế tác, nhưng vẫn ngủ quên nơi ngăn kéo cá nhân.</p>
-      <blockquote class="story-quote"><b>HR Innovation Challenge 2026</b> được khai mở không phải để tạo thêm một phong trào nhất thời. Đây là cánh cổng để hóa giải những <b>vướng mắc nhức nhối</b> thành <b>giải pháp thực chứng</b>, đưa những giá trị thầm lặng bước ra ánh sáng.</blockquote>
+      <p data-i18n="story_p1">Thế giới phù thủy HR đang chuyển mình với những kỳ vọng lớn chưa từng thấy: tốc độ nhanh hơn, trí tuệ nhân tạo nhạy bén hơn, và trải nghiệm làm việc ấm áp hơn.</p>
+      <p data-i18n="story_p2">Trong góc làm việc mỗi ngày, biết bao thần chú tự động hóa, bao sáng kiến tối ưu đã được các phù thủy tài năng chế tác, nhưng vẫn ngủ quên nơi ngăn kéo cá nhân.</p>
+      <blockquote class="story-quote" data-i18n="story_quote"><b>HR Innovation Challenge 2026</b> được khai mở không phải để tạo thêm một phong trào nhất thời. Đây là cánh cổng để hóa giải những <b>vướng mắc nhức nhối</b> thành <b>giải pháp thực chứng</b>, đưa những giá trị thầm lặng bước ra ánh sáng.</blockquote>
     </div>
-    <p class="story-hint">Bấm <b>›</b> để xem The Philosophy</p>
+    <p class="story-hint" data-i18n="story_hint">Bấm <b>›</b> để xem The Philosophy</p>
   </div>
 
   <div class="story-step story-step-b">
     <div class="sec-head">
-      <div class="eyebrow">The Philosophy</div>
-      <h2 class="title">What we <em>believe in</em></h2>
+      <div class="eyebrow" data-i18n="story_b_eyebrow">The Philosophy</div>
+      <h2 class="title" data-i18n="story_b_title">What we <em>believe in</em></h2>
     </div>
     <div class="grid-3">
       <div class="gcard belief">
-        <div class="bl-top"><span class="bl-ico">⚖️</span><h4><span class="en">Meritocracy</span><span class="vi">Thực tài</span></h4></div>
-        <p>Không cần phép thuật hoa mỹ hay những bài thuyết trình bóng bẩy. Phép màu khởi sinh từ việc giải quyết trọn vẹn một bài toán có thật.</p>
+        <div class="bl-top"><span class="bl-ico">⚖️</span><h4><span class="en">Meritocracy</span><span class="vi" data-i18n="belief_1_sub">Thực tài</span></h4></div>
+        <p data-i18n="belief_1_desc">Không cần phép thuật hoa mỹ hay những bài thuyết trình bóng bẩy. Phép màu khởi sinh từ việc giải quyết trọn vẹn một bài toán có thật.</p>
       </div>
       <div class="gcard belief">
-        <div class="bl-top"><span class="bl-ico">🤍</span><h4><span class="en">Caring</span><span class="vi">Nhân văn</span></h4></div>
-        <p>Xóa bỏ rào cản thủ tục rườm rà, khuyến khích các phù thủy trẻ thử nghiệm và hợp tác. Ghi nhận mọi nỗ lực đóng góp thực chất.</p>
+        <div class="bl-top"><span class="bl-ico">🤍</span><h4><span class="en">Caring</span><span class="vi" data-i18n="belief_2_sub">Nhân văn</span></h4></div>
+        <p data-i18n="belief_2_desc">Xóa bỏ rào cản thủ tục rườm rà, khuyến khích các phù thủy trẻ thử nghiệm và hợp tác. Ghi nhận mọi nỗ lực đóng góp thực chất.</p>
       </div>
       <div class="gcard belief">
-        <div class="bl-top"><span class="bl-ico">💫</span><h4><span class="en">Value-Driven</span><span class="vi">Thực giá trị</span></h4></div>
-        <p>Thước đo nằm ở câu hỏi giản dị: <em>"Điều gì quanh bạn đã/sẽ thực sự trở nên tốt đẹp hơn nhờ giải pháp này?"</em>.</p>
+        <div class="bl-top"><span class="bl-ico">💫</span><h4><span class="en">Value-Driven</span><span class="vi" data-i18n="belief_3_sub">Thực giá trị</span></h4></div>
+        <p data-i18n="belief_3_desc">Thước đo nằm ở câu hỏi giản dị: <em>"Điều gì quanh bạn đã/sẽ thực sự trở nên tốt đẹp hơn nhờ giải pháp này?"</em>.</p>
       </div>
     </div>
   </div>
@@ -614,15 +647,31 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ WHO CAN JOIN ============ -->
 <section id="who" class="reveal">
   <div class="sec-head">
-    <div class="eyebrow">Who Can Enter</div>
-    <h2 class="title">The Challenge welcomes <em>every Wizard</em></h2>
-    <p class="lede">Dù bạn là một ẩn sĩ độc hành hay một biệt đội đồng lòng, cánh cổng luôn mở rộng.</p>
+    <div class="eyebrow" data-i18n="who_eyebrow">Who Can Enter</div>
+    <h2 class="title" data-i18n="who_title">The Challenge welcomes <em>every Wizard</em></h2>
+    <p class="lede" data-i18n="who_lede">Dù bạn là một ẩn sĩ độc hành hay một biệt đội đồng lòng, cánh cổng luôn mở rộng.</p>
   </div>
   <div class="grid-4">
-    <div class="gcard icard"><span class="ic-ico">👤</span><h3><span class="en">Solo Mage</span><span class="vi">Độc hành</span></h3><p>Mang solution của riêng bạn đến ghi danh.</p></div>
-    <div class="gcard icard"><span class="ic-ico">👥</span><h3><span class="en">The Fellowship</span><span class="vi">Hợp lực</span></h3><p>Lập team tối đa 5 thành viên. Kết hợp đa góc nhìn, ghép các mảnh ghép chuyên môn để cùng phá đảo bài toán lớn.</p></div>
-    <div class="gcard icard"><span class="ic-ico">♾️</span><h3><span class="en">No Limits</span><span class="vi">Không giới hạn</span></h3><p>Không giới hạn số sáng kiến mỗi cá nhân hay đội nhóm có thể gửi về.</p></div>
-    <div class="gcard icard"><span class="ic-ico">🌱</span><h3><span class="en">Any Scale</span><span class="vi">Mọi quy mô</span></h3><p>Một cải tiến tiết kiệm 5 phút mỗi ngày cho một nhóm nhỏ cũng có thể là khởi đầu diệu kỳ để nhân rộng mai sau.</p></div>
+    <div class="gcard icard">
+      <span class="ic-ico">👤</span>
+      <h3><span class="en">Solo Mage</span><span class="vi" data-i18n="who_c1_sub">Độc hành</span></h3>
+      <p data-i18n="who_c1_p">Mang solution của riêng bạn đến ghi danh.</p>
+    </div>
+    <div class="gcard icard">
+      <span class="ic-ico">👥</span>
+      <h3><span class="en">The Fellowship</span><span class="vi" data-i18n="who_c2_sub">Hợp lực</span></h3>
+      <p data-i18n="who_c2_p">Lập team tối đa 5 thành viên. Kết hợp đa góc nhìn, ghép các mảnh ghép chuyên môn để cùng phá đảo bài toán lớn.</p>
+    </div>
+    <div class="gcard icard">
+      <span class="ic-ico">♾️</span>
+      <h3><span class="en">No Limits</span><span class="vi" data-i18n="who_c3_sub">Không giới hạn</span></h3>
+      <p data-i18n="who_c3_p">Không giới hạn số sáng kiến mỗi cá nhân hay đội nhóm có thể gửi về.</p>
+    </div>
+    <div class="gcard icard">
+      <span class="ic-ico">🌱</span>
+      <h3><span class="en">Any Scale</span><span class="vi" data-i18n="who_c4_sub">Mọi quy mô</span></h3>
+      <p data-i18n="who_c4_p">Một cải tiến tiết kiệm 5 phút mỗi ngày cho một nhóm nhỏ cũng có thể là khởi đầu diệu kỳ để nhân rộng mai sau.</p>
+    </div>
   </div>
 </section>
 
@@ -631,30 +680,37 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ INNOVATION CATEGORY ============ -->
 <section id="kind" class="reveal">
   <div class="sec-head">
-    <div class="eyebrow">What We're Looking For</div>
-    <h2 class="title">Countless ways to <em>create magic</em></h2>
-    <p class="lede">Innovation không chỉ là AI hay một sản phẩm công nghệ.</p>
+    <div class="eyebrow" data-i18n="kind_eyebrow">What We're Looking For</div>
+    <h2 class="title" data-i18n="kind_title">Countless ways to <em>create magic</em></h2>
+    <p class="lede" data-i18n="kind_lede">Innovation không chỉ là AI hay một sản phẩm công nghệ.</p>
   </div>
   <div class="grid-2">
     <div class="gcard cat">
-      <div class="cat-top"><div class="cat-ico">🔄</div><h3>Process & Ways of Working</h3></div>
-      <span class="cat-en">Thuật Biến Hình Quy Trình biến những quy trình rườm rà thành dòng chảy thông suốt, giản đơn và chuẩn xác.</span>
-      <ul><li>Rút ngắn thời gian xử lý</li><li>Giảm bước thừa</li><li>Giảm sai sót</li></ul>
+      <div class="cat-top"><div class="cat-ico">🔄</div><h3 data-i18n="cat_1_title">Process &amp; Ways of Working</h3></div>
+      <span class="cat-en" data-i18n="cat_1_desc">Thuật Biến Hình Quy Trình biến những quy trình rườm rà thành dòng chảy thông suốt, giản đơn và chuẩn xác.</span>
+      <ul>
+        <li data-i18n="cat_1_li1">Rút ngắn thời gian xử lý</li>
+        <li data-i18n="cat_1_li2">Giảm bước thừa</li>
+        <li data-i18n="cat_1_li3">Giảm sai sót</li>
+      </ul>
     </div>
     <div class="gcard cat">
-      <div class="cat-top"><div class="cat-ico">🛠️</div><h3>Tools & Technology</h3></div>
-      <span class="cat-en">Bùa Chú Công Nghệ khai mở sức mạnh công nghệ để giải phóng sức lao động cho các phù thủy.</span>
+      <div class="cat-top"><div class="cat-ico">🛠️</div><h3 data-i18n="cat_2_title">Tools &amp; Technology</h3></div>
+      <span class="cat-en" data-i18n="cat_2_desc">Bùa Chú Công Nghệ khai mở sức mạnh công nghệ để giải phóng sức lao động cho các phù thủy.</span>
       <ul><li>AI</li><li>PowerAutomate</li><li>PowerApp</li><li>Dashboard</li></ul>
     </div>
     <div class="gcard cat">
-      <div class="cat-top"><div class="cat-ico">🎓</div><h3>Capability & Knowledge</h3></div>
-      <span class="cat-en">Cây tri thức nâng tầm năng lực các phù thủy thông qua đúc kết cẩm nang, khung năng lực hoặc phương pháp học tập mới.</span>
+      <div class="cat-top"><div class="cat-ico">🎓</div><h3 data-i18n="cat_3_title">Capability &amp; Knowledge</h3></div>
+      <span class="cat-en" data-i18n="cat_3_desc">Cây tri thức nâng tầm năng lực các phù thủy thông qua đúc kết cẩm nang, khung năng lực hoặc phương pháp học tập mới.</span>
       <ul><li>Learning solution</li><li>Playbook</li><li>Knowledge hub</li><li>Capability framework</li></ul>
     </div>
     <div class="gcard cat">
-      <div class="cat-top"><div class="cat-ico">📋</div><h3>HR Regulations & Policies</h3></div>
-      <span class="cat-en">Tái tạo các quy chuẩn, mang triết lý thực tài nhân văn thấm sâu vào từng quy định, chính sách nhân sự.</span>
-      <ul><li>Cải tiến quy định, chính sách</li><li>Đề xuất quy định, chính sách mới</li></ul>
+      <div class="cat-top"><div class="cat-ico">📋</div><h3 data-i18n="cat_4_title">HR Regulations &amp; Policies</h3></div>
+      <span class="cat-en" data-i18n="cat_4_desc">Tái tạo các quy chuẩn, mang triết lý thực tài nhân văn thấm sâu vào từng quy định, chính sách nhân sự.</span>
+      <ul>
+        <li data-i18n="cat_4_li1">Cải tiến quy định, chính sách</li>
+        <li data-i18n="cat_4_li2">Đề xuất quy định, chính sách mới</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -662,29 +718,29 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ VALUE FRAMEWORK ============ -->
 <section id="value" class="reveal">
   <div class="sec-head">
-    <div class="eyebrow">The Crystals of Power</div>
-    <h2 class="title">What does <em>value</em> look like? — The 5 <em>OneHR Values Categories</em></h2>
+    <div class="eyebrow" data-i18n="value_eyebrow">The Crystals of Power</div>
+    <h2 class="title" data-i18n="value_title">What does <em>value</em> look like? — The 5 <em>OneHR Values Categories</em></h2>
   </div>
   <div class="vframe">
     <div class="gcard vf-card biz">
-      <div class="vfh"><div class="vfi">📈</div><div><h3>Business Performance Impact</h3></div></div>
-      <p class="vf-desc">Sáng kiến có đóng góp trực tiếp hoặc gián tiếp vào kết quả kinh doanh chung không?</p>
+      <div class="vfh"><div class="vfi">📈</div><div><h3 data-i18n="val_1_title">Business Performance Impact</h3></div></div>
+      <p class="vf-desc" data-i18n="val_1_desc">Sáng kiến có đóng góp trực tiếp hoặc gián tiếp vào kết quả kinh doanh chung không?</p>
     </div>
     <div class="gcard vf-card strat">
-      <div class="vfh"><div class="vfi">⚡</div><div><h3>Productivity &amp; Efficiency</h3></div></div>
-      <p class="vf-desc">Sáng kiến có giúp tăng tốc độ, nâng cao chất lượng công việc hoặc tối ưu chi phí vận hành không?</p>
+      <div class="vfh"><div class="vfi">⚡</div><div><h3 data-i18n="val_2_title">Productivity &amp; Efficiency</h3></div></div>
+      <p class="vf-desc" data-i18n="val_2_desc">Sáng kiến có giúp tăng tốc độ, nâng cao chất lượng công việc hoặc tối ưu chi phí vận hành không?</p>
     </div>
     <div class="gcard vf-card human">
-      <div class="vfh"><div class="vfi">💖</div><div><h3>Employee Experience &amp; Engagement</h3></div></div>
-      <p class="vf-desc">Sáng kiến có cải thiện cảm nhận và trải nghiệm thực tế của CBNV không?</p>
+      <div class="vfh"><div class="vfi">💖</div><div><h3 data-i18n="val_3_title">Employee Experience &amp; Engagement</h3></div></div>
+      <p class="vf-desc" data-i18n="val_3_desc">Sáng kiến có cải thiện cảm nhận và trải nghiệm thực tế của CBNV không?</p>
     </div>
     <div class="gcard vf-card people">
-      <div class="vfh"><div class="vfi">🌟</div><div><h3>Leadership &amp; Talent Sustainability</h3></div></div>
-      <p class="vf-desc">Sáng kiến có giúp củng cố và phát triển năng lực của đội ngũ lãnh đạo và năng lực tổ chức trước các cơ hội hoặc thách thức không?</p>
+      <div class="vfh"><div class="vfi">🌟</div><div><h3 data-i18n="val_4_title">Leadership &amp; Talent Sustainability</h3></div></div>
+      <p class="vf-desc" data-i18n="val_4_desc">Sáng kiến có giúp củng cố và phát triển năng lực của đội ngũ lãnh đạo và năng lực tổ chức trước các cơ hội hoặc thách thức không?</p>
     </div>
     <div class="gcard vf-card govern">
-      <div class="vfh"><div class="vfi">🛡️</div><div><h3>Governance &amp; Data Excellence</h3></div></div>
-      <p class="vf-desc">Sáng kiến có tăng cường kiểm soát tuân thủ, giảm thiểu rủi ro hoặc hỗ trợ ra quyết định dựa trên dữ liệu không?</p>
+      <div class="vfh"><div class="vfi">🛡️</div><div><h3 data-i18n="val_5_title">Governance &amp; Data Excellence</h3></div></div>
+      <p class="vf-desc" data-i18n="val_5_desc">Sáng kiến có tăng cường kiểm soát tuân thủ, giảm thiểu rủi ro hoặc hỗ trợ ra quyết định dựa trên dữ liệu không?</p>
     </div>
   </div>
 </section>
@@ -694,18 +750,18 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ EXISTING SOLUTIONS ============ -->
 <section id="existing" class="reveal">
   <div class="sec-head">
-    <div class="eyebrow">The Hidden Treasures</div>
-    <h2 class="title">Already creating value? <em>Bring it in.</em></h2>
+    <div class="eyebrow" data-i18n="exist_eyebrow">The Hidden Treasures</div>
+    <h2 class="title" data-i18n="exist_title">Already creating value? <em>Bring it in.</em></h2>
   </div>
   <div class="gcard banner">
-    <p style="max-width:680px; margin-inline:auto">Giải pháp của bạn đã âm thầm thành hình và phát huy tác dụng? Đó là một lợi thế. Đừng để bảo vật nằm trong góc.</p>
+    <p style="max-width:680px; margin-inline:auto" data-i18n="exist_p1">Giải pháp của bạn đã âm thầm thành hình và phát huy tác dụng? Đó là một lợi thế. Đừng để bảo vật nằm trong góc.</p>
     <div class="pill-row grid2x2">
-      <div class="pill"><span class="pk">✦</span>Innovation phát triển / ra mắt trong 2026</div>
-      <div class="pill"><span class="pk">✦</span>Innovation đã được triển khai trước Challenge</div>
-      <div class="pill"><span class="pk">✦</span>Innovation mang tính chiến lược của Khối</div>
-      <div class="pill"><span class="pk">✦</span>Innovation từng nhận giải Flame – AI Spot Award</div>
+      <div class="pill"><span class="pk">✦</span><span data-i18n="exist_pill1">Innovation phát triển / ra mắt trong 2026</span></div>
+      <div class="pill"><span class="pk">✦</span><span data-i18n="exist_pill2">Innovation đã được triển khai trước Challenge</span></div>
+      <div class="pill"><span class="pk">✦</span><span data-i18n="exist_pill3">Innovation mang tính chiến lược của Khối</span></div>
+      <div class="pill"><span class="pk">✦</span><span data-i18n="exist_pill4">Innovation từng nhận giải Flame – AI Spot Award</span></div>
     </div>
-    <p style="margin-top:22px; max-width:640px; margin-inline:auto" class="mut">Hãy mang bằng chứng về việc 'mọi thứ đã thực sự tốt hơn như thế nào' đến đây để tiếp lửa, nhân rộng quy mô và nhận sự ghi nhận xứng đáng nhất.</p>
+    <p style="margin-top:22px; max-width:640px; margin-inline:auto" class="mut" data-i18n="exist_p2">Hãy mang bằng chứng về việc 'mọi thứ đã thực sự tốt hơn như thế nào' đến đây để tiếp lửa, nhân rộng quy mô và nhận sự ghi nhận xứng đáng nhất.</p>
   </div>
 </section>
 
@@ -714,59 +770,63 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ THE JOURNEY ============ -->
 <section id="journey" class="reveal">
   <div class="sec-head">
-    <div class="eyebrow">The Journey</div>
-    <h2 class="title">Three rounds. <em>Three unlocks.</em></h2>
+    <div class="eyebrow" data-i18n="journey_eyebrow">The Journey</div>
+    <h2 class="title" data-i18n="journey_title">Three rounds. <em>Three unlocks.</em></h2>
   </div>
   <div class="rounds">
     <div class="gcard round r1">
       <div class="r-top">
-        <div class="r-badge">Round 1</div>
+        <div class="r-badge" data-i18n="r1_badge">Round 1</div>
         <span class="r-emoji">🎩</span>
-        <h3>The Sorting Hat</h3>
-        <div class="r-unlock">Unlock Your Idea</div>
+        <h3 data-i18n="r1_title">The Sorting Hat</h3>
+        <div class="r-unlock" data-i18n="r1_unlock">Unlock Your Idea</div>
       </div>
       <div class="r-body">
-        <div class="r-formbox"><span class="rf-ico">📝</span><span>Nộp idea qua <b>Microsoft Form</b></span></div>
-        <p>Thả ý tưởng của bạn vào Chiếc Nón Phân Loại với 3 nội dung:</p>
-        <ul><li>Problem đáng giải quyết</li><li>Solution có logic</li><li>Value đủ rõ để tiếp tục phát triển</li></ul>
+        <div class="r-formbox"><span class="rf-ico">📝</span><span data-i18n="r1_form">Nộp idea qua <b>Microsoft Form</b></span></div>
+        <p data-i18n="r1_desc">Thả ý tưởng của bạn vào Chiếc Nón Phân Loại với 3 nội dung:</p>
+        <ul>
+          <li data-i18n="r1_li1">Problem đáng giải quyết</li>
+          <li data-i18n="r1_li2">Solution có logic</li>
+          <li data-i18n="r1_li3">Value đủ rõ để tiếp tục phát triển</li>
+        </ul>
         <div class="r-milestones">
-          <div class="ms"><span class="ms-dot"></span><div><b>14 – 27 / 09</b><span>Mở &amp; đóng cổng nộp Innovation Case</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>14 – 27 / 09</b><span data-i18n="r1_ms">Mở &amp; đóng cổng nộp Innovation Case</span></div></div>
         </div>
-        <div class="r-foot">✨ Qualified Innovations unlock Early Recognition.</div>
+        <div class="r-foot" data-i18n="r1_foot">✨ Qualified Innovations unlock Early Recognition.</div>
       </div>
     </div>
 
     <div class="gcard round r2">
       <div class="r-top">
-        <div class="r-badge">Round 2</div>
+        <div class="r-badge" data-i18n="r2_badge">Round 2</div>
         <span class="r-emoji">⚗️</span>
-        <h3>The Chamber of Innovation</h3>
-        <div class="r-unlock">Unlock Your Solution</div>
+        <h3 data-i18n="r2_title">The Chamber of Innovation</h3>
+        <div class="r-unlock" data-i18n="r2_unlock">Unlock Your Solution</div>
       </div>
       <div class="r-body">
-        <div class="r-flow"><span>Develop & Validate Idea</span><i>→</i><span>Pitching</span></div>
-        <p>Bước vào không gian phát triển, kiểm chứng giả thuyết bằng dữ liệu và mài giũa sản phẩm để sẵn sàng cho vòng tranh tài vào Top 5.</p>
+        <div class="r-flow"><span data-i18n="r2_flow1">Develop &amp; Validate Idea</span><i>→</i><span data-i18n="r2_flow2">Pitching</span></div>
+        <p data-i18n="r2_desc">Bước vào không gian phát triển, kiểm chứng giả thuyết bằng dữ liệu và mài giũa sản phẩm để sẵn sàng cho vòng tranh tài vào Top 5.</p>
         <div class="r-milestones">
-          <div class="ms"><span class="ms-dot"></span><div><b>05 – 18 / 10</b><span>2 tuần Develop · Test · Validate solution</span></div></div>
-          <div class="ms"><span class="ms-dot"></span><div><b>~ 21 – 22 / 10</b><span>Pitch + Demo + Q&amp;A → chọn Top 5</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>05 – 18 / 10</b><span data-i18n="r2_ms1">2 tuần Develop · Test · Validate solution</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>~ 21 – 22 / 10</b><span data-i18n="r2_ms2">Pitch + Demo + Q&amp;A → chọn Top 5</span></div></div>
         </div>
-        <div class="r-foot">🏅 Các solution nổi bật nhất được chọn vào Top 5.</div>
+        <div class="r-foot" data-i18n="r2_foot">🏅 Các solution nổi bật nhất được chọn vào Top 5.</div>
       </div>
     </div>
 
     <div class="gcard round r3">
       <div class="r-top">
-        <div class="r-badge">Round 3</div>
+        <div class="r-badge" data-i18n="r3_badge">Round 3</div>
         <span class="r-emoji">🏆</span>
-        <h3>The Final Quest</h3>
-        <div class="r-unlock">Unlock Your Impact</div>
+        <h3 data-i18n="r3_title">The Final Quest</h3>
+        <div class="r-unlock" data-i18n="r3_unlock">Unlock Your Impact</div>
       </div>
       <div class="r-body">
-        <div class="r-flow"><span>Finalise Presentation</span><i>→</i><span>Live Pitching</span></div>
-        <p>Top 5 chuẩn bị bước lên sân khấu Grand Finale, trình diễn trước hội đồng thẩm định và khắc tên trên Đài Vinh Danh.</p>
+        <div class="r-flow"><span data-i18n="r3_flow1">Finalise Presentation</span><i>→</i><span data-i18n="r3_flow2">Live Pitching</span></div>
+        <p data-i18n="r3_desc">Top 5 chuẩn bị bước lên sân khấu Grand Finale, trình diễn trước hội đồng thẩm định và khắc tên trên Đài Vinh Danh.</p>
         <div class="r-milestones">
-          <div class="ms"><span class="ms-dot"></span><div><b>23 – 29 / 10</b><span>1 tuần hoàn thiện solution</span></div></div>
-          <div class="ms"><span class="ms-dot"></span><div><b>~ 30 – 31 / 10</b><span>Grand Finale · Pitch · Demo · Awards</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>23 – 29 / 10</b><span data-i18n="r3_ms1">1 tuần hoàn thiện solution</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>~ 30 – 31 / 10</b><span data-i18n="r3_ms2">Grand Finale · Pitch · Demo · Awards</span></div></div>
         </div>
         <div class="r-foot">🔥 Prove the value. Show the impact.</div>
       </div>
@@ -779,37 +839,58 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ REWARDS ============ -->
 <section id="rewards" class="reveal reward-section step-0" data-steps="2">
   <div class="sec-head">
-    <div class="eyebrow">Rewards Framework</div>
-    <h2 class="title">Greater value <em>unlocks greater recognition</em></h2>
+    <div class="eyebrow" data-i18n="reward_eyebrow">Rewards Framework</div>
+    <h2 class="title" data-i18n="reward_title">Greater value <em>unlocks greater recognition</em></h2>
   </div>
   <div class="reward-layout">
     <div class="reward-podium-col">
       <div class="podium">
-        <div class="pod silver"><div class="pm">🥈</div><div class="pod-info"><div class="pr">Giải Nhì</div><div class="pv">10–20</div><div class="pu">TRIỆU VND</div></div></div>
-        <div class="pod gold"><div class="pm">🥇</div><div class="pod-info"><div class="pr">Giải Nhất</div><div class="pv">20–40</div><div class="pu">TRIỆU VND</div></div></div>
-        <div class="pod bronze"><div class="pm">🥉</div><div class="pod-info"><div class="pr">Giải Ba</div><div class="pv">5–10</div><div class="pu">TRIỆU VND</div></div></div>
+        <div class="pod silver">
+          <div class="pm">🥈</div>
+          <div class="pod-info">
+            <div class="pr" data-i18n="pod_silver">Giải Nhì</div>
+            <div class="pv">10–20</div>
+            <div class="pu" data-i18n="pod_unit">TRIỆU VND</div>
+          </div>
+        </div>
+        <div class="pod gold">
+          <div class="pm">🥇</div>
+          <div class="pod-info">
+            <div class="pr" data-i18n="pod_gold">Giải Nhất</div>
+            <div class="pv">20–40</div>
+            <div class="pu" data-i18n="pod_unit">TRIỆU VND</div>
+          </div>
+        </div>
+        <div class="pod bronze">
+          <div class="pm">🥉</div>
+          <div class="pod-info">
+            <div class="pr" data-i18n="pod_bronze">Giải Ba</div>
+            <div class="pv">5–10</div>
+            <div class="pu" data-i18n="pod_unit">TRIỆU VND</div>
+          </div>
+        </div>
       </div>
-      <p class="podium-note mut">Mức thưởng cụ thể do Hội đồng Chung kết quyết định dựa trên chất lượng của các submission.</p>
-      <p class="podium-hint">Bấm <b>›</b> để xem thêm các giải phụ &amp; Early Recognition</p>
+      <p class="podium-note mut" data-i18n="pod_note">Mức thưởng cụ thể do Hội đồng Chung kết quyết định dựa trên chất lượng của các submission.</p>
+      <p class="podium-hint" data-i18n="pod_hint">Bấm <b>›</b> để xem thêm các giải phụ &amp; Early Recognition</p>
     </div>
 
     <div class="reward-extra-col">
-      <h3 class="reward-sub">✨ Special Awards</h3>
+      <h3 class="reward-sub" data-i18n="sp_title">✨ Special Awards</h3>
       <div class="special-grid">
-        <div class="gcard sp-award"><span class="spa-ico">🏆</span><div><span class="spa-name">Most Innovative</span><span class="spa-desc">Solution sáng tạo nhất</span></div><span class="spa-amt">3M</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">💎</span><div><span class="spa-name">Highest Value</span><span class="spa-desc">Value nổi bật nhất</span></div><span class="spa-amt">3M</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">👍</span><div><span class="spa-name">People’s Choice</span><span class="spa-desc">Bình chọn online cao nhất</span></div><span class="spa-amt">3M</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">🐣</span><div><span class="spa-name">Chíp Chíp Choice</span><span class="spa-desc">2 Chíp yêu thích nhất</span></div><span class="spa-amt">3M</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">🌱</span><div><span class="spa-name">Rising Star</span><span class="spa-desc">Solution mới có tiềm năng lớn</span></div><span class="spa-amt">3M</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">🤝</span><div><span class="spa-name">Inclusive</span><span class="spa-desc">Team cross-function nổi bật nhất</span></div><span class="spa-amt">1M</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">🔥</span><div><span class="spa-name">Most Engaged Function</span><span class="spa-desc">Tỷ lệ tham gia Vòng 1 cao nhất</span></div><span class="spa-amt">5M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🏆</span><div><span class="spa-name">Most Innovative</span><span class="spa-desc" data-i18n="spa_desc1">Solution sáng tạo nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">💎</span><div><span class="spa-name">Highest Value</span><span class="spa-desc" data-i18n="spa_desc2">Value nổi bật nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">👍</span><div><span class="spa-name">People’s Choice</span><span class="spa-desc" data-i18n="spa_desc3">Bình chọn online cao nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🐣</span><div><span class="spa-name">Chíp Chíp Choice</span><span class="spa-desc" data-i18n="spa_desc4">2 Chíp yêu thích nhất</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🌱</span><div><span class="spa-name">Rising Star</span><span class="spa-desc" data-i18n="spa_desc5">Solution mới có tiềm năng lớn</span></div><span class="spa-amt">3M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🤝</span><div><span class="spa-name">Inclusive</span><span class="spa-desc" data-i18n="spa_desc6">Team cross-function nổi bật nhất</span></div><span class="spa-amt">1M</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🔥</span><div><span class="spa-name">Most Engaged Function</span><span class="spa-desc" data-i18n="spa_desc7">Tỷ lệ tham gia Vòng 1 cao nhất</span></div><span class="spa-amt">5M</span></div>
       </div>
 
-      <h3 class="reward-sub" style="margin-top:26px">✨ Early Recognition</h3>
-      <p class="mut" style="margin-bottom:16px">Ghi nhận ngay tại Vòng 1 cho mỗi Innovation được Qualified — không cần đợi tới Chung kết.</p>
+      <h3 class="reward-sub" style="margin-top:26px" data-i18n="early_title">✨ Early Recognition</h3>
+      <p class="mut" style="margin-bottom:16px" data-i18n="early_desc">Ghi nhận ngay tại Vòng 1 cho mỗi Innovation được Qualified — không cần đợi tới Chung kết.</p>
       <div class="special-grid">
-        <div class="gcard sp-award"><span class="spa-ico">🥇</span><div><span class="spa-name">05 Qualified đầu tiên</span><span class="spa-desc">Ghi nhận ngay tại Vòng 1</span></div><span class="spa-amt">500K</span></div>
-        <div class="gcard sp-award"><span class="spa-ico">✨</span><div><span class="spa-name">Các Qualified tiếp theo</span><span class="spa-desc">Mỗi Innovation được Qualified (cut off top 40)</span></div><span class="spa-amt">200K</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">🥇</span><div><span class="spa-name" data-i18n="early_c1_title">05 Qualified đầu tiên</span><span class="spa-desc" data-i18n="early_c1_desc">Ghi nhận ngay tại Vòng 1</span></div><span class="spa-amt">500K</span></div>
+        <div class="gcard sp-award"><span class="spa-ico">✨</span><div><span class="spa-name" data-i18n="early_c2_title">Các Qualified tiếp theo</span><span class="spa-desc" data-i18n="early_c2_desc">Mỗi Innovation được Qualified (cut off top 40)</span></div><span class="spa-amt">200K</span></div>
       </div>
     </div>
   </div>
@@ -819,16 +900,16 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 
 <!-- ============ FINAL CTA ============ -->
 <section id="submit" class="finalcta reveal">
-  <div class="eyebrow">Ready to Unlock Your Idea?</div>
-  <h2 class="title">The Time <em>Is Now</em></h2>
-  <p style="max-width:680px; margin:0 auto; font-size:1.05rem">Mọi phép màu vĩ đại đều từng bắt đầu từ một sự bất tiện chưa ai thay đổi. Các phù thủy đã <b style="color:var(--gold-bright)">sẵn sàng để bước ra ánh sáng và ghi danh câu chuyện của chính mình?.</b></p>
+  <div class="eyebrow" data-i18n="cta_eyebrow">Ready to Unlock Your Idea?</div>
+  <h2 class="title" data-i18n="cta_title">The Time <em>Is Now</em></h2>
+  <p style="max-width:680px; margin:0 auto; font-size:1.05rem" data-i18n="cta_p">Mọi phép màu vĩ đại đều từng bắt đầu từ một sự bất tiện chưa ai thay đổi. Các phù thủy đã <b style="color:var(--gold-bright)">sẵn sàng để bước ra ánh sáng và ghi danh câu chuyện của chính mình?.</b></p>
 
   <a href="https://forms.cloud.microsoft/r/igpZ5dnhdY" target="_blank" rel="noopener noreferrer" class="btn-mega" id="submitBtn">
     <span class="mega-spark mega-spark-l">✦</span>
     <span class="mega-inner">
       <span class="mega-ico">🎩</span>
       <span class="mega-lines">
-        <span class="mega-txt">Click HERE to Submit</span>
+        <span class="mega-txt" data-i18n="cta_btn">Click HERE to Submit</span>
       </span>
     </span>
     <span class="mega-spark mega-spark-r">✦</span>
@@ -838,35 +919,35 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <div class="road-wrap">
       <div class="road-end left">
         <div class="road-flag">🚀</div>
-        <b>11/09/2026</b><span>Kickoff cuộc thi</span>
+        <b>11/09/2026</b><span data-i18n="road_start">Kickoff cuộc thi</span>
       </div>
       <div class="road-end right">
         <div class="road-flag">🎩</div>
-        <b>27/09/2026</b><span>Đóng đơn Vòng 1</span>
+        <b>27/09/2026</b><span data-i18n="road_end">Đóng đơn Vòng 1</span>
       </div>
       <div class="road-track">
         <div class="road-fill" id="roadFill"></div>
         <div class="road-gate" id="roadGate">
           <div class="gate-pin"></div>
-          <div class="gate-label"><b>📝 09:00 · 14/09</b><span>Mở đơn</span></div>
+          <div class="gate-label"><b>📝 09:00 · 14/09</b><span data-i18n="road_gate">Mở đơn</span></div>
         </div>
         <div class="road-here" id="roadHere">
-          <div class="here-bubble">📍 We are here</div>
+          <div class="here-bubble" data-i18n="road_here">📍 We are here</div>
           <div class="here-pin"></div>
         </div>
       </div>
     </div>
 
     <div class="countdown" id="countdown">
-      <div class="cd-label" id="cdLabel">Còn lại để nộp Innovation Case</div>
+      <div class="cd-label" id="cdLabel" data-i18n="cd_label">Còn lại để nộp Innovation Case</div>
       <div class="cd-timer" id="cdTimer">
-        <div class="cd-unit"><b id="cdD">--</b><span>ngày</span></div>
+        <div class="cd-unit"><b id="cdD">--</b><span data-i18n="unit_d">ngày</span></div>
         <div class="cd-sep">:</div>
-        <div class="cd-unit"><b id="cdH">--</b><span>giờ</span></div>
+        <div class="cd-unit"><b id="cdH">--</b><span data-i18n="unit_h">giờ</span></div>
         <div class="cd-sep">:</div>
-        <div class="cd-unit"><b id="cdM">--</b><span>phút</span></div>
+        <div class="cd-unit"><b id="cdM">--</b><span data-i18n="unit_m">phút</span></div>
         <div class="cd-sep">:</div>
-        <div class="cd-unit"><b id="cdS">--</b><span>giây</span></div>
+        <div class="cd-unit"><b id="cdS">--</b><span data-i18n="unit_s">giây</span></div>
       </div>
     </div>
   </div>
@@ -877,9 +958,9 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ TIMELINE ============ -->
 <section id="timeline" class="reveal">
   <div class="sec-head">
-    <div class="eyebrow">The Magic Calendar</div>
-    <h2 class="title">When does <em>the magic happen?</em></h2>
-    <p class="lede">Mark your journey.</p>
+    <div class="eyebrow" data-i18n="tl_eyebrow">The Magic Calendar</div>
+    <h2 class="title" data-i18n="tl_title">When does <em>the magic happen?</em></h2>
+    <p class="lede" data-i18n="tl_lede">Mark your journey.</p>
   </div>
 
   <div class="tlx">
@@ -887,15 +968,15 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <div class="tlx-head r1">
         <span class="tlx-emoji">🎩</span>
         <div>
-          <span class="tlx-badge">Chặng 1 · Sep</span>
+          <span class="tlx-badge" data-i18n="tl_c1_badge">Chặng 1 · Sep</span>
           <h3>The Sorting Hat</h3>
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>11 SEP</b><p>Kickoff cuộc thi — công bố Challenge</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>14 SEP · 09:00</b><p>The Gates Open — mở cổng nhận Innovation Case</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>27 SEP</b><p>The Sorting Hat Closes — deadline submission Vòng 1</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>28 SEP – 04 OCT</b><p>Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>11 SEP</b><p data-i18n="tl_step1">Kickoff cuộc thi — công bố Challenge</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>14 SEP · 09:00</b><p data-i18n="tl_step2">The Gates Open — mở cổng nhận Innovation Case</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>27 SEP</b><p data-i18n="tl_step3">The Sorting Hat Closes — deadline submission Vòng 1</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>28 SEP – 04 OCT</b><p data-i18n="tl_step4">Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
       </div>
     </div>
 
@@ -903,13 +984,13 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <div class="tlx-head r2">
         <span class="tlx-emoji">⚗️</span>
         <div>
-          <span class="tlx-badge">Chặng 2 · Oct</span>
+          <span class="tlx-badge" data-i18n="tl_c2_badge">Chặng 2 · Oct</span>
           <h3>The Chamber of Innovation</h3>
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>05 – 18 OCT</b><p>The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~21 – 22 OCT</b><p>Pitch &amp; Demo Day — chọn Top 5</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>05 – 18 OCT</b><p data-i18n="tl_step5">The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~21 – 22 OCT</b><p data-i18n="tl_step6">Pitch &amp; Demo Day — chọn Top 5</p></div></div>
       </div>
     </div>
 
@@ -917,13 +998,13 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <div class="tlx-head r3">
         <span class="tlx-emoji">🏆</span>
         <div>
-          <span class="tlx-badge">Chặng 3 · Oct</span>
+          <span class="tlx-badge" data-i18n="tl_c3_badge">Chặng 3 · Oct</span>
           <h3>The Final Quest</h3>
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>23 – 29 OCT</b><p>The Final Quest — Top 5 hoàn thiện solution</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~30 / 31 OCT</b><p>Grand Finale — Pitch · Q&amp;A · Trao thưởng</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>23 – 29 OCT</b><p data-i18n="tl_step7">The Final Quest — Top 5 hoàn thiện solution</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~30 / 31 OCT</b><p data-i18n="tl_step8">Grand Finale — Pitch · Q&amp;A · Trao thưởng</p></div></div>
       </div>
     </div>
   </div>
@@ -932,10 +1013,370 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <footer>
   <div class="ornament">✦ ⟡ ✦</div>
   <p class="f-sig" style="margin-top:16px">HR INNOVATION CHALLENGE · 2026</p>
-  <p>Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.</p>
+  <p data-i18n="footer_sub">Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.</p>
 </footer>
 
 <script>
+/* ============ MULTILINGUAL (I18N) ============ */
+const i18n = {
+  vi: {
+    page_title: "HR Innovation Challenge 2026 — Unlock the Magic of Innovation",
+    brand_sub: "2026 · Unlock the Magic",
+    nav_story: "Our Story",
+    nav_who: "Who can enter",
+    nav_journey: "The Journey",
+    nav_rewards: "Rewards",
+    nav_timeline: "Timeline",
+    nav_submit: "Submit ✦",
+    scroll_hint: "Scroll to begin<span>⌄</span>",
+    kb_hint: '<span class="kbk">←</span><span class="kbk">→</span> để chuyển section',
+    story_a_eyebrow: "The Calling",
+    story_a_title: "Why this challenge, <em>why now?</em>",
+    story_p1: "Thế giới phù thủy HR đang chuyển mình với những kỳ vọng lớn chưa từng thấy: tốc độ nhanh hơn, trí tuệ nhân tạo nhạy bén hơn, và trải nghiệm làm việc ấm áp hơn.",
+    story_p2: "Trong góc làm việc mỗi ngày, biết bao thần chú tự động hóa, bao sáng kiến tối ưu đã được các phù thủy tài năng chế tác, nhưng vẫn ngủ quên nơi ngăn kéo cá nhân.",
+    story_quote: "<b>HR Innovation Challenge 2026</b> được khai mở không phải để tạo thêm một phong trào nhất thời. Đây là cánh cổng để hóa giải những <b>vướng mắc nhức nhối</b> thành <b>giải pháp thực chứng</b>, đưa những giá trị thầm lặng bước ra ánh sáng.",
+    story_hint: "Bấm <b>›</b> để xem The Philosophy",
+    story_b_eyebrow: "The Philosophy",
+    story_b_title: "What we <em>believe in</em>",
+    belief_1_sub: "Thực tài",
+    belief_1_desc: "Không cần phép thuật hoa mỹ hay những bài thuyết trình bóng bẩy. Phép màu khởi sinh từ việc giải quyết trọn vẹn một bài toán có thật.",
+    belief_2_sub: "Nhân văn",
+    belief_2_desc: "Xóa bỏ rào cản thủ tục rườm rà, khuyến khích các phù thủy trẻ thử nghiệm và hợp tác. Ghi nhận mọi nỗ lực đóng góp thực chất.",
+    belief_3_sub: "Thực giá trị",
+    belief_3_desc: 'Thước đo nằm ở câu hỏi giản dị: <em>"Điều gì quanh bạn đã/sẽ thực sự trở nên tốt đẹp hơn nhờ giải pháp này?"</em>.',
+    who_eyebrow: "Who Can Enter",
+    who_title: "The Challenge welcomes <em>every Wizard</em>",
+    who_lede: "Dù bạn là một ẩn sĩ độc hành hay một biệt đội đồng lòng, cánh cổng luôn mở rộng.",
+    who_c1_sub: "Độc hành",
+    who_c1_p: "Mang solution của riêng bạn đến ghi danh.",
+    who_c2_sub: "Hợp lực",
+    who_c2_p: "Lập team tối đa 5 thành viên. Kết hợp đa góc nhìn, ghép các mảnh ghép chuyên môn để cùng phá đảo bài toán lớn.",
+    who_c3_sub: "Không giới hạn",
+    who_c3_p: "Không giới hạn số sáng kiến mỗi cá nhân hay đội nhóm có thể gửi về.",
+    who_c4_sub: "Mọi quy mô",
+    who_c4_p: "Một cải tiến tiết kiệm 5 phút mỗi ngày cho một nhóm nhỏ cũng có thể là khởi đầu diệu kỳ để nhân rộng mai sau.",
+    kind_eyebrow: "What We're Looking For",
+    kind_title: "Countless ways to <em>create magic</em>",
+    kind_lede: "Innovation không chỉ là AI hay một sản phẩm công nghệ.",
+    cat_1_title: "Process & Ways of Working",
+    cat_1_desc: "Thuật Biến Hình Quy Trình biến những quy trình rườm rà thành dòng chảy thông suốt, giản đơn và chuẩn xác.",
+    cat_1_li1: "Rút ngắn thời gian xử lý",
+    cat_1_li2: "Giảm bước thừa",
+    cat_1_li3: "Giảm sai sót",
+    cat_2_title: "Tools & Technology",
+    cat_2_desc: "Bùa Chú Công Nghệ khai mở sức mạnh công nghệ để giải phóng sức lao động cho các phù thủy.",
+    cat_3_title: "Capability & Knowledge",
+    cat_3_desc: "Cây tri thức nâng tầm năng lực các phù thủy thông qua đúc kết cẩm nang, khung năng lực hoặc phương pháp học tập mới.",
+    cat_4_title: "HR Regulations & Policies",
+    cat_4_desc: "Tái tạo các quy chuẩn, mang triết lý thực tài nhân văn thấm sâu vào từng quy định, chính sách nhân sự.",
+    cat_4_li1: "Cải tiến quy định, chính sách",
+    cat_4_li2: "Đề xuất quy định, chính sách mới",
+    value_eyebrow: "The Crystals of Power",
+    value_title: "What does <em>value</em> look like? — The 5 <em>OneHR Values Categories</em>",
+    val_1_title: "Business Performance Impact",
+    val_1_desc: "Sáng kiến có đóng góp trực tiếp hoặc gián tiếp vào kết quả kinh doanh chung không?",
+    val_2_title: "Productivity & Efficiency",
+    val_2_desc: "Sáng kiến có giúp tăng tốc độ, nâng cao chất lượng công việc hoặc tối ưu chi phí vận hành không?",
+    val_3_title: "Employee Experience & Engagement",
+    val_3_desc: "Sáng kiến có cải thiện cảm nhận và trải nghiệm thực tế của CBNV không?",
+    val_4_title: "Leadership & Talent Sustainability",
+    val_4_desc: "Sáng kiến có giúp củng cố và phát triển năng lực của đội ngũ lãnh đạo và năng lực tổ chức trước các cơ hội hoặc thách thức không?",
+    val_5_title: "Governance & Data Excellence",
+    val_5_desc: "Sáng kiến có tăng cường kiểm soát tuân thủ, giảm thiểu rủi ro hoặc hỗ trợ ra quyết định dựa trên dữ liệu không?",
+    exist_eyebrow: "The Hidden Treasures",
+    exist_title: "Already creating value? <em>Bring it in.</em>",
+    exist_p1: "Giải pháp của bạn đã âm thầm thành hình và phát huy tác dụng? Đó là một lợi thế. Đừng để bảo vật nằm trong góc.",
+    exist_pill1: "Innovation phát triển / ra mắt trong 2026",
+    exist_pill2: "Innovation đã được triển khai trước Challenge",
+    exist_pill3: "Innovation mang tính chiến lược của Khối",
+    exist_pill4: "Innovation từng nhận giải Flame – AI Spot Award",
+    exist_p2: "Hãy mang bằng chứng về việc 'mọi thứ đã thực sự tốt hơn như thế nào' đến đây để tiếp lửa, nhân rộng quy mô và nhận sự ghi nhận xứng đáng nhất.",
+    journey_eyebrow: "The Journey",
+    journey_title: "Three rounds. <em>Three unlocks.</em>",
+    r1_badge: "Round 1",
+    r1_title: "The Sorting Hat",
+    r1_unlock: "Unlock Your Idea",
+    r1_form: "Nộp idea qua <b>Microsoft Form</b>",
+    r1_desc: "Thả ý tưởng của bạn vào Chiếc Nón Phân Loại với 3 nội dung:",
+    r1_li1: "Problem đáng giải quyết",
+    r1_li2: "Solution có logic",
+    r1_li3: "Value đủ rõ để tiếp tục phát triển",
+    r1_ms: "Mở & đóng cổng nộp Innovation Case",
+    r1_foot: "✨ Qualified Innovations unlock Early Recognition.",
+    r2_badge: "Round 2",
+    r2_title: "The Chamber of Innovation",
+    r2_unlock: "Unlock Your Solution",
+    r2_flow1: "Develop & Validate Idea",
+    r2_flow2: "Pitching",
+    r2_desc: "Bước vào không gian phát triển, kiểm chứng giả thuyết bằng dữ liệu và mài giũa sản phẩm để sẵn sàng cho vòng tranh tài vào Top 5.",
+    r2_ms1: "2 tuần Develop · Test · Validate solution",
+    r2_ms2: "Pitch + Demo + Q&A → chọn Top 5",
+    r2_foot: "🏅 Các solution nổi bật nhất được chọn vào Top 5.",
+    r3_badge: "Round 3",
+    r3_title: "The Final Quest",
+    r3_unlock: "Unlock Your Impact",
+    r3_flow1: "Finalise Presentation",
+    r3_flow2: "Live Pitching",
+    r3_desc: "Top 5 chuẩn bị bước lên sân khấu Grand Finale, trình diễn trước hội đồng thẩm định và khắc tên trên Đài Vinh Danh.",
+    r3_ms1: "1 tuần hoàn thiện solution",
+    r3_ms2: "Grand Finale · Pitch · Demo · Awards",
+    reward_eyebrow: "Rewards Framework",
+    reward_title: "Greater value <em>unlocks greater recognition</em>",
+    pod_silver: "Giải Nhì",
+    pod_gold: "Giải Nhất",
+    pod_bronze: "Giải Ba",
+    pod_unit: "TRIỆU VND",
+    pod_note: "Mức thưởng cụ thể do Hội đồng Chung kết quyết định dựa trên chất lượng của các submission.",
+    pod_hint: "Bấm <b>›</b> để xem thêm các giải phụ & Early Recognition",
+    sp_title: "✨ Special Awards",
+    spa_desc1: "Solution sáng tạo nhất",
+    spa_desc2: "Value nổi bật nhất",
+    spa_desc3: "Bình chọn online cao nhất",
+    spa_desc4: "2 Chíp yêu thích nhất",
+    spa_desc5: "Solution mới có tiềm năng lớn",
+    spa_desc6: "Team cross-function nổi bật nhất",
+    spa_desc7: "Tỷ lệ tham gia Vòng 1 cao nhất",
+    early_title: "✨ Early Recognition",
+    early_desc: "Ghi nhận ngay tại Vòng 1 cho mỗi Innovation được Qualified — không cần đợi tới Chung kết.",
+    early_c1_title: "05 Qualified đầu tiên",
+    early_c1_desc: "Ghi nhận ngay tại Vòng 1",
+    early_c2_title: "Các Qualified tiếp theo",
+    early_c2_desc: "Mỗi Innovation được Qualified (cut off top 40)",
+    cta_eyebrow: "Ready to Unlock Your Idea?",
+    cta_title: "The Time <em>Is Now</em>",
+    cta_p: 'Mọi phép màu vĩ đại đều từng bắt đầu từ một sự bất tiện chưa ai thay đổi. Các phù thủy đã <b style="color:var(--gold-bright)">sẵn sàng để bước ra ánh sáng và ghi danh câu chuyện của chính mình?.</b>',
+    cta_btn: "Click HERE to Submit",
+    road_start: "Kickoff cuộc thi",
+    road_end: "Đóng đơn Vòng 1",
+    road_gate: "Mở đơn",
+    road_here: "📍 We are here",
+    unit_d: "ngày",
+    unit_h: "giờ",
+    unit_m: "phút",
+    unit_s: "giây",
+    tl_eyebrow: "The Magic Calendar",
+    tl_title: "When does <em>the magic happen?</em>",
+    tl_lede: "Mark your journey.",
+    tl_c1_badge: "Chặng 1 · Sep",
+    tl_c2_badge: "Chặng 2 · Oct",
+    tl_c3_badge: "Chặng 3 · Oct",
+    tl_step1: "Kickoff cuộc thi — công bố Challenge",
+    tl_step2: "The Gates Open — mở cổng nhận Innovation Case",
+    tl_step3: "The Sorting Hat Closes — deadline submission Vòng 1",
+    tl_step4: "Sorting & Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified",
+    tl_step5: "The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value",
+    tl_step6: "Pitch & Demo Day — chọn Top 5",
+    tl_step7: "The Final Quest — Top 5 hoàn thiện solution",
+    tl_step8: "Grand Finale — Pitch · Q&A · Trao thưởng",
+    footer_sub: "Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.",
+    cd_before: "📝 Cổng nộp đơn mở sau",
+    cd_open: "⏳ Còn lại để nộp Innovation Case",
+    cd_closed: "🎩 Cổng nộp Vòng 1 đã đóng — hẹn gặp ở Chamber!"
+  },
+  en: {
+    page_title: "HR Innovation Challenge 2026 — Unlock the Magic of Innovation",
+    brand_sub: "2026 · Unlock the Magic",
+    nav_story: "Our Story",
+    nav_who: "Who can enter",
+    nav_journey: "The Journey",
+    nav_rewards: "Rewards",
+    nav_timeline: "Timeline",
+    nav_submit: "Submit ✦",
+    scroll_hint: "Scroll to begin<span>⌄</span>",
+    kb_hint: '<span class="kbk">←</span><span class="kbk">→</span> to navigate sections',
+    story_a_eyebrow: "The Calling",
+    story_a_title: "Why this challenge, <em>why now?</em>",
+    story_p1: "The realm of HR wizards is transforming under unprecedented expectations: faster velocity, sharper artificial intelligence, and a warmer, more human workplace experience.",
+    story_p2: "At daily workstations, countless automation spells and optimization initiatives have been crafted by brilliant wizards—yet still lie dormant in personal desk drawers.",
+    story_quote: "<b>HR Innovation Challenge 2026</b> is summoned not to spark a fleeting trend, but to open a gateway—turning <b>painful friction</b> into <b>proven solutions</b>, bringing silent value into the spotlight.",
+    story_hint: "Press <b>›</b> to view The Philosophy",
+    story_b_eyebrow: "The Philosophy",
+    story_b_title: "What we <em>believe in</em>",
+    belief_1_sub: "Meritocracy",
+    belief_1_desc: "No fancy spells or flashy presentations required. Real magic sparks from solving a genuine, real-world challenge end-to-end.",
+    belief_2_sub: "Caring",
+    belief_2_desc: "Eliminating cumbersome bureaucracy, empowering young wizards to experiment and collaborate, and recognizing every meaningful contribution.",
+    belief_3_sub: "Value-Driven",
+    belief_3_desc: 'The true measure lies in one simple question: <em>"What around you has truly become better—or will become better—thanks to this solution?"</em>.',
+    who_eyebrow: "Who Can Enter",
+    who_title: "The Challenge welcomes <em>every Wizard</em>",
+    who_lede: "Whether you are a solo hermit or a united fellowship, the gates are wide open.",
+    who_c1_sub: "Solo Mage",
+    who_c1_p: "Bring your own solution and enter the fray.",
+    who_c2_sub: "The Fellowship",
+    who_c2_p: "Form a team of up to 5 wizards. Combine perspectives and piece together expertise to conquer grand challenges.",
+    who_c3_sub: "No Limits",
+    who_c3_p: "No limit on the number of innovation initiatives each individual or team can submit.",
+    who_c4_sub: "Any Scale",
+    who_c4_p: "An improvement saving 5 minutes a day for a small team can be the miraculous beginning of enterprise-wide impact.",
+    kind_eyebrow: "What We're Looking For",
+    kind_title: "Countless ways to <em>create magic</em>",
+    kind_lede: "Innovation is not just AI or a shiny technology tool.",
+    cat_1_title: "Process & Ways of Working",
+    cat_1_desc: "Process Shape-Shifting transforms tedious workflows into seamless, simplified, and accurate streams.",
+    cat_1_li1: "Shorten turnaround time",
+    cat_1_li2: "Eliminate redundant steps",
+    cat_1_li3: "Minimize errors",
+    cat_2_title: "Tools & Technology",
+    cat_2_desc: "Tech Incantations harness modern technology to liberate wizards from manual labor.",
+    cat_3_title: "Capability & Knowledge",
+    cat_3_desc: "The Knowledge Tree elevates wizard capability through curated playbooks, frameworks, or innovative learning approaches.",
+    cat_4_title: "HR Regulations & Policies",
+    cat_4_desc: "Reinventing benchmarks, instilling meritocracy and human-centric values into HR regulations and policies.",
+    cat_4_li1: "Improve existing policies",
+    cat_4_li2: "Propose new policies & guidelines",
+    value_eyebrow: "The Crystals of Power",
+    value_title: "What does <em>value</em> look like? — The 5 <em>OneHR Values Categories</em>",
+    val_1_title: "Business Performance Impact",
+    val_1_desc: "Does the initiative directly or indirectly drive overall business performance?",
+    val_2_title: "Productivity & Efficiency",
+    val_2_desc: "Does the initiative accelerate speed, improve work quality, or optimize operating costs?",
+    val_3_title: "Employee Experience & Engagement",
+    val_3_desc: "Does the initiative enhance employees' sentiment, journey, and day-to-day workplace experience?",
+    val_4_title: "Leadership & Talent Sustainability",
+    val_4_desc: "Does the initiative strengthen and develop leadership and organizational capability against emerging opportunities or challenges?",
+    val_5_title: "Governance & Data Excellence",
+    val_5_desc: "Does the initiative boost compliance control, mitigate operational risks, or empower data-driven decision-making?",
+    exist_eyebrow: "The Hidden Treasures",
+    exist_title: "Already creating value? <em>Bring it in.</em>",
+    exist_p1: "Has your solution already taken shape and proven its worth? That's an advantage. Don't leave your magical artifact in the shadows.",
+    exist_pill1: "Innovations developed / launched in 2026",
+    exist_pill2: "Innovations deployed prior to the Challenge",
+    exist_pill3: "Strategic divisional HR innovations",
+    exist_pill4: "Innovations that received Flame – AI Spot Awards",
+    exist_p2: "Bring evidence of 'how things have truly become better' to ignite momentum, scale impact, and receive the highest recognition.",
+    journey_eyebrow: "The Journey",
+    journey_title: "Three rounds. <em>Three unlocks.</em>",
+    r1_badge: "Round 1",
+    r1_title: "The Sorting Hat",
+    r1_unlock: "Unlock Your Idea",
+    r1_form: "Submit ideas via <b>Microsoft Forms</b>",
+    r1_desc: "Drop your idea into The Sorting Hat focusing on 3 pillars:",
+    r1_li1: "A problem worth solving",
+    r1_li2: "A logical solution",
+    r1_li3: "Clear value to incubate further",
+    r1_ms: "Innovation Case submission window",
+    r1_foot: "✨ Qualified Innovations unlock Early Recognition.",
+    r2_badge: "Round 2",
+    r2_title: "The Chamber of Innovation",
+    r2_unlock: "Unlock Your Solution",
+    r2_flow1: "Develop & Validate Idea",
+    r2_flow2: "Pitching",
+    r2_desc: "Enter the incubation chamber, validate hypotheses with hard data, and sharpen the product to compete for the Top 5.",
+    r2_ms1: "2 weeks Develop · Test · Validate solution",
+    r2_ms2: "Pitch + Demo + Q&A → Top 5 selection",
+    r2_foot: "🏅 Top standout solutions advance to the Top 5.",
+    r3_badge: "Round 3",
+    r3_title: "The Final Quest",
+    r3_unlock: "Unlock Your Impact",
+    r3_flow1: "Finalise Presentation",
+    r3_flow2: "Live Pitching",
+    r3_desc: "Top 5 prepare to step onto the Grand Finale stage, pitching before the appraisal committee to etch their names on the Hall of Fame.",
+    r3_ms1: "1 week to polish solutions",
+    r3_ms2: "Grand Finale · Pitch · Demo · Awards",
+    reward_eyebrow: "Rewards Framework",
+    reward_title: "Greater value <em>unlocks greater recognition</em>",
+    pod_silver: "2nd Prize",
+    pod_gold: "1st Prize",
+    pod_bronze: "3rd Prize",
+    pod_unit: "MILLION VND",
+    pod_note: "Specific award amounts will be determined by the Grand Finale Committee based on submission quality.",
+    pod_hint: "Press <b>›</b> to view Special Awards & Early Recognition",
+    sp_title: "✨ Special Awards",
+    spa_desc1: "Most creative solution",
+    spa_desc2: "Highest demonstrated value",
+    spa_desc3: "Highest online employee votes",
+    spa_desc4: "2 Chíp favorite picks",
+    spa_desc5: "Promising emerging solution",
+    spa_desc6: "Standout cross-functional team",
+    spa_desc7: "Highest Round 1 participation rate",
+    early_title: "✨ Early Recognition",
+    early_desc: "Awarded directly in Round 1 for every Qualified Innovation — no need to wait for the Grand Finale.",
+    early_c1_title: "First 5 Qualified",
+    early_c1_desc: "Direct recognition in Round 1",
+    early_c2_title: "Subsequent Qualified",
+    early_c2_desc: "Each Qualified Innovation (capped at top 40)",
+    cta_eyebrow: "Ready to Unlock Your Idea?",
+    cta_title: "The Time <em>Is Now</em>",
+    cta_p: 'Every great magic began with a daily friction no one had dared to fix. Wizards, are you <b style="color:var(--gold-bright)">ready to step into the light and chronicle your own story?</b>',
+    cta_btn: "Click HERE to Submit",
+    road_start: "Challenge Kickoff",
+    road_end: "Round 1 Closes",
+    road_gate: "Submissions Open",
+    road_here: "📍 We are here",
+    unit_d: "days",
+    unit_h: "hours",
+    unit_m: "mins",
+    unit_s: "secs",
+    tl_eyebrow: "The Magic Calendar",
+    tl_title: "When does <em>the magic happen?</em>",
+    tl_lede: "Mark your journey.",
+    tl_c1_badge: "Phase 1 · Sep",
+    tl_c2_badge: "Phase 2 · Oct",
+    tl_c3_badge: "Phase 3 · Oct",
+    tl_step1: "Challenge Kickoff — Announcing the Challenge",
+    tl_step2: "The Gates Open — Innovation Case portal opens",
+    tl_step3: "The Sorting Hat Closes — Round 1 submission deadline",
+    tl_step4: "Sorting & Early Recognition — Round 1 appraisal & Qualified announcement",
+    tl_step5: "The Chamber of Innovation — Teams incubate solutions & validate value",
+    tl_step6: "Pitch & Demo Day — Top 5 finalist selection",
+    tl_step7: "The Final Quest — Top 5 polish their solutions",
+    tl_step8: "Grand Finale — Pitching, Q&A & Award Ceremony",
+    footer_sub: "Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.",
+    cd_before: "📝 Submissions open in",
+    cd_open: "⏳ Time left to submit Innovation Case",
+    cd_closed: "🎩 Round 1 submissions closed — see you in the Chamber!"
+  }
+};
+
+let currentLang = 'vi';
+try {
+  const saved = localStorage.getItem('hr_innov_lang');
+  if (saved === 'en' || saved === 'vi') currentLang = saved;
+} catch(e) {}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  try { localStorage.setItem('hr_innov_lang', lang); } catch(e) {}
+
+  document.querySelectorAll('#langSwitch .lang-btn').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key] !== undefined) {
+      el.innerHTML = i18n[lang][key];
+    }
+  });
+
+  if (i18n[lang] && i18n[lang].page_title) {
+    document.title = i18n[lang].page_title;
+  }
+  
+  const navPrev = document.getElementById('navPrev');
+  const navNext = document.getElementById('navNext');
+  if (navPrev && navNext) {
+    navPrev.setAttribute('aria-label', lang === 'vi' ? 'Section trước' : 'Previous section');
+    navNext.setAttribute('aria-label', lang === 'vi' ? 'Section kế' : 'Next section');
+  }
+
+  if (typeof updateCountdownText === 'function') {
+    updateCountdownText();
+  }
+}
+
+document.querySelectorAll('#langSwitch .lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.getAttribute('data-lang');
+    if (lang !== currentLang) {
+      setLanguage(lang);
+    }
+  });
+});
+
+/* ============ ORIGINAL LOGIC & RESTORATION ============ */
 if('scrollRestoration' in history){history.scrollRestoration='manual';}
 
 const safeStorage={
@@ -944,6 +1385,7 @@ const safeStorage={
 };
 
 window.addEventListener('load',()=>{
+  setLanguage(currentLang);
   if(location.hash){history.replaceState(null,'',location.pathname+location.search);}
   const y=safeStorage.get('scrollY');
   if(y!==null) window.scrollTo(0, parseFloat(y));
@@ -1086,6 +1528,7 @@ setTimeout(hideHint, 7000);
 })();
 
 /* countdown & timeline tracker */
+let updateCountdownText = function(){};
 (function(){
   const KICKOFF = new Date('2026-09-11T00:00:00');
   const OPEN    = new Date('2026-09-14T09:00:00');
@@ -1104,7 +1547,7 @@ setTimeout(hideHint, 7000);
   if(gate) gate.style.left = gatePct + '%';
 
   function diff(ms){
-    const s=Math.floor(ms/1000);
+    const s=Math.max(0, Math.floor(ms/1000));
     elD.textContent=Math.floor(s/86400);
     elH.textContent=pad(Math.floor(s%86400/3600));
     elM.textContent=pad(Math.floor(s%3600/60));
@@ -1118,19 +1561,23 @@ setTimeout(hideHint, 7000);
     fill.style.width=pct+'%';
     if(here) here.style.left=pct+'%';
 
+    const langObj = i18n[currentLang] || i18n.vi;
+
     if(now < OPEN){
       cd.className='countdown';
-      cdLabel.textContent='📝 Cổng nộp đơn mở sau';
+      cdLabel.textContent = langObj.cd_before;
       diff(OPEN-now);
     } else if(now <= CLOSE){
       cd.className='countdown state-open';
-      cdLabel.textContent='⏳ Còn lại để nộp Innovation Case';
+      cdLabel.textContent = langObj.cd_open;
       diff(CLOSE-now);
     } else {
       cd.className='countdown state-closed';
-      cdLabel.textContent='🎩 Cổng nộp Vòng 1 đã đóng — hẹn gặp ở Chamber!';
+      cdLabel.textContent = langObj.cd_closed;
     }
   }
+
+  updateCountdownText = tick;
   tick(); setInterval(tick,1000);
 })();
 
