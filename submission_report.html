@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="pageTitle">HR Innovation Challenge 2026 — Submission Report</title>
- 
+
 <!-- ===== SEO / Social Preview ===== -->
 <meta name="description" content="HR Innovation Challenge 2026 — Submission Report. Bức tranh toàn cảnh Vòng 1: The Sorting Hat.">
 <meta property="og:type" content="website">
@@ -20,16 +20,16 @@
 <meta name="twitter:title" content="HR Innovation Challenge 2026 — Submission Report">
 <meta name="twitter:description" content="Bức tranh toàn cảnh Vòng 1: The Sorting Hat.">
 <meta name="twitter:image" content="https://hrinnovationchallenge.github.io/KV34.png">
- 
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
- 
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
- 
+
 @font-face{ font-family:'Marcellus'; src:local('Be Vietnam Pro'),local('Segoe UI'),local('Arial'); unicode-range:U+00C0-024F,U+1E00-1EFF,U+0300-036F,U+20AB; }
 @font-face{ font-family:'Cinzel'; src:local('Be Vietnam Pro'),local('Segoe UI'),local('Arial'); unicode-range:U+00C0-024F,U+1E00-1EFF,U+0300-036F,U+20AB; }
- 
+
 :root{
   --navy:#160e2e; --navy-2:#1e1440; --purple:#2d1b4e; --purple-deep:#3a2168; --plum:#4a1942;
   --violet:#6b3fa0; --violet-soft:#8a5fc0; --gold:#d4a84b; --gold-bright:#f0cd78; --gold-deep:#a6690a;
@@ -42,11 +42,11 @@
   --display:'Cormorant','EB Garamond','Be Vietnam Pro',Georgia,serif;
   --sans:'Inter','Be Vietnam Pro','Segoe UI',system-ui,-apple-system,sans-serif;
 }
- 
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans); color:var(--ink); line-height:1.7; background:var(--navy); overflow-x:hidden;}
- 
+
 .bg-fixed{position:fixed; inset:0; z-index:-3; background:url('KV34.png') center top / cover no-repeat; filter:saturate(1.05);}
 .bg-veil{position:fixed; inset:0; z-index:-2;
   background:
@@ -61,7 +61,7 @@ body{font-family:var(--sans); color:var(--ink); line-height:1.7; background:var(
     radial-gradient(1.5px 1.5px at 30% 65%, rgba(255,255,255,.5), transparent);
   background-size:cover; animation:twinkle 6s ease-in-out infinite alternate;}
 @keyframes twinkle{from{opacity:.28}to{opacity:.6}}
- 
+
 /* ============ TOP NAV ============ */
 .topbar{position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between;
   padding:16px 30px; background:linear-gradient(180deg, rgba(15,8,30,0.92), rgba(15,8,30,0.4)); backdrop-filter:blur(10px);
@@ -77,7 +77,7 @@ body{font-family:var(--sans); color:var(--ink); line-height:1.7; background:var(
 .nav-links a:hover{color:var(--gold-bright); background:rgba(212,168,75,.1)}
 .nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-deep)) !important; color:#241503 !important; font-weight:700 !important; box-shadow:0 0 16px rgba(212,168,75,.4);}
 .nav-cta:hover{color:#241503 !important; transform:translateY(-1px)}
- 
+
 .topbar-actions{display:flex; align-items:center; gap:12px}
 .lang-switch{display:inline-flex; align-items:center; gap:2px; background:rgba(26,16,56,0.85); border:1px solid var(--line); border-radius:20px; padding:3px 4px; box-shadow:0 4px 14px rgba(0,0,0,0.3);}
 .lang-btn{background:none; border:none; color:var(--ink-dim); font-family:'Marcellus',serif; font-size:0.75rem; font-weight:700; letter-spacing:.5px; cursor:pointer; padding:4px 9px; border-radius:14px; transition:all .2s ease;}
@@ -85,9 +85,9 @@ body{font-family:var(--sans); color:var(--ink); line-height:1.7; background:var(
 .lang-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-deep)); color:#241503; font-weight:800; box-shadow:0 0 10px rgba(212,168,75,.5);}
 .lang-divider{color:var(--line); font-size:0.7rem; opacity:.7}
 .burger{display:none; background:none; border:none; color:var(--gold-bright); font-size:1.5rem; cursor:pointer}
- 
+
 .scroll-progress{position:fixed; top:0; left:0; height:3px; z-index:101; background:linear-gradient(90deg,var(--violet),var(--gold-bright)); width:0%; box-shadow:0 0 10px rgba(212,168,75,.6);}
- 
+
 /* ============ HERO ============ */
 .hero{position:relative; min-height:64vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:130px 24px 60px;}
 .hero .eyebrow{margin-bottom:20px}
@@ -95,7 +95,7 @@ body{font-family:var(--sans); color:var(--ink); line-height:1.7; background:var(
 .hero h1 em{color:var(--gold-bright); font-style:italic}
 .hero .sub{font-family:var(--serif); font-style:italic; font-size:clamp(1.05rem,2vw,1.4rem); color:var(--ink-soft); max-width:720px; margin:18px auto 0;}
 .hero .stamp{margin-top:22px; font-family:'Marcellus',serif; font-size:.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--ink-dim);}
- 
+
 /* ============ SHARED SECTION ============ */
 section{position:relative; padding:56px 24px; max-width:1240px; margin:0 auto; scroll-margin-top:80px}
 .reveal{opacity:0; transform:translateY(34px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -110,7 +110,7 @@ h2.title em{color:var(--gold-bright); font-style:italic}
 .sec-head .lede{margin:0 auto}
 p{color:var(--ink-soft); margin-bottom:14px}
 .mut{color:var(--ink-dim)}
- 
+
 .gcard{background:linear-gradient(160deg, var(--glass), var(--glass-2)); border:1px solid var(--line-soft); border-radius:var(--radius);
   backdrop-filter:blur(12px); box-shadow:var(--shadow); position:relative; overflow:hidden; transition:transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s;}
 .gcard::before{content:''; position:absolute; inset:0; border-radius:inherit; padding:1px;
@@ -118,7 +118,7 @@ p{color:var(--ink-soft); margin-bottom:14px}
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; opacity:.7; transition:opacity .35s}
 .gcard:hover{transform:translateY(-6px); border-color:var(--line); box-shadow:0 26px 60px rgba(8,4,22,.7)}
 .gcard:hover::before{opacity:1}
- 
+
 /* ============ KPI STATS ============ */
 .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
 .stats.stats-3{grid-template-columns:repeat(3,1fr); max-width:900px; margin:0 auto}
@@ -129,7 +129,7 @@ p{color:var(--ink-soft); margin-bottom:14px}
 .stat .n{font-family:'Marcellus',serif; font-size:2.2rem; font-weight:800; line-height:1;
   background:linear-gradient(90deg,var(--gold-bright),var(--gold)); -webkit-background-clip:text; background-clip:text; color:transparent;}
 .stat .l{font-size:.82rem; color:var(--ink-soft); margin-top:8px}
- 
+
 /* ============ CHART CARDS ============ */
 .chart-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
 @media(max-width:820px){.chart-grid{grid-template-columns:1fr}}
@@ -141,7 +141,7 @@ p{color:var(--ink-soft); margin-bottom:14px}
 .chart-card .csub{font-size:.8rem; color:var(--ink-dim); margin:0 0 14px 43px}
 .chart-wrap{position:relative; min-height:280px}
 .chart-wrap.tall{min-height:320px}
- 
+
 /* ============ CTA ROW ============ */
 .cta-row{display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; margin:10px auto 0}
 .btn-back{position:relative; display:inline-flex; align-items:center; gap:11px; padding:14px 32px; border-radius:44px; text-decoration:none; cursor:pointer;
@@ -149,13 +149,13 @@ p{color:var(--ink-soft); margin-bottom:14px}
   font-family:'Marcellus',serif; font-weight:700; letter-spacing:1px; font-size:.95rem; color:#241503; text-transform:uppercase;
   box-shadow:0 0 22px rgba(240,205,120,.4), 0 12px 34px rgba(166,105,10,.42); transition:transform .2s;}
 .btn-back:hover{transform:translateY(-3px) scale(1.02)}
- 
+
 /* ============ FOOTER ============ */
 footer{text-align:center; padding:40px 24px 60px; border-top:1px solid var(--line-soft); margin-top:20px}
 footer .f-sig{font-family:'Marcellus',serif; color:var(--gold); letter-spacing:2px; font-size:.85rem}
 footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 .ornament{text-align:center; color:var(--gold); opacity:.6; font-size:1.1rem; letter-spacing:8px; margin:0 auto}
- 
+
 @media(max-width:900px){
   .reveal{transition:none !important; opacity:1 !important; transform:none !important}
   .nav-links{position:fixed; top:66px; right:14px; left:14px; flex-direction:column; align-items:stretch;
@@ -172,7 +172,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <div class="bg-veil"></div>
 <div class="bg-stars"></div>
 <div class="scroll-progress" id="prog"></div>
- 
+
 <div class="topbar" id="topbar">
   <div class="brand">
     <div class="sigil">📊</div>
@@ -195,7 +195,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <a href="https://hrinnovationchallenge.github.io/" class="nav-cta" data-i18n="nav_home">🎩 Landing</a>
   </nav>
 </div>
- 
+
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="eyebrow" data-i18n="hero_eyebrow">Round 1 · The Sorting Hat</div>
@@ -203,7 +203,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   <p class="sub" data-i18n="hero_sub">Bức tranh toàn cảnh của Vòng 1 sau 3 ngày mở đơn.</p>
   <div class="stamp" data-i18n="hero_stamp">✦ Snapshot dữ liệu Vòng 1 ✦</div>
 </header>
- 
+
 <!-- ============ OVERVIEW ============ -->
 <section id="overview" class="reveal">
   <div class="sec-head">
@@ -216,7 +216,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <div class="gcard stat"><span class="st-ico">🎩</span><div class="n">4</div><div class="l" data-i18n="kpi_full">Function đạt ≥70% tham gia</div></div>
   </div>
 </section>
- 
+
 <!-- ============ INNOVATION GROUPS ============ -->
 <section id="groups" class="reveal">
   <div class="sec-head">
@@ -236,7 +236,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     </div>
   </div>
 </section>
- 
+
 <!-- ============ TEAMS ============ -->
 <section id="teams" class="reveal">
   <div class="sec-head">
@@ -249,7 +249,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <div class="chart-wrap tall"><canvas id="chartTeams"></canvas></div>
   </div>
 </section>
- 
+
 <!-- ============ IMPACT ============ -->
 <section id="impact" class="reveal">
   <div class="sec-head">
@@ -262,7 +262,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <div class="chart-wrap tall"><canvas id="chartImpact"></canvas></div>
   </div>
 </section>
- 
+
 <!-- ============ FUNCTIONS ============ -->
 <section id="functions" class="reveal">
   <div class="sec-head">
@@ -275,18 +275,18 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <p class="csub" data-i18n="fn_c_sub">Tên các Function được mã hóa để đảm bảo tuân thủ quy định An ninh thông tin, liên hệ với AI Champion của Function để biết thứ hạng của Function.</p>
     <div class="chart-wrap tall"><canvas id="chartFunctions"></canvas></div>
   </div>
- 
+
   <div class="cta-row" style="margin-top:40px">
     <a href="https://hrinnovationchallenge.github.io/" class="btn-back">🎩 <span data-i18n="btn_back">Về trang Challenge</span></a>
   </div>
 </section>
- 
+
 <footer>
   <div class="ornament">✦ ⟡ ✦</div>
   <p class="f-sig" style="margin-top:16px">HR INNOVATION CHALLENGE · 2026</p>
   <p data-i18n="footer_sub">Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.</p>
 </footer>
- 
+
 <script>
 /* ============ DATA (từ Round1_Dashboard_Screenshots.md) ============ */
 const DATA = {
@@ -326,10 +326,10 @@ const DATA = {
     {name:'Function H', pct:23.6}
   ]
 };
- 
+
 /* Palette phù thủy */
 const PAL = ['#8a5fc0','#00d4ff','#22c98d','#d4a84b','#ff5c7c','#6b3fa0','#f0cd78'];
- 
+
 /* ============ MULTILINGUAL (I18N) ============ */
 const i18n = {
   vi: {
@@ -379,17 +379,17 @@ const i18n = {
     footer_sub:"Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact."
   }
 };
- 
+
 let currentLang = 'vi';
 try { const saved = localStorage.getItem('hr_innov_lang'); if (saved === 'en' || saved === 'vi') currentLang = saved; } catch(e) {}
- 
+
 /* ============ Chart.js global theme ============ */
 Chart.defaults.color = '#c4b8d9';
 Chart.defaults.font.family = "'Inter','Be Vietnam Pro',sans-serif";
 Chart.defaults.font.size = 12;
- 
+
 let charts = {};
- 
+
 /* value + % label plugin for bars */
 const barLabels = {
   id:'barLabels',
@@ -408,7 +408,7 @@ const barLabels = {
     ctx.restore();
   }
 };
- 
+
 /* draw value + % directly on doughnut slices */
 const donutLabels = {
   id:'donutLabels',
@@ -423,7 +423,7 @@ const donutLabels = {
       const val = ds.data[i];
       if(!val) return;
       const pct = total ? Math.round(val/total*100) : 0;
-      if(pct < 5) return; // bỏ nhãn cho lát quá nhỏ, tránh chồng chữ
+      if(pct < 5) return;
       const pos = arc.tooltipPosition();
       ctx.font = "800 14px 'Inter',sans-serif";
       ctx.fillStyle = '#ffffff';
@@ -433,14 +433,14 @@ const donutLabels = {
     ctx.restore();
   }
 };
- 
+
 function langKey(){ return currentLang === 'en' ? 'en' : 'vi'; }
- 
+
 function buildCharts(){
   const lk = langKey();
   Object.values(charts).forEach(c=>c && c.destroy());
   charts = {};
- 
+
   /* Groups — horizontal bar */
   const g = DATA.groups;
   charts.groups = new Chart(document.getElementById('chartGroups'), {
@@ -451,7 +451,7 @@ function buildCharts(){
       scales:{ x:{beginAtZero:true, grid:{color:'rgba(255,255,255,.06)'}}, y:{grid:{display:false}} } },
     plugins:[barLabels]
   });
- 
+
   /* Status — doughnut */
   const s = DATA.status;
   charts.status = new Chart(document.getElementById('chartStatus'), {
@@ -462,7 +462,7 @@ function buildCharts(){
         tooltip:{callbacks:{label:c=>` ${c.raw} (${s[c.dataIndex].pct}%)`}} } },
     plugins:[donutLabels]
   });
- 
+
   /* Teams — doughnut */
   const t = DATA.teams;
   charts.teams = new Chart(document.getElementById('chartTeams'), {
@@ -473,7 +473,7 @@ function buildCharts(){
         tooltip:{callbacks:{label:c=>` ${c.raw} (${t[c.dataIndex].pct}%)`}} } },
     plugins:[donutLabels]
   });
- 
+
   /* Impact — horizontal bar with % */
   const im = DATA.impact;
   const impChart = new Chart(document.getElementById('chartImpact'), {
@@ -487,7 +487,7 @@ function buildCharts(){
   impChart.$labelText = im.map(x=>`${x.v} (${x.pct}%)`);
   impChart.update();
   charts.impact = impChart;
- 
+
   /* Functions — vertical bar with % */
   const f = DATA.functions;
   const fnChart = new Chart(document.getElementById('chartFunctions'), {
@@ -503,7 +503,7 @@ function buildCharts(){
   fnChart.update();
   charts.functions = fnChart;
 }
- 
+
 function setLanguage(lang){
   currentLang = lang;
   document.documentElement.lang = lang;
@@ -516,11 +516,11 @@ function setLanguage(lang){
   if (i18n[lang] && i18n[lang].page_title) document.title = i18n[lang].page_title;
   buildCharts();
 }
- 
+
 document.querySelectorAll('#langSwitch .lang-btn').forEach(btn=>{
   btn.addEventListener('click', ()=>{ const lang = btn.getAttribute('data-lang'); if (lang!==currentLang) setLanguage(lang); });
 });
- 
+
 /* ============ UI behaviour ============ */
 const prog=document.getElementById('prog'), topbar=document.getElementById('topbar');
 window.addEventListener('scroll',()=>{
@@ -528,19 +528,27 @@ window.addEventListener('scroll',()=>{
   prog.style.width=(window.scrollY/h*100)+'%';
   topbar.classList.toggle('solid', window.scrollY>60);
 },{passive:true});
- 
+
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
- 
+
 const burger=document.getElementById('burger'), navlinks=document.getElementById('navlinks');
 burger.addEventListener('click',()=>navlinks.classList.toggle('open'));
 navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
- 
+
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',(e)=>{
     const id=a.getAttribute('href'); if(id.length<2) return;
     const target=document.querySelector(id); if(!target) return;
     e.preventDefault(); target.classList.add('in'); target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+
+window.addEventListener('load', ()=> setLanguage(currentLang));
+</script>
+</body>
+</html>
+tDefault(); target.classList.add('in'); target.scrollIntoView({behavior:'smooth', block:'start'});
   });
 });
  
