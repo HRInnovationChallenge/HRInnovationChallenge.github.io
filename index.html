@@ -450,6 +450,59 @@ p{color:var(--ink-soft); margin-bottom:14px}
 @keyframes megaSweep{0%{left:-60%}55%,100%{left:130%}}
 @keyframes megaTwinkle{0%,100%{opacity:.5; transform:scale(.85)}50%{opacity:1; transform:scale(1.15)}}
 
+.cta-row{display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; margin:34px auto 40px}
+.cta-row .btn-mega{margin:0}
+
+/* ===== WOW Explore Report button ===== */
+.btn-report{
+  position:relative; display:inline-flex; align-items:center; justify-content:center;
+  padding:15px 34px; border-radius:44px; text-decoration:none; cursor:pointer;
+  overflow:hidden; isolation:isolate; will-change:transform;
+  background:linear-gradient(135deg, #3a2168 0%, #6b3fa0 50%, #4a1942 100%);
+  background-size:200% 100%;
+  box-shadow:0 0 0 1px rgba(212,168,75,.35) inset, 0 0 20px rgba(107,63,160,.45), 0 12px 30px rgba(8,4,22,.5);
+  animation:rpHue 6s ease infinite, rpFloat 3.4s ease-in-out infinite;
+}
+/* viền conic xoay lấp lánh */
+.btn-report::before{
+  content:''; position:absolute; inset:-2px; border-radius:inherit; z-index:-2;
+  background:conic-gradient(from 0deg, transparent 0deg, rgba(240,205,120,.95) 70deg, transparent 150deg,
+             rgba(138,95,192,.9) 240deg, transparent 320deg, rgba(240,205,120,.95) 360deg);
+  filter:blur(7px); opacity:.75; animation:rpSpin 5.5s linear infinite;
+}
+/* nền tối bên trong để chữ nổi */
+.btn-report::after{
+  content:''; position:absolute; inset:1px; border-radius:inherit; z-index:-1;
+  background:linear-gradient(135deg, #2a1850, #4a1942);
+}
+/* dải sáng quét ngang */
+.btn-report .rp-glow{
+  position:absolute; top:0; left:-60%; width:45%; height:100%; z-index:1; pointer-events:none;
+  background:linear-gradient(100deg, transparent, rgba(240,205,120,.55), transparent);
+  transform:skewX(-18deg); animation:rpSweep 3.6s ease-in-out infinite;
+}
+.btn-report .rp-inner{position:relative; z-index:2; display:inline-flex; align-items:center; gap:11px}
+.btn-report .rp-ico{font-size:1.2rem; animation:rpTwinkle 1.9s ease-in-out infinite}
+.btn-report .rp-txt{
+  font-family:'Marcellus',serif; font-weight:700; letter-spacing:1px; font-size:.98rem;
+  background:linear-gradient(90deg, var(--gold-bright), #fff, var(--gold-bright));
+  background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:rpShine 3.5s linear infinite;
+}
+.btn-report:hover{transform:translateY(-3px) scale(1.02);
+  box-shadow:0 0 0 1px rgba(212,168,75,.5) inset, 0 0 32px rgba(240,205,120,.6), 0 14px 34px rgba(8,4,22,.6)}
+@keyframes rpHue{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+@keyframes rpSpin{to{transform:rotate(360deg)}}
+@keyframes rpSweep{0%{left:-60%}55%,100%{left:130%}}
+@keyframes rpTwinkle{0%,100%{opacity:.6; transform:scale(.9) rotate(-4deg)}50%{opacity:1; transform:scale(1.18) rotate(4deg)}}
+@keyframes rpShine{0%{background-position:0% 0}100%{background-position:200% 0}}
+@keyframes rpFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(max-width:560px){.btn-report{padding:13px 24px} .btn-report .rp-txt{font-size:.86rem}}
+
+/* nav report link */
+.nav-report{color:var(--gold-bright) !important; font-weight:600}
+.nav-report:hover{color:#fff !important; background:rgba(107,63,160,.28) !important}
+
 .road-card{padding:22px 40px 30px; margin-top:0}
 .road-wrap{position:relative; display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding-top:56px}
 .road-end{text-align:center; flex-shrink:0; width:140px; z-index:3}
@@ -558,6 +611,30 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   .burger{display:block}
   section{padding:64px 18px}
 }
+
+/* ============ FLOATING PROGRESS BUTTON ============ */
+.float-progress{
+  position:fixed; top:0; left:0; z-index:120; text-decoration:none;
+  display:inline-flex; align-items:center; gap:9px;
+  padding:11px 20px; border-radius:40px; cursor:pointer;
+  font-family:'Marcellus',serif; font-weight:700; letter-spacing:.6px; font-size:.82rem;
+  color:#241503; white-space:nowrap; user-select:none;
+  background:linear-gradient(135deg, var(--gold-bright) 0%, var(--gold) 50%, var(--gold-deep) 100%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.28) inset, 0 0 20px rgba(240,205,120,.5), 0 10px 26px rgba(8,4,22,.5);
+  will-change:transform; transition:box-shadow .3s, filter .2s;
+}
+.float-progress::before{
+  content:''; position:absolute; inset:-3px; border-radius:inherit; z-index:-1;
+  background:conic-gradient(from 0deg, transparent 0deg, rgba(240,205,120,.9) 70deg, transparent 150deg,
+             rgba(138,95,192,.85) 240deg, transparent 320deg, rgba(240,205,120,.9) 360deg);
+  filter:blur(6px); opacity:.75; animation:fpSpin 5s linear infinite;
+}
+.float-progress .fp-ico{font-size:1rem; animation:fpTwinkle 1.8s ease-in-out infinite}
+.float-progress:hover{filter:brightness(1.08); box-shadow:0 0 0 1px rgba(255,255,255,.35) inset, 0 0 30px rgba(240,205,120,.7), 0 12px 30px rgba(8,4,22,.6)}
+.float-progress.grabbed{cursor:grabbing}
+@keyframes fpSpin{to{transform:rotate(360deg)}}
+@keyframes fpTwinkle{0%,100%{opacity:.55; transform:scale(.85)}50%{opacity:1; transform:scale(1.2)}}
+@media(max-width:560px){.float-progress{font-size:.72rem; padding:9px 15px}}
 </style>
 </head>
 <body>
@@ -565,6 +642,12 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <div class="bg-veil"></div>
 <div class="bg-stars"></div>
 <div class="scroll-progress" id="prog"></div>
+
+<a class="float-progress" id="floatProgress"
+   href="https://hrinnovationchallenge.github.io/submission_report.html"
+   target="_blank" rel="noopener noreferrer">
+  <span class="fp-ico">✦</span><span>Submission Report</span>
+</a>
 
 <div class="secnav">
   <button class="secnav-btn" id="navPrev" aria-label="Section trước">‹</button>
@@ -597,6 +680,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <a href="#journey" data-i18n="nav_journey">The Journey</a>
     <a href="#rewards" data-i18n="nav_rewards">Rewards</a>
     <a href="#timeline" data-i18n="nav_timeline">Timeline</a>
+    <a href="https://hrinnovationchallenge.github.io/submission_report.html" target="_blank" rel="noopener noreferrer" class="nav-report" data-i18n="nav_report">📊 Report</a>
     <a href="#submit" class="nav-cta" data-i18n="nav_submit">Submit ✦</a>
   </nav>
 </div>
@@ -790,7 +874,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
           <li data-i18n="r1_li3">Value đủ rõ để tiếp tục phát triển</li>
         </ul>
         <div class="r-milestones">
-          <div class="ms"><span class="ms-dot"></span><div><b>14 – 27 / 09</b><span data-i18n="r1_ms">Mở &amp; đóng cổng nộp Innovation Case</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>14 – 20 / 09</b><span data-i18n="r1_ms">Mở &amp; đóng cổng nộp Innovation Case</span></div></div>
         </div>
         <div class="r-foot" data-i18n="r1_foot">✨ Qualified Innovations unlock Early Recognition.</div>
       </div>
@@ -807,8 +891,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
         <div class="r-flow"><span data-i18n="r2_flow1">Develop &amp; Validate Idea</span><i>→</i><span data-i18n="r2_flow2">Pitching</span></div>
         <p data-i18n="r2_desc">Bước vào không gian phát triển, kiểm chứng giả thuyết bằng dữ liệu và mài giũa sản phẩm để sẵn sàng cho vòng tranh tài vào Top 5.</p>
         <div class="r-milestones">
-          <div class="ms"><span class="ms-dot"></span><div><b>05 – 18 / 10</b><span data-i18n="r2_ms1">2 tuần Develop · Test · Validate solution</span></div></div>
-          <div class="ms"><span class="ms-dot"></span><div><b>~ 21 – 22 / 10</b><span data-i18n="r2_ms2">Pitch + Demo + Q&amp;A → chọn Top 5</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>28/09 – 11 / 10</b><span data-i18n="r2_ms1">2 tuần Develop · Test · Validate solution</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>~ 14 – 15 / 10</b><span data-i18n="r2_ms2">Pitch + Demo + Q&amp;A → chọn Top 5</span></div></div>
         </div>
         <div class="r-foot" data-i18n="r2_foot">🏅 Các solution nổi bật nhất được chọn vào Top 5.</div>
       </div>
@@ -825,8 +909,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
         <div class="r-flow"><span data-i18n="r3_flow1">Finalise Presentation</span><i>→</i><span data-i18n="r3_flow2">Live Pitching</span></div>
         <p data-i18n="r3_desc">Top 5 chuẩn bị bước lên sân khấu Grand Finale, trình diễn trước hội đồng thẩm định và khắc tên trên Đài Vinh Danh.</p>
         <div class="r-milestones">
-          <div class="ms"><span class="ms-dot"></span><div><b>23 – 29 / 10</b><span data-i18n="r3_ms1">1 tuần hoàn thiện solution</span></div></div>
-          <div class="ms"><span class="ms-dot"></span><div><b>~ 30 – 31 / 10</b><span data-i18n="r3_ms2">Grand Finale · Pitch · Demo · Awards</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>16 – 22 / 10</b><span data-i18n="r3_ms1">1 tuần hoàn thiện solution</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>~ 23 – 24 / 10</b><span data-i18n="r3_ms2">Grand Finale · Pitch · Demo · Awards</span></div></div>
         </div>
         <div class="r-foot">🔥 Prove the value. Show the impact.</div>
       </div>
@@ -904,16 +988,26 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   <h2 class="title" data-i18n="cta_title">The Time <em>Is Now</em></h2>
   <p style="max-width:680px; margin:0 auto; font-size:1.05rem" data-i18n="cta_p">Mọi phép màu vĩ đại đều từng bắt đầu từ một sự bất tiện chưa ai thay đổi. Các phù thủy đã <b style="color:var(--gold-bright)">sẵn sàng để bước ra ánh sáng và ghi danh câu chuyện của chính mình?.</b></p>
 
-  <a href="https://forms.cloud.microsoft/r/igpZ5dnhdY" target="_blank" rel="noopener noreferrer" class="btn-mega" id="submitBtn">
-    <span class="mega-spark mega-spark-l">✦</span>
-    <span class="mega-inner">
-      <span class="mega-ico">🎩</span>
-      <span class="mega-lines">
-        <span class="mega-txt" data-i18n="cta_btn">Click HERE to Submit</span>
+  <div class="cta-row">
+    <a href="https://forms.cloud.microsoft/r/igpZ5dnhdY" target="_blank" rel="noopener noreferrer" class="btn-mega" id="submitBtn">
+      <span class="mega-spark mega-spark-l">✦</span>
+      <span class="mega-inner">
+        <span class="mega-ico">🎩</span>
+        <span class="mega-lines">
+          <span class="mega-txt" data-i18n="cta_btn">Click HERE to Submit</span>
+        </span>
       </span>
-    </span>
-    <span class="mega-spark mega-spark-r">✦</span>
-  </a>
+      <span class="mega-spark mega-spark-r">✦</span>
+    </a>
+
+    <a href="https://hrinnovationchallenge.github.io/submission_report.html" target="_blank" rel="noopener noreferrer" class="btn-report">
+      <span class="rp-glow"></span>
+      <span class="rp-inner">
+        <span class="rp-ico">📊</span>
+        <span class="rp-txt" data-i18n="report_btn">Explore Latest Submission Report</span>
+      </span>
+    </a>
+  </div>
 
   <div class="gcard road-card">
     <div class="road-wrap">
@@ -923,7 +1017,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       </div>
       <div class="road-end right">
         <div class="road-flag">🎩</div>
-        <b>27/09/2026</b><span data-i18n="road_end">Đóng đơn Vòng 1</span>
+        <b>20/09/2026</b><span data-i18n="road_end">Đóng đơn Vòng 1</span>
       </div>
       <div class="road-track">
         <div class="road-fill" id="roadFill"></div>
@@ -975,8 +1069,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <div class="tlx-body">
         <div class="tlx-step"><span class="tlx-dot"></span><div><b>11 SEP</b><p data-i18n="tl_step1">Kickoff cuộc thi — công bố Challenge</p></div></div>
         <div class="tlx-step"><span class="tlx-dot"></span><div><b>14 SEP · 09:00</b><p data-i18n="tl_step2">The Gates Open — mở cổng nhận Innovation Case</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>27 SEP</b><p data-i18n="tl_step3">The Sorting Hat Closes — deadline submission Vòng 1</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>28 SEP – 04 OCT</b><p data-i18n="tl_step4">Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>20 SEP</b><p data-i18n="tl_step3">The Sorting Hat Closes — deadline submission Vòng 1</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>21 – 27 SEP</b><p data-i18n="tl_step4">Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
       </div>
     </div>
 
@@ -984,13 +1078,13 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <div class="tlx-head r2">
         <span class="tlx-emoji">⚗️</span>
         <div>
-          <span class="tlx-badge" data-i18n="tl_c2_badge">Chặng 2 · Oct</span>
+          <span class="tlx-badge" data-i18n="tl_c2_badge">Chặng 2 · Sep – Oct</span>
           <h3>The Chamber of Innovation</h3>
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>05 – 18 OCT</b><p data-i18n="tl_step5">The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~21 – 22 OCT</b><p data-i18n="tl_step6">Pitch &amp; Demo Day — chọn Top 5</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>28 SEP – 11 OCT</b><p data-i18n="tl_step5">The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~14 – 15 OCT</b><p data-i18n="tl_step6">Pitch &amp; Demo Day — chọn Top 5</p></div></div>
       </div>
     </div>
 
@@ -1003,8 +1097,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
         </div>
       </div>
       <div class="tlx-body">
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>23 – 29 OCT</b><p data-i18n="tl_step7">The Final Quest — Top 5 hoàn thiện solution</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~30 / 31 OCT</b><p data-i18n="tl_step8">Grand Finale — Pitch · Q&amp;A · Trao thưởng</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>16 – 22 OCT</b><p data-i18n="tl_step7">The Final Quest — Top 5 hoàn thiện solution</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>~23 / 24 OCT</b><p data-i18n="tl_step8">Grand Finale — Pitch · Q&amp;A · Trao thưởng</p></div></div>
       </div>
     </div>
   </div>
@@ -1027,7 +1121,9 @@ const i18n = {
     nav_journey: "The Journey",
     nav_rewards: "Rewards",
     nav_timeline: "Timeline",
+    nav_report: "📊 Report",
     nav_submit: "Submit ✦",
+    report_btn: "Xem Submission Report mới nhất",
     scroll_hint: "Scroll to begin<span>⌄</span>",
     kb_hint: '<span class="kbk">←</span><span class="kbk">→</span> để chuyển section',
     story_a_eyebrow: "The Calling",
@@ -1158,7 +1254,7 @@ const i18n = {
     tl_title: "When does <em>the magic happen?</em>",
     tl_lede: "Mark your journey.",
     tl_c1_badge: "Chặng 1 · Sep",
-    tl_c2_badge: "Chặng 2 · Oct",
+    tl_c2_badge: "Chặng 2 · Sep – Oct",
     tl_c3_badge: "Chặng 3 · Oct",
     tl_step1: "Kickoff cuộc thi — công bố Challenge",
     tl_step2: "The Gates Open — mở cổng nhận Innovation Case",
@@ -1181,7 +1277,9 @@ const i18n = {
     nav_journey: "The Journey",
     nav_rewards: "Rewards",
     nav_timeline: "Timeline",
+    nav_report: "📊 Report",
     nav_submit: "Submit ✦",
+    report_btn: "Explore Latest Submission Report",
     scroll_hint: "Scroll to begin<span>⌄</span>",
     kb_hint: '<span class="kbk">←</span><span class="kbk">→</span> to navigate sections',
     story_a_eyebrow: "The Calling",
@@ -1312,7 +1410,7 @@ const i18n = {
     tl_title: "When does <em>the magic happen?</em>",
     tl_lede: "Mark your journey.",
     tl_c1_badge: "Phase 1 · Sep",
-    tl_c2_badge: "Phase 2 · Oct",
+    tl_c2_badge: "Phase 2 · Sep – Oct",
     tl_c3_badge: "Phase 3 · Oct",
     tl_step1: "Challenge Kickoff — Announcing the Challenge",
     tl_step2: "The Gates Open — Innovation Case portal opens",
@@ -1532,7 +1630,7 @@ let updateCountdownText = function(){};
 (function(){
   const KICKOFF = new Date('2026-09-11T00:00:00');
   const OPEN    = new Date('2026-09-14T09:00:00');
-  const CLOSE   = new Date('2026-09-27T23:59:59');
+  const CLOSE   = new Date('2026-09-20T23:59:59');
   const fill=document.getElementById('roadFill');
   const here=document.getElementById('roadHere');
   const gate=document.getElementById('roadGate');
@@ -1593,6 +1691,88 @@ let updateCountdownText = function(){};
     }catch(err){}
   });
 })();
+
+/* ============ FLOATING "Progress Update" — bay lung tung ============ */
+(function(){
+  var el = document.getElementById('floatProgress');
+  if(!el) return;
+
+  var margin = 12;
+  var x, y, vx, vy;
+  var paused = false, dragging = false, moved = false;
+  var dragDX = 0, dragDY = 0;
+
+  function size(){ return { w: el.offsetWidth, h: el.offsetHeight }; }
+  function maxX(){ return Math.max(margin, window.innerWidth  - size().w - margin); }
+  function maxY(){ return Math.max(margin, window.innerHeight - size().h - margin); }
+
+  // vị trí & vận tốc khởi tạo
+  x = Math.random() * (maxX()-margin) + margin;
+  y = Math.random() * (maxY()-margin) + margin;
+  var speed = 1.4;
+  var ang = Math.random() * Math.PI * 2;
+  vx = Math.cos(ang) * speed;
+  vy = Math.sin(ang) * speed;
+
+  function place(){ el.style.transform = 'translate('+x+'px,'+y+'px)'; }
+  place();
+
+  function step(){
+    if(!paused && !dragging){
+      x += vx; y += vy;
+      var mx = maxX(), my = maxY();
+      if(x <= margin){ x = margin; vx = Math.abs(vx); }
+      else if(x >= mx){ x = mx; vx = -Math.abs(vx); }
+      if(y <= margin){ y = margin; vy = Math.abs(vy); }
+      else if(y >= my){ y = my; vy = -Math.abs(vy); }
+      place();
+    }
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+
+  // Dừng khi hover để dễ bấm
+  el.addEventListener('mouseenter', function(){ paused = true; });
+  el.addEventListener('mouseleave', function(){ if(!dragging) paused = false; });
+
+  // Cho phép kéo thả; nếu chỉ click (không kéo) thì để link mở bình thường
+  function onDown(e){
+    dragging = true; moved = false; paused = true;
+    el.classList.add('grabbed');
+    var p = ('touches' in e) ? e.touches[0] : e;
+    dragDX = p.clientX - x; dragDY = p.clientY - y;
+  }
+  function onMove(e){
+    if(!dragging) return;
+    var p = ('touches' in e) ? e.touches[0] : e;
+    var nx = p.clientX - dragDX, ny = p.clientY - dragDY;
+    if(Math.abs(nx-x) > 3 || Math.abs(ny-y) > 3) moved = true;
+    x = Math.min(maxX(), Math.max(margin, nx));
+    y = Math.min(maxY(), Math.max(margin, ny));
+    place();
+    if('touches' in e) e.preventDefault();
+  }
+  function onUp(){
+    if(!dragging) return;
+    dragging = false; paused = false;
+    el.classList.remove('grabbed');
+  }
+  el.addEventListener('mousedown', onDown);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', onUp);
+  el.addEventListener('touchstart', onDown, {passive:true});
+  window.addEventListener('touchmove', onMove, {passive:false});
+  window.addEventListener('touchend', onUp);
+
+  // Nếu vừa kéo thì chặn điều hướng (tránh mở link khi thả)
+  el.addEventListener('click', function(e){ if(moved){ e.preventDefault(); } });
+
+  // Giữ trong khung khi resize
+  window.addEventListener('resize', function(){
+    x = Math.min(x, maxX()); y = Math.min(y, maxY()); place();
+  });
+})();
 </script>
 </body>
 </html>
+
