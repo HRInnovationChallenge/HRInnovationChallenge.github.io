@@ -537,7 +537,8 @@ p{color:var(--ink-soft); margin-bottom:14px}
 .cd-unit b{font-family:'Marcellus',serif; font-size:1.9rem; color:var(--gold-bright); line-height:1}
 .cd-unit span{font-size:.62rem; text-transform:uppercase; letter-spacing:1px; color:var(--ink-dim); margin-top:4px}
 .cd-sep{font-family:'Marcellus',serif; font-size:1.6rem; color:var(--gold); opacity:.6; margin-top:-8px}
-.countdown.state-open .cd-label{color:var(--gold-bright)}
+.countdown.state-open .cd-label,
+.countdown.state-before .cd-label{color:var(--gold-bright)}
 .countdown.state-closed .cd-timer{display:none}
 .countdown.state-closed .cd-label{font-size:1.05rem; color:#ffb3bd}
 
@@ -587,7 +588,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     transition:none !important; animation:none !important;
   }
   .reveal, .tlx-col{opacity:1 !important; transform:none !important}
-  .story-section .story-step-a, .story-section .story-step-b{display:block !important}
+  .story-section .story-step-a, .story-step-b{display:block !important}
   .reward-layout{flex-direction:column !important; gap:20px !important; align-items:stretch !important}
   .reward-section .reward-podium-col, .reward-section .reward-extra-col{
     flex:1 1 auto !important; max-width:100% !important; width:100% !important; opacity:1 !important; transform:none !important; overflow:visible !important;
@@ -874,7 +875,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
           <li data-i18n="r1_li3">Value đủ rõ để tiếp tục phát triển</li>
         </ul>
         <div class="r-milestones">
-          <div class="ms"><span class="ms-dot"></span><div><b>14 – 20 / 09</b><span data-i18n="r1_ms">Mở &amp; đóng cổng nộp Innovation Case</span></div></div>
+          <div class="ms"><span class="ms-dot"></span><div><b>14 – 22 / 09 (13:00)</b><span data-i18n="r1_ms">Mở &amp; đóng cổng nộp Innovation Case (Gia hạn)</span></div></div>
         </div>
         <div class="r-foot" data-i18n="r1_foot">✨ Qualified Innovations unlock Early Recognition.</div>
       </div>
@@ -1017,7 +1018,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       </div>
       <div class="road-end right">
         <div class="road-flag">🎩</div>
-        <b>20/09/2026</b><span data-i18n="road_end">Đóng đơn Vòng 1</span>
+        <b>13:00 · 22/09/2026</b><span data-i18n="road_end">Đóng đơn Vòng 1</span>
       </div>
       <div class="road-track">
         <div class="road-fill" id="roadFill"></div>
@@ -1069,8 +1070,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <div class="tlx-body">
         <div class="tlx-step"><span class="tlx-dot"></span><div><b>11 SEP</b><p data-i18n="tl_step1">Kickoff cuộc thi — công bố Challenge</p></div></div>
         <div class="tlx-step"><span class="tlx-dot"></span><div><b>14 SEP · 09:00</b><p data-i18n="tl_step2">The Gates Open — mở cổng nhận Innovation Case</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>20 SEP</b><p data-i18n="tl_step3">The Sorting Hat Closes — deadline submission Vòng 1</p></div></div>
-        <div class="tlx-step"><span class="tlx-dot"></span><div><b>21 – 27 SEP</b><p data-i18n="tl_step4">Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>22 SEP · 13:00</b><p data-i18n="tl_step3">The Sorting Hat Closes — hạn chót gia hạn Vòng 1</p></div></div>
+        <div class="tlx-step"><span class="tlx-dot"></span><div><b>22 (chiều) – 27 SEP</b><p data-i18n="tl_step4">Sorting &amp; Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified</p></div></div>
       </div>
     </div>
 
@@ -1197,7 +1198,7 @@ const i18n = {
     r1_li1: "Problem đáng giải quyết",
     r1_li2: "Solution có logic",
     r1_li3: "Value đủ rõ để tiếp tục phát triển",
-    r1_ms: "Mở & đóng cổng nộp Innovation Case",
+    r1_ms: "Mở & đóng cổng nộp Innovation Case (Gia hạn)",
     r1_foot: "✨ Qualified Innovations unlock Early Recognition.",
     r2_badge: "Round 2",
     r2_title: "The Chamber of Innovation",
@@ -1243,7 +1244,7 @@ const i18n = {
     cta_p: 'Mọi phép màu vĩ đại đều từng bắt đầu từ một sự bất tiện chưa ai thay đổi. Các phù thủy đã <b style="color:var(--gold-bright)">sẵn sàng để bước ra ánh sáng và ghi danh câu chuyện của chính mình?.</b>',
     cta_btn: "Click HERE to Submit",
     road_start: "Kickoff cuộc thi",
-    road_end: "Đóng đơn Vòng 1",
+    road_end: "Đóng đơn Vòng 1 (13:00)",
     road_gate: "Mở đơn",
     road_here: "📍 We are here",
     unit_d: "ngày",
@@ -1258,16 +1259,16 @@ const i18n = {
     tl_c3_badge: "Chặng 3 · Oct",
     tl_step1: "Kickoff cuộc thi — công bố Challenge",
     tl_step2: "The Gates Open — mở cổng nhận Innovation Case",
-    tl_step3: "The Sorting Hat Closes — deadline submission Vòng 1",
+    tl_step3: "The Sorting Hat Closes — hạn chót gia hạn Vòng 1 (13:00)",
     tl_step4: "Sorting & Early Recognition — Hội đồng chấm Vòng 1 và công bố Qualified",
     tl_step5: "The Chamber of Innovation — Các đội thi phát triển Solution và xác minh Value",
     tl_step6: "Pitch & Demo Day — chọn Top 5",
     tl_step7: "The Final Quest — Top 5 hoàn thiện solution",
     tl_step8: "Grand Finale — Pitch · Q&A · Trao thưởng",
     footer_sub: "Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.",
-    cd_before: "📝 Cổng nộp đơn mở sau",
-    cd_open: "⏳ Còn lại để nộp Innovation Case",
-    cd_closed: "🎩 Cổng nộp Vòng 1 đã đóng — hẹn gặp ở Chamber!"
+    cd_reopen_wait: "✨ Cổng nộp đơn sẽ mở lại sau (Gia hạn 9:00 – 13:00)",
+    cd_extend_open: "⏳ Thời gian gia hạn còn lại để nộp Innovation Case (Đóng lúc 13:00)",
+    cd_closed: "🎩 Cổng nộp Vòng 1 đã chính thức khép lại — hẹn gặp ở Chamber!"
   },
   en: {
     page_title: "HR Innovation Challenge 2026 — Unlock the Magic of Innovation",
@@ -1353,7 +1354,7 @@ const i18n = {
     r1_li1: "A problem worth solving",
     r1_li2: "A logical solution",
     r1_li3: "Clear value to incubate further",
-    r1_ms: "Innovation Case submission window",
+    r1_ms: "Innovation Case submission window (Extended to 13:00 · Sep 22)",
     r1_foot: "✨ Qualified Innovations unlock Early Recognition.",
     r2_badge: "Round 2",
     r2_title: "The Chamber of Innovation",
@@ -1399,7 +1400,7 @@ const i18n = {
     cta_p: 'Every great magic began with a daily friction no one had dared to fix. Wizards, are you <b style="color:var(--gold-bright)">ready to step into the light and chronicle your own story?</b>',
     cta_btn: "Click HERE to Submit",
     road_start: "Challenge Kickoff",
-    road_end: "Round 1 Closes",
+    road_end: "Round 1 Closes (13:00)",
     road_gate: "Submissions Open",
     road_here: "📍 We are here",
     unit_d: "days",
@@ -1414,16 +1415,16 @@ const i18n = {
     tl_c3_badge: "Phase 3 · Oct",
     tl_step1: "Challenge Kickoff — Announcing the Challenge",
     tl_step2: "The Gates Open — Innovation Case portal opens",
-    tl_step3: "The Sorting Hat Closes — Round 1 submission deadline",
+    tl_step3: "The Sorting Hat Closes — extended Round 1 deadline (13:00)",
     tl_step4: "Sorting & Early Recognition — Round 1 appraisal & Qualified announcement",
     tl_step5: "The Chamber of Innovation — Teams incubate solutions & validate value",
     tl_step6: "Pitch & Demo Day — Top 5 finalist selection",
     tl_step7: "The Final Quest — Top 5 polish their solutions",
     tl_step8: "Grand Finale — Pitching, Q&A & Award Ceremony",
     footer_sub: "Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact.",
-    cd_before: "📝 Submissions open in",
-    cd_open: "⏳ Time left to submit Innovation Case",
-    cd_closed: "🎩 Round 1 submissions closed — see you in the Chamber!"
+    cd_reopen_wait: "✨ Submission portal will reopen in (Extended 9:00 – 13:00)",
+    cd_extend_open: "⏳ Extended time left to submit Innovation Case (Closes at 13:00)",
+    cd_closed: "🎩 Round 1 submissions have closed — see you in the Chamber!"
   }
 };
 
@@ -1625,58 +1626,67 @@ setTimeout(hideHint, 7000);
   }, {passive:false});
 })();
 
-/* countdown & timeline tracker */
+/* countdown & timeline tracker (Gia hạn 9h - 13h ngày 22/09) */
 let updateCountdownText = function(){};
 (function(){
-  const KICKOFF = new Date('2026-09-11T00:00:00');
-  const OPEN    = new Date('2026-09-14T09:00:00');
-  const CLOSE   = new Date('2026-09-20T23:59:59');
-  const fill=document.getElementById('roadFill');
-  const here=document.getElementById('roadHere');
-  const gate=document.getElementById('roadGate');
-  const cd=document.getElementById('countdown');
-  const cdLabel=document.getElementById('cdLabel');
-  const elD=document.getElementById('cdD'), elH=document.getElementById('cdH'),
-        elM=document.getElementById('cdM'), elS=document.getElementById('cdS');
-  if(!fill||!cd) return;
-  const pad=n=>String(n).padStart(2,'0');
+  const KICKOFF      = new Date('2026-09-11T00:00:00');
+  const EXTEND_START = new Date('2026-09-22T09:00:00'); // 09:00 sáng 22/09 mở lại
+  const EXTEND_END   = new Date('2026-09-22T13:00:00'); // 13:00 chiều 22/09 đóng hẳn
+  
+  const fill    = document.getElementById('roadFill');
+  const here    = document.getElementById('roadHere');
+  const gate    = document.getElementById('roadGate');
+  const cd      = document.getElementById('countdown');
+  const cdLabel = document.getElementById('cdLabel');
+  const elD = document.getElementById('cdD'), elH = document.getElementById('cdH'),
+        elM = document.getElementById('cdM'), elS = document.getElementById('cdS');
+  if(!fill || !cd) return;
+  const pad = n => String(n).padStart(2,'0');
 
-  const gatePct = Math.max(0, Math.min(100, (OPEN-KICKOFF)/(CLOSE-KICKOFF)*100));
+  // Đặt vị trí mốc Gate (Mở đơn 14/09) trên trục timeline mới
+  const OPEN_INITIAL = new Date('2026-09-14T09:00:00');
+  const gatePct = Math.max(0, Math.min(100, (OPEN_INITIAL - KICKOFF) / (EXTEND_END - KICKOFF) * 100));
   if(gate) gate.style.left = gatePct + '%';
 
   function diff(ms){
-    const s=Math.max(0, Math.floor(ms/1000));
-    elD.textContent=Math.floor(s/86400);
-    elH.textContent=pad(Math.floor(s%86400/3600));
-    elM.textContent=pad(Math.floor(s%3600/60));
-    elS.textContent=pad(s%60);
+    const s = Math.max(0, Math.floor(ms / 1000));
+    elD.textContent = Math.floor(s / 86400);
+    elH.textContent = pad(Math.floor((s % 86400) / 3600));
+    elM.textContent = pad(Math.floor((s % 3600) / 60));
+    elS.textContent = pad(s % 60);
   }
 
   function tick(){
-    const now=new Date();
-    let pct=(now-KICKOFF)/(CLOSE-KICKOFF)*100;
-    pct=Math.max(0,Math.min(100,pct));
-    fill.style.width=pct+'%';
-    if(here) here.style.left=pct+'%';
+    const now = new Date();
+    
+    // Cập nhật vị trí ghim và thanh chạy theo mốc hạn chót mới (13h ngày 22/09)
+    let pct = (now - KICKOFF) / (EXTEND_END - KICKOFF) * 100;
+    pct = Math.max(0, Math.min(100, pct));
+    fill.style.width = pct + '%';
+    if(here) here.style.left = pct + '%';
 
     const langObj = i18n[currentLang] || i18n.vi;
 
-    if(now < OPEN){
-      cd.className='countdown';
-      cdLabel.textContent = langObj.cd_before;
-      diff(OPEN-now);
-    } else if(now <= CLOSE){
-      cd.className='countdown state-open';
-      cdLabel.textContent = langObj.cd_open;
-      diff(CLOSE-now);
+    if (now < EXTEND_START) {
+      // 1. Từ giờ đến trước 09:00 ngày 22/09: Đếm lùi đến lúc MỞ LẠI đăng ký
+      cd.className = 'countdown state-before';
+      cdLabel.innerHTML = langObj.cd_reopen_wait;
+      diff(EXTEND_START - now);
+    } else if (now <= EXTEND_END) {
+      // 2. Từ 09:00 đến 13:00 ngày 22/09: Đếm lùi 4 tiếng đến lúc ĐÓNG HẲN
+      cd.className = 'countdown state-open';
+      cdLabel.innerHTML = langObj.cd_extend_open;
+      diff(EXTEND_END - now);
     } else {
-      cd.className='countdown state-closed';
-      cdLabel.textContent = langObj.cd_closed;
+      // 3. Sau 13:00 ngày 22/09: Đóng đơn hoàn toàn (ẩn đồng hồ số)
+      cd.className = 'countdown state-closed';
+      cdLabel.innerHTML = langObj.cd_closed;
     }
   }
 
   updateCountdownText = tick;
-  tick(); setInterval(tick,1000);
+  tick(); 
+  setInterval(tick, 1000);
 })();
 
 /* submit button */
@@ -1775,4 +1785,9 @@ let updateCountdownText = function(){};
 </script>
 </body>
 </html>
-
+maxX()); y = Math.min(y, maxY()); place();
+  });
+})();
+</script>
+</body>
+</html>
