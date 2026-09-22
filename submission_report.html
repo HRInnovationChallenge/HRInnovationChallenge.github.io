@@ -201,11 +201,11 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <button class="burger" id="burger" aria-label="menu">☰</button>
   </div>
   <nav class="nav-links" id="navlinks">
-    <a href="#overview" data-i18n="nav_overview">Overview</a>
-    <a href="#groups" data-i18n="nav_groups">Innovation</a>
-    <a href="#teams" data-i18n="nav_teams">Teams</a>
-    <a href="#impact" data-i18n="nav_impact">Impact</a>
-    <a href="#functions" data-i18n="nav_functions">By Function</a>
+    <a href="#overview" data-i18n="nav_overview">Tổng quan</a>
+    <a href="#groups" data-i18n="nav_groups">Trường phái</a>
+    <a href="#teams" data-i18n="nav_teams">Đội hình</a>
+    <a href="#impact" data-i18n="nav_impact">Tác động</a>
+    <a href="#functions" data-i18n="nav_functions">Theo Function</a>
     <a href="https://hrinnovationchallenge.github.io/" class="nav-cta" data-i18n="nav_home">🎩 Landing</a>
   </nav>
 </div>
@@ -213,8 +213,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="eyebrow" data-i18n="hero_eyebrow">Round 1 · The Sorting Hat</div>
-  <h1 data-i18n="hero_title">The Sorting Hat has <em>spoken</em></h1>
-  <p class="sub" data-i18n="hero_sub">Bức tranh toàn cảnh của Vòng 1 sau 4 ngày mở đơn.</p>
+  <h1 data-i18n="hero_title">Chiếc Nón Phân Loại đã <em>lên tiếng</em></h1>
+  <p class="sub" data-i18n="hero_sub">Bức tranh toàn cảnh của Vòng 1 sau 1 tuần mở đơn.</p>
   <div class="stamp" data-i18n="hero_stamp">✦ Snapshot dữ liệu Vòng 1 ✦</div>
 </header>
 
@@ -225,8 +225,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <h2 class="title" data-i18n="ov_title">Những con số <em>biết kể chuyện</em></h2>
   </div>
   <div class="stats stats-3">
-    <div class="gcard stat"><span class="st-ico">🧙</span><div class="n">59.4%</div><div class="l" data-i18n="kpi_participation">Tỉ lệ HRer đã tham gia</div></div>
-    <div class="gcard stat"><span class="st-ico">📜</span><div class="n">90+</div><div class="l" data-i18n="kpi_submissions">Tổng số đơn đăng ký</div></div>
+    <div class="gcard stat"><span class="st-ico">🧙</span><div class="n">70.1%</div><div class="l" data-i18n="kpi_participation">Tỉ lệ HRer đã tham gia</div></div>
+    <div class="gcard stat"><span class="st-ico">📜</span><div class="n">110+</div><div class="l" data-i18n="kpi_submissions">Tổng số đơn đăng ký</div></div>
     <div class="gcard stat"><span class="st-ico">🎩</span><div class="n">4</div><div class="l" data-i18n="kpi_full">Function đạt ≥90% tham gia</div></div>
   </div>
 </section>
@@ -302,42 +302,42 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 </footer>
 
 <script>
-/* ============ DATA ============ */
+/* ============ DATA (CẬP NHẬT TỪ DASHBOARD SNAPSHOT) ============ */
 const DATA = {
   groups: [
-    {vi:'Tools & Technology', en:'Tools & Technology', v:57},
-    {vi:'Process & Ways of Working', en:'Process & Ways of Working', v:46},
-    {vi:'Capability & Knowledge', en:'Capability & Knowledge', v:16},
-    {vi:'HR Regulations & Policies', en:'HR Regulations & Policies', v:9}
+    {vi:'Tools & Technology', en:'Tools & Technology', v:76},
+    {vi:'Process & Ways of Working', en:'Process & Ways of Working', v:60},
+    {vi:'Capability & Knowledge', en:'Capability & Knowledge', v:25},
+    {vi:'HR Regulations & Policies', en:'HR Regulations & Policies', v:16}
   ],
   status: [
-    {vi:'New Idea', en:'New Idea', v:35, pct:38},
-    {vi:'In Development', en:'In Development', v:31, pct:34},
-    {vi:'Existing Solution', en:'Existing Solution', v:25, pct:27}
+    {vi:'Existing Solution', en:'Existing Solution', v:41, pct:34},
+    {vi:'In Development', en:'In Development', v:40, pct:34},
+    {vi:'New Idea', en:'New Idea', v:38, pct:32}
   ],
   teams: [
-    {vi:'1 người', en:'1 person', v:31, pct:34},
-    {vi:'2 người', en:'2 people', v:18, pct:20},
-    {vi:'5 người', en:'5 people', v:16, pct:18},
-    {vi:'3 người', en:'3 people', v:15, pct:16},
-    {vi:'4 người', en:'4 people', v:11, pct:12}
+    {vi:'1 người', en:'1 person', v:41, pct:34},
+    {vi:'2 người', en:'2 people', v:24, pct:20},
+    {vi:'5 người', en:'5 people', v:24, pct:20},
+    {vi:'3 người', en:'3 people', v:17, pct:14},
+    {vi:'4 người', en:'4 people', v:13, pct:11}
   ],
   impact: [
-    {vi:'Trong (các) team', en:'Within team(s)', v:21, pct:23},
-    {vi:'Trong (các) function', en:'Within function(s)', v:22, pct:24},
-    {vi:'Toàn Division', en:'Division-wide', v:16, pct:18},
-    {vi:'Toàn Tổ chức', en:'Organization-wide', v:24, pct:26},
-    {vi:'Toàn hệ sinh thái', en:'Ecosystem-wide', v:8, pct:9}
+    {vi:'Trong (các) team', en:'Within team(s)', v:24, pct:22},
+    {vi:'Trong (các) function', en:'Within function(s)', v:23, pct:21},
+    {vi:'Toàn Khối', en:'Division-wide', v:23, pct:21},
+    {vi:'Bankwide', en:'Bankwide', v:32, pct:29},
+    {vi:'Toàn hệ sinh thái (TCB, OM, MAG)', en:'Ecosystem-wide (TCB, OM, MAG)', v:9, pct:8}
   ],
   functions: [
     {name:'Function A', pct:100,  done:10, total:10},
-    {name:'Function B', pct:100,  done:15, total:15},
-    {name:'Function C', pct:100,  done:12, total:12},
+    {name:'Function B', pct:100,  done:11, total:11},
+    {name:'Function C', pct:100,  done:15, total:15},
     {name:'Function D', pct:91.7, done:11, total:12},
-    {name:'Function E', pct:53.3, done:32, total:60},
-    {name:'Function F', pct:50,   done:6,  total:12},
-    {name:'Function G', pct:43.3, done:13, total:30},
-    {name:'Function H', pct:40.4, done:19, total:47}
+    {name:'Function E', pct:61.7, done:29, total:47},
+    {name:'Function F', pct:61.7, done:37, total:60},
+    {name:'Function G', pct:60,   done:18, total:30},
+    {name:'Function H', pct:58.3, done:7,  total:12}
   ]
 };
 
@@ -351,7 +351,7 @@ const i18n = {
     nav_overview:"Tổng quan", nav_groups:"Trường phái", nav_teams:"Đội hình", nav_impact:"Tác động", nav_functions:"Theo Function", nav_home:"🎩 Landing",
     hero_eyebrow:"Vòng 1 · The Sorting Hat",
     hero_title:"Chiếc Nón Phân Loại đã <em>lên tiếng</em>",
-    hero_sub:"Bức tranh toàn cảnh của Vòng 1 sau 4 ngày mở đơn.",
+    hero_sub:"Bức tranh toàn cảnh của Vòng 1 sau 1 tuần mở đơn.",
     hero_stamp:"✦ Snapshot dữ liệu Vòng 1 ✦",
     ov_eyebrow:"The Grand Overview", ov_title:"Những con số <em>biết kể chuyện</em>",
     kpi_participation:"Tỉ lệ HRer đã tham gia", kpi_submissions:"Tổng số đơn đăng ký", kpi_full:"Function đạt ≥90% tham gia",
@@ -374,10 +374,10 @@ const i18n = {
     nav_overview:"Overview", nav_groups:"Innovation", nav_teams:"Teams", nav_impact:"Impact", nav_functions:"By Function", nav_home:"🎩 Landing",
     hero_eyebrow:"Round 1 · The Sorting Hat",
     hero_title:"The Sorting Hat has <em>spoken</em>",
-    hero_sub:"The grand overview of Round 1, three days into the submission window.",
+    hero_sub:"The grand overview of Round 1, one week into the submission window.",
     hero_stamp:"✦ Round 1 data snapshot ✦",
     ov_eyebrow:"The Grand Overview", ov_title:"The numbers that <em>tell a story</em>",
-    kpi_participation:"HRers who participated", kpi_submissions:"Total submissions", kpi_full:"Functions at ≥70% participation",
+    kpi_participation:"HRers who participated", kpi_submissions:"Total submissions", kpi_full:"Functions at ≥90% participation",
     grp_eyebrow:"The Schools of Magic", grp_title:"Which <em>school</em> do ideas belong to?",
     grp_c1_title:"Submissions by Innovation Group", grp_c1_sub:"Submissions split across the 4 innovation groups.",
     grp_c2_title:"Innovation Status Breakdown", grp_c2_sub:"Where each innovation stands on its journey.",
