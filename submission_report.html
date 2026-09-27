@@ -75,6 +75,8 @@ body{font-family:var(--sans); color:var(--ink); line-height:1.7; background:var(
 .nav-links{display:flex; gap:4px; align-items:center}
 .nav-links a{color:var(--ink-soft); text-decoration:none; font-size:.78rem; font-weight:500; padding:8px 13px; border-radius:20px; transition:.2s; letter-spacing:.3px; white-space:nowrap;}
 .nav-links a:hover{color:var(--gold-bright); background:rgba(212,168,75,.1)}
+.nav-btn-alt{border:1px solid var(--line); background:rgba(107,63,160,0.28) !important; color:var(--gold-bright) !important;}
+.nav-btn-alt:hover{background:rgba(107,63,160,0.55) !important; box-shadow:0 0 12px rgba(107,63,160,0.5);}
 .nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-deep)) !important; color:#241503 !important; font-weight:700 !important; box-shadow:0 0 16px rgba(212,168,75,.4);}
 .nav-cta:hover{color:#241503 !important; transform:translateY(-1px)}
 
@@ -144,11 +146,18 @@ p{color:var(--ink-soft); margin-bottom:14px}
 
 /* ============ CTA ROW ============ */
 .cta-row{display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; margin:10px auto 0}
-.btn-back{position:relative; display:inline-flex; align-items:center; gap:11px; padding:14px 32px; border-radius:44px; text-decoration:none; cursor:pointer;
+.btn-back{position:relative; display:inline-flex; align-items:center; gap:11px; padding:14px 30px; border-radius:44px; text-decoration:none; cursor:pointer;
   background:linear-gradient(135deg, var(--gold-bright) 0%, var(--gold) 45%, var(--gold-deep) 100%);
-  font-family:'Marcellus',serif; font-weight:700; letter-spacing:1px; font-size:.95rem; color:#241503; text-transform:uppercase;
-  box-shadow:0 0 22px rgba(240,205,120,.4), 0 12px 34px rgba(166,105,10,.42); transition:transform .2s;}
-.btn-back:hover{transform:translateY(-3px) scale(1.02)}
+  font-family:'Marcellus',serif; font-weight:700; letter-spacing:1px; font-size:.92rem; color:#241503; text-transform:uppercase;
+  box-shadow:0 0 22px rgba(240,205,120,.4), 0 12px 34px rgba(166,105,10,.42); transition:transform .2s, box-shadow .2s;}
+.btn-back:hover{transform:translateY(-3px) scale(1.02); box-shadow:0 0 28px rgba(240,205,120,.6), 0 16px 40px rgba(166,105,10,.5);}
+
+.btn-scoring{position:relative; display:inline-flex; align-items:center; gap:11px; padding:14px 30px; border-radius:44px; text-decoration:none; cursor:pointer;
+  background:linear-gradient(135deg, rgba(74,25,66,0.9), rgba(45,27,78,0.95));
+  border:1px solid var(--line);
+  font-family:'Marcellus',serif; font-weight:700; letter-spacing:1px; font-size:.92rem; color:var(--gold-bright); text-transform:uppercase;
+  box-shadow:0 0 20px rgba(107,63,160,.4); transition:transform .2s, border-color .2s, box-shadow .2s;}
+.btn-scoring:hover{transform:translateY(-3px) scale(1.02); border-color:var(--gold-bright); color:#fff; box-shadow:0 0 26px rgba(212,168,75,.45);}
 
 /* ============ FOOTER ============ */
 footer{text-align:center; padding:40px 20px 60px; border-top:1px solid var(--line-soft); margin-top:20px}
@@ -206,6 +215,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <a href="#teams" data-i18n="nav_teams">Đội hình</a>
     <a href="#impact" data-i18n="nav_impact">Tác động</a>
     <a href="#functions" data-i18n="nav_functions">Theo Function</a>
+    <a href="https://hrinnovationchallenge.github.io/round_1_scoring_details.html" class="nav-btn-alt" data-i18n="nav_scoring">⚖️ Tiến độ chấm</a>
     <a href="https://hrinnovationchallenge.github.io/" class="nav-cta" data-i18n="nav_home">🎩 Landing</a>
   </nav>
 </div>
@@ -225,8 +235,8 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     <h2 class="title" data-i18n="ov_title">Những con số <em>biết kể chuyện</em></h2>
   </div>
   <div class="stats stats-3">
-    <div class="gcard stat"><span class="st-ico">🧙</span><div class="n">70.1%</div><div class="l" data-i18n="kpi_participation">Tỉ lệ HRer đã tham gia</div></div>
-    <div class="gcard stat"><span class="st-ico">📜</span><div class="n">110+</div><div class="l" data-i18n="kpi_submissions">Tổng số đơn đăng ký</div></div>
+    <div class="gcard stat"><span class="st-ico">🧙</span><div class="n">71.6%</div><div class="l" data-i18n="kpi_participation">Tỉ lệ HRer đã tham gia</div></div>
+    <div class="gcard stat"><span class="st-ico">📜</span><div class="n">120+</div><div class="l" data-i18n="kpi_submissions">Tổng số đơn đăng ký</div></div>
     <div class="gcard stat"><span class="st-ico">🎩</span><div class="n">4</div><div class="l" data-i18n="kpi_full">Function đạt ≥90% tham gia</div></div>
   </div>
 </section>
@@ -291,6 +301,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
   </div>
 
   <div class="cta-row" style="margin-top:40px">
+    <a href="https://hrinnovationchallenge.github.io/round_1_scoring_details.html" class="btn-scoring">⚖️ <span data-i18n="btn_scoring">Xem Tiến độ Chấm Vòng 1</span></a>
     <a href="https://hrinnovationchallenge.github.io/" class="btn-back">🎩 <span data-i18n="btn_back">Về trang Challenge</span></a>
   </div>
 </section>
@@ -311,22 +322,22 @@ const DATA = {
     {vi:'HR Regulations & Policies', en:'HR Regulations & Policies', v:16}
   ],
   status: [
-    {vi:'Existing Solution', en:'Existing Solution', v:41, pct:34},
-    {vi:'In Development', en:'In Development', v:40, pct:34},
-    {vi:'New Idea', en:'New Idea', v:38, pct:32}
+    {vi:'Existing Solution', en:'Existing Solution', v:43, pct:34},
+    {vi:'In Development', en:'In Development', v:43, pct:34},
+    {vi:'New Idea', en:'New Idea', v:40, pct:32}
   ],
   teams: [
-    {vi:'1 người', en:'1 person', v:41, pct:34},
-    {vi:'2 người', en:'2 people', v:24, pct:20},
-    {vi:'5 người', en:'5 people', v:24, pct:20},
-    {vi:'3 người', en:'3 people', v:17, pct:14},
-    {vi:'4 người', en:'4 people', v:13, pct:11}
+    {vi:'1 người', en:'1 person', v:43, pct:34},
+    {vi:'5 người', en:'5 people', v:26, pct:21},
+    {vi:'2 người', en:'2 people', v:24, pct:19},
+    {vi:'3 người', en:'3 people', v:18, pct:14},
+    {vi:'4 người', en:'4 people', v:15, pct:12}
   ],
   impact: [
-    {vi:'Trong (các) team', en:'Within team(s)', v:24, pct:22},
-    {vi:'Trong (các) function', en:'Within function(s)', v:23, pct:21},
-    {vi:'Toàn Khối', en:'Division-wide', v:23, pct:21},
-    {vi:'Bankwide', en:'Bankwide', v:32, pct:29},
+    {vi:'Bankwide', en:'Bankwide', v:32, pct:27},
+    {vi:'Trong (các) team', en:'Within team(s)', v:29, pct:25},
+    {vi:'Toàn Khối', en:'Division-wide', v:25, pct:21},
+    {vi:'Trong (các) function', en:'Within function(s)', v:23, pct:19},
     {vi:'Toàn hệ sinh thái (TCB, OM, MAG)', en:'Ecosystem-wide (TCB, OM, MAG)', v:9, pct:8}
   ],
   functions: [
@@ -334,8 +345,8 @@ const DATA = {
     {name:'Function B', pct:100,  done:11, total:11},
     {name:'Function C', pct:100,  done:15, total:15},
     {name:'Function D', pct:91.7, done:11, total:12},
-    {name:'Function E', pct:61.7, done:29, total:47},
-    {name:'Function F', pct:61.7, done:37, total:60},
+    {name:'Function E', pct:66.7, done:40, total:60},
+    {name:'Function F', pct:61.7, done:29, total:47},
     {name:'Function G', pct:60,   done:18, total:30},
     {name:'Function H', pct:58.3, done:7,  total:12}
   ]
@@ -348,7 +359,8 @@ const i18n = {
   vi: {
     page_title: "HR Innovation Challenge 2026 — Submission Report",
     brand_sub: "2026 · Submission Report",
-    nav_overview:"Tổng quan", nav_groups:"Trường phái", nav_teams:"Đội hình", nav_impact:"Tác động", nav_functions:"Theo Function", nav_home:"🎩 Landing",
+    nav_overview:"Tổng quan", nav_groups:"Trường phái", nav_teams:"Đội hình", nav_impact:"Tác động", nav_functions:"Theo Function", 
+    nav_scoring:"⚖️ Tiến độ chấm", nav_home:"🎩 Landing",
     hero_eyebrow:"Vòng 1 · The Sorting Hat",
     hero_title:"Chiếc Nón Phân Loại đã <em>lên tiếng</em>",
     hero_sub:"Bức tranh toàn cảnh của Vòng 1 sau 1 tuần mở đơn.",
@@ -365,13 +377,15 @@ const i18n = {
     fn_eyebrow:"The House Cup", fn_title:"Tỉ lệ tham gia <em>theo Function</em>",
     fn_lede:"Function nào đã đưa mọi Phù thủy bước qua cánh cổng đầu tiên?",
     fn_c_title:"Tỉ lệ tham gia theo Function", fn_c_sub:"Tên các Function được mã hóa để đảm bảo tuân thủ quy định An ninh thông tin, liên hệ với AI Champion của Function để biết thứ hạng của Function.",
+    btn_scoring:"Xem Tiến độ Chấm Vòng 1",
     btn_back:"Về trang Challenge",
     footer_sub:"Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact."
   },
   en: {
     page_title: "HR Innovation Challenge 2026 — Submission Report",
     brand_sub: "2026 · Submission Report",
-    nav_overview:"Overview", nav_groups:"Innovation", nav_teams:"Teams", nav_impact:"Impact", nav_functions:"By Function", nav_home:"🎩 Landing",
+    nav_overview:"Overview", nav_groups:"Innovation", nav_teams:"Teams", nav_impact:"Impact", nav_functions:"By Function", 
+    nav_scoring:"⚖️ Scoring Progress", nav_home:"🎩 Landing",
     hero_eyebrow:"Round 1 · The Sorting Hat",
     hero_title:"The Sorting Hat has <em>spoken</em>",
     hero_sub:"The grand overview of Round 1, one week into the submission window.",
@@ -388,6 +402,7 @@ const i18n = {
     fn_eyebrow:"The House Cup", fn_title:"Participation rate <em>by Function</em>",
     fn_lede:"Which Function brought every Wizard through the first gate?",
     fn_c_title:"Participation rate by Function", fn_c_sub:"Function names are anonymized to comply with Information Security regulations; contact your Function's AI Champion to learn its ranking.",
+    btn_scoring:"View Round 1 Scoring Progress",
     btn_back:"Back to Challenge",
     footer_sub:"Unlock the Magic of Innovation — Find the friction. Create the value. Show the impact."
   }
@@ -508,7 +523,7 @@ function buildCharts(){
   if(elI) {
     const impChart = new Chart(elI, {
       type:'bar',
-      data:{ labels:im.map(x=>x[lk]), datasets:[{ data:im.map(x=>x.v), backgroundColor:['#8a5fc0','#00d4ff','#22c98d','#d4a84b','#ff5c7c'], borderRadius:7, barThickness:22 }] },
+      data:{ labels:im.map(x=>x[lk]), datasets:[{ data:im.map(x=>x.v), backgroundColor:['#d4a84b','#8a5fc0','#22c98d','#00d4ff','#ff5c7c'], borderRadius:7, barThickness:22 }] },
       options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, layout:{padding:{right:60}},
         plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.raw} (${im[c.dataIndex].pct}%)`}} },
         scales:{ x:{beginAtZero:true, grid:{color:'rgba(255,255,255,.06)'}}, y:{grid:{display:false}} } },
