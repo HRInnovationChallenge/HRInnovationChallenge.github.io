@@ -645,9 +645,9 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
 <div class="scroll-progress" id="prog"></div>
 
 <a class="float-progress" id="floatProgress"
-   href="https://hrinnovationchallenge.github.io/submission_report.html"
+   href="https://hrinnovationchallenge.github.io/round_1_scoring_details.html"
    target="_blank" rel="noopener noreferrer">
-  <span class="fp-ico">✦</span><span>Submission Report</span>
+  <span class="fp-ico">✦</span><span>Round 1 Scoring Details</span>
 </a>
 
 <div class="secnav">
@@ -781,7 +781,7 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
     </div>
     <div class="gcard cat">
       <div class="cat-top"><div class="cat-ico">🛠️</div><h3 data-i18n="cat_2_title">Tools &amp; Technology</h3></div>
-      <span class="cat-en" data-i18n="cat_2_desc">Bùa Chú Công Nghệ khai mở sức mạnh công nghệ để giải phóng sức lao động cho các phù thủy.</span>
+      <span class="cat-en" data-i18n="cat_2_desc">Bùa Chú Công Nghệ khai mở sức mạnh công nghệ để giải phóng sức lao động cho các phù thủy.</</span>
       <ul><li>AI</li><li>PowerAutomate</li><li>PowerApp</li><li>Dashboard</li></ul>
     </div>
     <div class="gcard cat">
@@ -1001,11 +1001,21 @@ footer p{font-size:.78rem; color:var(--ink-dim); margin-top:8px}
       <span class="mega-spark mega-spark-r">✦</span>
     </a>
 
+    <!-- Nút xem tiến độ đánh giá vòng 1 mới thêm -->
+    <a href="https://hrinnovationchallenge.github.io/round_1_scoring_details.html" target="_blank" rel="noopener noreferrer" class="btn-report">
+      <span class="rp-glow"></span>
+      <span class="rp-inner">
+        <span class="rp-ico">⚖️</span>
+        <span class="rp-txt" data-i18n="scoring_progress_btn">Xem tiến độ đánh giá Vòng 1</span>
+      </span>
+    </a>
+
+    <!-- Nút xem submission report đã rút gọn tên -->
     <a href="https://hrinnovationchallenge.github.io/submission_report.html" target="_blank" rel="noopener noreferrer" class="btn-report">
       <span class="rp-glow"></span>
       <span class="rp-inner">
         <span class="rp-ico">📊</span>
-        <span class="rp-txt" data-i18n="report_btn">Explore Latest Submission Report</span>
+        <span class="rp-txt" data-i18n="report_btn">Xem Submission Report</span>
       </span>
     </a>
   </div>
@@ -1124,7 +1134,8 @@ const i18n = {
     nav_timeline: "Timeline",
     nav_report: "📊 Report",
     nav_submit: "Submit ✦",
-    report_btn: "Xem Submission Report mới nhất",
+    scoring_progress_btn: "Xem tiến độ đánh giá Vòng 1",
+    report_btn: "Xem Submission Report",
     scroll_hint: "Scroll to begin<span>⌄</span>",
     kb_hint: '<span class="kbk">←</span><span class="kbk">→</span> để chuyển section',
     story_a_eyebrow: "The Calling",
@@ -1280,7 +1291,8 @@ const i18n = {
     nav_timeline: "Timeline",
     nav_report: "📊 Report",
     nav_submit: "Submit ✦",
-    report_btn: "Explore Latest Submission Report",
+    scoring_progress_btn: "Round 1 Evaluation Progress",
+    report_btn: "Explore Submission Report",
     scroll_hint: "Scroll to begin<span>⌄</span>",
     kb_hint: '<span class="kbk">←</span><span class="kbk">→</span> to navigate sections',
     story_a_eyebrow: "The Calling",
@@ -1702,7 +1714,7 @@ let updateCountdownText = function(){};
   });
 })();
 
-/* ============ FLOATING "Progress Update" — bay lung tung ============ */
+/* ============ FLOATING "Round 1 Scoring Details" — bay lung tung ============ */
 (function(){
   var el = document.getElementById('floatProgress');
   if(!el) return;
@@ -1785,9 +1797,4 @@ let updateCountdownText = function(){};
 </script>
 </body>
 </html>
-maxX()); y = Math.min(y, maxY()); place();
-  });
-})();
-</script>
-</body>
-</html>
+    
